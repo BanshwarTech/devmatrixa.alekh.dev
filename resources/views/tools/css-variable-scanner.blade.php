@@ -1,6 +1,7 @@
 <x-layout
     title="CSS Variable Scanner – Extract CSS Custom Props"
     description="Scan any webpage and extract all CSS custom properties (variables). See tokens for colors, spacing, and typography used in the design system."
+    keywords="css variable scanner, css custom properties, css design tokens, extract css variables"
     og-title="CSS Variable Scanner — Audit Every CSS Custom Property on Any Site | Devmatrixa"
     og-description="Paste any URL and instantly see every CSS custom property the site declares — auto-classified by type, usage-counted, and grouped by purpose. Free and zero data stored."
 >

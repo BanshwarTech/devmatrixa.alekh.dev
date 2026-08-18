@@ -1,6 +1,7 @@
 <x-layout
     title="Contact DevMatrixa | Get in Touch"
     description="Have a feature request, found a bug, or want to collaborate? Reach out to the DevMatrixa team. We respond fast and actually read every message."
+    keywords="contact devmatrixa, devmatrixa support, feature request, report a bug, devmatrixa feedback"
 >
     @push('head')
         @vite('resources/js/pages/contact.js')

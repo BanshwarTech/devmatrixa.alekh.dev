@@ -1,6 +1,7 @@
 <x-layout
     title="Sitemap Diff Tool – Compare Two Sitemaps"
     description="Compare two XML sitemaps and instantly see added, removed, or changed URLs. Perfect for tracking site migrations and content updates."
+    keywords="sitemap diff tool, compare sitemaps, xml sitemap comparison, sitemap change checker, sitemap crawl diff"
     og-title="Sitemap vs Crawl Diff — Orphan & Missing Page Finder | Devmatrixa"
     og-description="Paste your homepage and we'll diff your sitemap.xml against a live crawl — orphan pages, missing pages, and a coverage score, all in one click."
 >

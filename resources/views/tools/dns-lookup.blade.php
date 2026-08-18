@@ -1,6 +1,7 @@
 <x-layout
     title="DNS Lookup Tool – Query DNS Records Instantly"
     description="Look up A, AAAA, CNAME, MX, TXT, and NS records for any domain. Free DNS checker tool with real-time results, no installation needed."
+    keywords="dns lookup tool, dns checker, domain dns records, mx record lookup, txt record checker, dns propagation checker"
     og-title="DNS Lookup Tool — Resolve Every DNS Record | Devmatrixa"
     og-description="Enter a domain and instantly resolve A, AAAA, CNAME, MX, TXT, NS, SOA, CAA and DMARC records with TTLs and email-security detection. Free, instant, no signup."
 >

@@ -1,6 +1,7 @@
 <x-layout
     title="Typography SEO Checker – Audit Fonts & Readability"
     description="Check typography choices on any webpage for SEO and readability. Analyze font size, line height, contrast, and readability score instantly."
+    keywords="typography checker, font readability checker, seo typography audit, website readability score, font size checker"
 >
     @push('head')
         @vite('resources/js/pages/typography-seo-checker.js')

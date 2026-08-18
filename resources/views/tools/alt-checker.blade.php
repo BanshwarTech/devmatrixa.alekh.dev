@@ -1,6 +1,7 @@
 <x-layout
     title="Alt Text Checker – Find Images Missing Alt Tags"
     description="Scan any webpage for images without alt attributes. Fix accessibility issues and improve image SEO with this free alt text audit tool."
+    keywords="alt text checker, image alt tag checker, missing alt attributes, image seo audit, accessibility checker"
 >
     @push('head')
         @vite('resources/js/pages/alt-checker.js')

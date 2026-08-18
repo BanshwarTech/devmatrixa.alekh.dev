@@ -1,6 +1,7 @@
 <x-layout
     title="Tracker Inventory – Detect All 3rd Party Scripts"
     description="Scan any URL to see every third-party tracker, pixel, and analytics tag loaded on the page. Great for privacy audits and performance checks."
+    keywords="tracker inventory tool, third party script detector, website tracker scanner, privacy audit tool, pixel tracker checker"
     og-title="Tracker Inventory — Audit Every Third-Party Pixel | Devmatrixa"
     og-description="Paste a URL and see every external domain it loads — classified into analytics, ads, social, CDN, fonts, chat and more, with privacy-impact grading."
 >

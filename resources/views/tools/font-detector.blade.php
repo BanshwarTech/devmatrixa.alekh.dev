@@ -1,6 +1,7 @@
 <x-layout
     title="Font Detector – Find Fonts Used on Any Website"
     description="Detect every font loaded on a webpage including Google Fonts, system fonts, and custom webfonts. Free font inspector, no install required."
+    keywords="font detector, website font finder, identify fonts on website, google fonts checker, font inspector"
     og-title="Font Detector — Detect Every Font on Any Website | Devmatrixa"
     og-description="Paste any URL and instantly see every font the site loads — source, weights, styles, and usage counts. No DevTools. No extensions. Completely free."
 >

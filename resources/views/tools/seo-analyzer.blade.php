@@ -1,6 +1,7 @@
 <x-layout
     title="Free SEO Analyzer – Audit Any Page Instantly"
     description="Paste a URL and get a full on-page SEO report in seconds. Title, meta, headings, canonicals, and more. No account, no credit card required."
+    keywords="free seo analyzer, seo audit tool, on page seo checker, website seo checker, seo report generator"
     og-title="Free SEO Analyzer — Instant On-Page Audit | Devmatrixa"
     og-description="Get an instant SEO health score for any URL. Title, meta, headings, OG tags, schema, canonical, ALT text — 10+ signals checked in under 3 seconds. Free forever."
 >

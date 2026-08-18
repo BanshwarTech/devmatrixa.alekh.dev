@@ -1,6 +1,7 @@
 <x-layout
     title="Redirect Chain Checker – Trace All Redirects"
     description="Follow every redirect hop on any URL. Detect redirect loops, unnecessary chains, and 301 vs 302 issues that silently kill your PageRank."
+    keywords="redirect chain checker, redirect checker, 301 redirect checker, redirect loop finder, url redirect tracer"
     og-title="Redirect Chain Tracer — See Every Hop on Any URL | Devmatrixa"
     og-description="Paste any URL and see the full redirect chain — status codes, response times, HTTPS downgrades, and loops — all in one click. No data stored."
 >

@@ -1,6 +1,7 @@
 <x-layout
     title="Script Audit – Analyze All JS Scripts on a Page"
     description="Audit every JavaScript file loaded on a webpage. See script sizes, load types (async/defer), and third-party scripts blocking your render."
+    keywords="javascript audit tool, script audit, page scripts analyzer, third party script checker, js performance audit"
 >
     @push('head')
         @vite('resources/js/pages/script-audit.js')

@@ -1,6 +1,7 @@
 <x-layout
     title="About DevMatrixa | Built for Devs & SEOs"
     description="DevMatrixa is a free toolkit for developers and SEO professionals. Learn who built it, why, and how these tools save hours of manual audit work."
+    keywords="about devmatrixa, devmatrixa team, free seo tools platform, developer tools company"
 >
     @php
         $tools = config('tools');

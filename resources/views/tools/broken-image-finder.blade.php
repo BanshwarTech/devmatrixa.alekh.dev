@@ -1,6 +1,7 @@
 <x-layout
     title="Broken Image Finder – Fix 404 Images on Your Site"
     description="Scan any webpage and detect all broken images with 404 errors. Fix missing images before they damage your UX and crawl quality signals."
+    keywords="broken image finder, broken image checker, 404 image checker, dead image scanner, image link checker"
     og-title="Broken Image Finder — Scan Any Page for Missing or Dead Images | Devmatrixa"
     og-description="Paste any URL and get a full HTTP-level audit of every image on the page — 404s, 403s, network failures, and working images all clearly labeled. Free and zero data stored."
 >

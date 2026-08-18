@@ -1,6 +1,7 @@
 <x-layout
     title="Anchor Text Analyzer – Audit Link Text on Any Page"
     description="Extract and analyze all anchor text from internal and external links on any URL. Find over-optimized anchors and fix your internal link strategy."
+    keywords="anchor text analyzer, anchor text checker, link text audit, internal link anchor text, seo link analysis"
 >
     @push('head')
         @vite('resources/js/pages/anchor-text-analyzer.js')

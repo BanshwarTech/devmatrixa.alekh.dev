@@ -1,6 +1,7 @@
 <x-layout
     title="Security Headers Checker – Test HTTP Headers"
     description="Check if your site has proper security headers like CSP, HSTS, and X-Frame-Options. Free HTTP security header scanner with instant results."
+    keywords="security headers checker, http security header scanner, csp checker, hsts checker, website security audit"
     og-title="Security Headers Auditor — Grade Any URL's Headers | Devmatrixa"
     og-description="Paste a URL, get an A+ to F grade on its security headers with per-header explanations, weak-config warnings, and one-line fix snippets. No data stored."
 >

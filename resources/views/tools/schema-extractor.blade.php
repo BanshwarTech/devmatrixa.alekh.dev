@@ -1,6 +1,7 @@
 <x-layout
     title="Schema Extractor – View Structured Data on Any Page"
     description="Extract and visualize all JSON-LD, Microdata, and RDFa schema markup from any URL. Instantly check what structured data Google can read."
+    keywords="schema extractor, json-ld extractor, structured data checker, schema markup viewer, rich results checker"
     og-title="Schema Extractor — Inspect Every JSON-LD Block on Any URL | Devmatrixa"
     og-description="Paste any URL and instantly extract every JSON-LD structured data block — auto-typed, pretty-printed, and copy-ready for Google's Rich Results Test. Free and zero data stored."
 >

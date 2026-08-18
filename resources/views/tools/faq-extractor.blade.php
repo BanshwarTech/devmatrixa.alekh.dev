@@ -1,6 +1,7 @@
 <x-layout
     title="FAQ Extractor – Pull FAQs From Any Webpage"
     description="Extract all FAQ questions and answers from any URL in one click. Great for content research, competitor analysis, and schema markup planning."
+    keywords="faq extractor, extract faq from webpage, faq scraper, faq schema generator"
     og-title="FAQ Extractor — Pull FAQs from Any URL | Devmatrixa"
     og-description="Paste any URL. Auto-detect FAQ blocks. Export clean Q&A pairs as a ready-to-import JavaScript file. No signup. No data stored. Completely free."
 >

@@ -1,6 +1,7 @@
 <x-layout
     title="Tailwind Class Extractor – Scan Any Webpage"
     description="Extract all Tailwind CSS classes used on any live webpage. Reverse-engineer designs and speed up your own Tailwind-based development."
+    keywords="tailwind class extractor, extract tailwind css classes, tailwind css scanner, reverse engineer tailwind"
     og-title="Tailwind Extractor — Extract Every Tailwind Class from Any URL | Devmatrixa"
     og-description="Point it at any live site. Get every Tailwind class, grouped by category, with one-click copy on each group. Zero data stored. Completely free."
 >

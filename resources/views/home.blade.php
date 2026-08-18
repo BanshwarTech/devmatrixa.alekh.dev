@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout
+    keywords="free seo tools, free developer tools, website audit tools, seo checker online, web development utilities, devmatrixa"
+>
     @push('head')
         @vite('resources/js/pages/home.js')
     @endpush

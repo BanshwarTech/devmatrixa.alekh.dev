@@ -1,6 +1,7 @@
 <x-layout
     title="CSS to Tailwind Converter – Free Online Tool"
     description="Convert raw CSS code to Tailwind utility classes instantly. Speed up your migration to Tailwind CSS without hunting through the docs manually."
+    keywords="css to tailwind converter, css to tailwind css, convert css to tailwind classes, tailwind migration tool"
 >
     @push('head')
         @vite('resources/js/pages/css-to-tailwind.js')

@@ -1,6 +1,7 @@
 <x-layout
     title="Color Palette Extractor – Get Colors From Any Site"
     description="Instantly extract the full color palette from any website. Find hex codes for backgrounds, text, buttons, and borders used on any live URL."
+    keywords="color palette extractor, website color palette, extract colors from website, hex code finder, css color scanner"
     og-title="Color Palette Extractor — Extract Every Color from Any Website | Devmatrixa"
     og-description="Paste any URL and instantly get a visual color palette — hex codes, RGB values, and frequency-ranked swatches from every CSS source on the page. Free and zero data stored."
 >

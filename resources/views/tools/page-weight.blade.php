@@ -1,6 +1,7 @@
 <x-layout
     title="Page Weight Checker – Measure Total Page Size"
     description="Check the total size of any webpage including HTML, CSS, JS, and images. Identify heavy assets slowing down your Core Web Vitals scores."
+    keywords="page weight checker, page size checker, website weight analyzer, core web vitals checker, page speed audit"
     og-title="Page Weight Breakdown — See Where Every Byte Goes on Any URL | Devmatrixa"
     og-description="Paste any URL and instantly see a full breakdown of page weight by HTML, JS, CSS, images, and media — with the largest assets listed and real Content-Length sizes. Free and zero data stored."
 >

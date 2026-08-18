@@ -1,6 +1,7 @@
 <x-layout
     title="Free Link Checker – Find Broken Links Fast"
     description="Scan any webpage for broken internal and external links instantly. Catch 404 errors before they hurt your SEO. Free, fast, no sign-up needed."
+    keywords="broken link checker, link checker tool, 404 link finder, dead link checker, seo link audit"
     og-title="Link Checker — Real-Time Internal Link Auditor | Devmatrixa"
     og-description="Crawl any page and check every internal link live. Catch 404s, 301 redirects, and server errors in seconds — free, no sign-up, no data stored."
 >

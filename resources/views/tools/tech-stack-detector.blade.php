@@ -1,6 +1,7 @@
 <x-layout
     title="Tech Stack Detector – What Is This Site Built With?"
     description="Identify the CMS, framework, CDN, analytics, and plugins powering any website. Get instant tech stack insights for competitive research."
+    keywords="tech stack detector, website technology checker, cms detector, framework detector, what cms is this site using"
     og-title="Tech Stack Detector — Identify Any Website's Tech Stack Instantly | Devmatrixa"
     og-description="Paste any URL and instantly identify the CMS, JS framework, analytics, hosting, and CDN behind the site. 80+ tech signatures. 10 categories. Completely free."
 >

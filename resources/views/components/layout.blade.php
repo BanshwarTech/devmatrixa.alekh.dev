@@ -1,6 +1,7 @@
 @props([
     'title' => null,
     'description' => null,
+    'keywords' => null,
     'ogTitle' => null,
     'ogDescription' => null,
 ])
@@ -13,6 +14,7 @@
 
     <title>{{ $title ?? 'Devmatrixa – Free Developer and SEO Tools for Modern Workflows' }}</title>
     <meta name="description" content="{{ $description ?? config('seo.site_description') }}">
+    <meta name="keywords" content="{{ $keywords ?? config('seo.site_keywords') }}">
     <link rel="canonical" href="{{ url()->current() }}">
 
     <meta property="og:type" content="website">

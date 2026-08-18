@@ -1,6 +1,7 @@
 <x-layout
     title="Heading Checker – Audit H1–H6 Tag Structure"
     description="Analyze the heading hierarchy of any webpage. Spot missing H1s, skipped heading levels, and structure issues hurting your on-page SEO."
+    keywords="heading checker, h1 h6 checker, heading structure audit, seo heading hierarchy, on page seo checker"
     og-title="Heading Hierarchy Checker — Audit H1–H6 Structure of Any URL | Devmatrixa"
     og-description="Paste any URL and instantly see your full H1–H6 heading tree. Detect missing H1s, skipped levels, and empty headings — with auto-fix suggestions included. Free and zero data stored."
 >

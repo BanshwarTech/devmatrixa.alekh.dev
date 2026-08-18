@@ -1,6 +1,7 @@
 <x-layout
     title="OG Preview – Test Open Graph & Twitter Card Tags"
     description="Preview how your page looks when shared on Twitter, LinkedIn, and Facebook. Check OG title, description, and image before going live."
+    keywords="og preview tool, open graph preview, social share preview, twitter card preview, facebook link preview"
     og-title="Social OG Preview - See How Any URL Looks When Shared | Devmatrixa"
     og-description="Paste any URL and instantly see how it looks on Facebook, X, LinkedIn, WhatsApp, and Google - all five share cards generated live in one click. Zero data stored. Completely free."
 >
