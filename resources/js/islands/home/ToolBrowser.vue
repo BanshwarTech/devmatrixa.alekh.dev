@@ -43,17 +43,36 @@ function countFor(catKey) {
 </script>
 
 <template>
-  <div class="cat-bar flex flex-wrap gap-2 justify-center p-2 rounded-full mx-auto mb-10" style="max-width:fit-content">
-    <button
-      v-for="c in CATS"
-      :key="c.key"
-      @click="toolState.activeCat = c.key"
-      :class="['cpill px-5 py-2 rounded-full text-sm', toolState.activeCat === c.key ? 'active' : '']"
-    >
-      <i v-if="c.icon" class="fa-solid mr-1.5" :class="c.icon" :style="{ color: toolState.activeCat === c.key ? '#061c21' : c.color }"></i>
-      {{ c.label }}
-      <span class="ml-2 text-[10px] font-bold opacity-70">{{ countFor(c.key) }}</span>
-    </button>
+  <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-10">
+    <div class="cat-bar flex flex-wrap gap-2 justify-center lg:justify-start p-2 rounded-full mx-auto lg:mx-0" style="max-width:fit-content">
+      <button
+        v-for="c in CATS"
+        :key="c.key"
+        @click="toolState.activeCat = c.key"
+        :class="['cpill px-5 py-2 rounded-full text-sm', toolState.activeCat === c.key ? 'active' : '']"
+      >
+        <i v-if="c.icon" class="fa-solid mr-1.5" :class="c.icon" :style="{ color: toolState.activeCat === c.key ? '#061c21' : c.color }"></i>
+        {{ c.label }}
+        <span class="ml-2 text-[10px] font-bold opacity-70">{{ countFor(c.key) }}</span>
+      </button>
+    </div>
+
+    <div class="w-full lg:w-auto lg:min-w-[280px] relative">
+      <div class="flex items-center gap-3 rounded-2xl px-4 py-3" style="background:var(--c-surface);border:1px solid var(--c-border)">
+        <i class="fa-solid fa-magnifying-glass text-sm shrink-0" style="color:#0694a2"></i>
+        <input
+          v-model="toolState.query"
+          type="text"
+          placeholder="Search tools..."
+          autocomplete="off"
+          class="w-full bg-transparent text-sm outline-none"
+          style="color:var(--c-text);font-weight:500"
+        >
+        <button v-if="toolState.query" @click="toolState.query = ''" class="shrink-0 w-7 h-7 rounded-xl flex items-center justify-center text-sm font-bold transition-all" style="color:#0694a2;background:rgba(6,148,162,0.12)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
   </div>
 
   <div v-if="filtered.length === 0" class="text-center py-20">
