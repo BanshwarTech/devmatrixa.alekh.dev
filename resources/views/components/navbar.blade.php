@@ -1,7 +1,8 @@
 <header id="nav" class="fixed top-0 inset-x-0 z-50" data-navbar>
     <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-[66px]">
         <a href="{{ url('/') }}" class="flex items-center group" aria-label="devmatrixa home">
-            <img src="{{ asset('logo.png') }}" alt="devmatrixa" width="160" height="40" class="h-9 w-auto transition-transform duration-300 group-hover:scale-[1.02]">
+            <img src="{{ asset('logo-light.png') }}" alt="devmatrixa" width="160" height="40" class="h-9 w-auto transition-transform duration-300 group-hover:scale-[1.02] dark:hidden">
+            <img src="{{ asset('logo.png') }}" alt="devmatrixa" width="160" height="40" class="hidden h-9 w-auto transition-transform duration-300 group-hover:scale-[1.02] dark:block">
         </a>
 
         <nav class="hidden md:flex items-center gap-1">
@@ -13,6 +14,10 @@
         </nav>
 
         <div class="flex items-center gap-3">
+            <button type="button" data-theme-toggle aria-label="Toggle color theme" class="p-2.5 rounded-none transition-colors hover:bg-teal-50 dark:hover:bg-white/5">
+                <i class="fa-solid fa-sun text-sm" data-icon-sun style="color:var(--c-muted);display:none"></i>
+                <i class="fa-solid fa-moon text-sm" data-icon-moon style="color:var(--c-muted)"></i>
+            </button>
             <a href="{{ url('/#tools') }}" class="hidden sm:inline-flex btn-primary px-5 py-2.5 rounded-full text-sm items-center gap-2">
                 Explore Tools <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
@@ -29,10 +34,14 @@
             <a href="{{ url('/#featured') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition-colors hover:bg-teal-50 dark:hover:bg-white/5">Featured</a>
             <a href="{{ url('/about') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition-colors hover:bg-teal-50 dark:hover:bg-white/5">About</a>
             <a href="{{ url('/contact') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition-colors hover:bg-teal-50 dark:hover:bg-white/5">Contact</a>
-            <div class="pt-2">
+            <div class="pt-2 flex items-center gap-3">
                 <a href="{{ url('/#tools') }}" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm">
                     Explore Tools <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
+                <button type="button" data-theme-toggle aria-label="Toggle color theme" class="p-2.5 rounded-none transition-colors hover:bg-teal-50 dark:hover:bg-white/5">
+                    <i class="fa-solid fa-sun text-sm" data-icon-sun style="color:var(--c-muted);display:none"></i>
+                    <i class="fa-solid fa-moon text-sm" data-icon-moon style="color:var(--c-muted)"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -70,6 +79,32 @@
       icon.classList.remove('fa-xmark');
     });
   });
+})();
+
+(function () {
+  var root = document.documentElement;
+  var toggles = document.querySelectorAll('[data-theme-toggle]');
+
+  function syncToggles() {
+    var isDark = root.classList.contains('dark');
+    toggles.forEach(function (btn) {
+      var sun = btn.querySelector('[data-icon-sun]');
+      var moon = btn.querySelector('[data-icon-moon]');
+      if (sun) sun.style.display = isDark ? '' : 'none';
+      if (moon) moon.style.display = isDark ? 'none' : '';
+      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  }
+
+  toggles.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var isDark = root.classList.toggle('dark');
+      try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+      syncToggles();
+    });
+  });
+
+  syncToggles();
 })();
 </script>
 @endpush

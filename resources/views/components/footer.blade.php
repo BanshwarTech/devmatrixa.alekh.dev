@@ -3,7 +3,8 @@
         <div class="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-16 mb-12">
             <div class="lg:w-[20%] shrink-0">
                 <a href="{{ url('/') }}" class="inline-flex items-center mb-4" aria-label="devmatrixa home">
-                    <img src="{{ asset('logo.png') }}" alt="devmatrixa" width="180" height="45" class="h-10 w-auto">
+                    <img src="{{ asset('logo-light.png') }}" alt="devmatrixa" width="180" height="45" class="h-10 w-auto dark:hidden">
+                    <img src="{{ asset('logo.png') }}" alt="devmatrixa" width="180" height="45" class="hidden h-10 w-auto dark:block">
                 </a>
                 <p class="text-sm leading-relaxed max-w-xs mb-5" style="color:var(--c-muted)">
                     Premium developer tools crafted for creators who value speed, simplicity, and clean workflows.

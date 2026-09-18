@@ -6,9 +6,20 @@
     'ogDescription' => null,
 ])
 <!doctype html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = (stored === 'light' || stored === 'dark') ? stored : 'light';
+                document.documentElement.classList.toggle('dark', theme === 'dark');
+            } catch (e) {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0694a2">
 
@@ -41,11 +52,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('head')
 </head>
-<body class="text-slate-100">
+<body>
     <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div class="absolute -top-24 left-[-4rem] h-72 w-72 rounded-full bg-teal-300/30 blur-3xl"></div>
-        <div class="absolute right-[-3rem] top-1/3 h-80 w-80 rounded-full bg-lime-300/25 blur-3xl"></div>
-        <div class="absolute bottom-[-5rem] left-1/3 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
+        <div class="absolute -top-24 left-[-4rem] h-72 w-72 rounded-full bg-teal-300/10 dark:bg-teal-300/30 blur-3xl"></div>
+        <div class="absolute right-[-3rem] top-1/3 h-80 w-80 rounded-full bg-lime-300/8 dark:bg-lime-300/25 blur-3xl"></div>
+        <div class="absolute bottom-[-5rem] left-1/3 h-96 w-96 rounded-full bg-cyan-300/8 dark:bg-cyan-300/20 blur-3xl"></div>
     </div>
 
     <x-navbar />
