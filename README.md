@@ -1,73 +1,46 @@
-# Devmatrixa
+# devmatrixa.alekh.dev
+
+## Overview
 
 Free, no-signup collection of developer & SEO tools — no bloat, no paywalls.
 
-Built with Laravel + Vue "islands" (small Vue components mounted into server-rendered Blade pages) and Tailwind CSS.
+## Technology stack
 
-## Tech Stack
+- Laravel ^13.17
+- PHP ^8.3
+- Vue.js
+- Tailwind CSS
+- Vite
 
-- **Backend:** Laravel 13 (PHP ^8.3), SQLite by default
-- **Frontend:** Blade views + Vue 3 islands, Tailwind CSS v4 (`@tailwindcss/vite`), Vite 8
-- **Crawling:** `symfony/dom-crawler` + `symfony/css-selector` for HTML parsing/scraping
+## Repository structure
 
-## Getting Started
+- `.editorconfig`
+- `.env.example`
+- `.gitattributes`
+- `.gitignore`
+- `.npmrc`
+- `README.md`
+- `artisan`
+- `bootstrap/app.php`
+- `bootstrap/providers.php`
+- `composer.json`
+- `composer.lock`
+- `config/app.php`
 
-```bash
-composer install
-npm install
+## Setup
 
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
+1. Clone this repository and enter its directory.
+2. Review the dependency manifests and configure required environment variables using an example environment file if provided.
+3. Install dependencies using the package manager for this project.
+4. Configure the required database/services and run the project's migrations or setup commands, if applicable.
+5. Start the development server using the commands documented in the dependency manifest or application configuration.
 
-npm run build      # or `npm run dev` for local development with HMR
-php artisan serve
-```
+## Development notes
 
-Alternatively, `composer run setup` performs the install + `.env` + migrate + build steps in one go, and `composer run dev` starts the Laravel dev server (via `php artisan dev`).
+- Never commit secrets, access tokens, passwords, or production environment files.
+- Check configuration and dependency manifests before deploying.
+- Replace these general setup notes with project-specific commands when the exact runtime requirements are confirmed.
 
-## Project Structure
+## License
 
-- `config/tools.php` — registry of every tool shown on the homepage (name, description, icon, category, badges, URL). Add an entry here to list a new tool on `/`.
-- `routes/web.php` — one route per tool page (`tools.*` names), plus `/`, `/about`, `/contact`, and `/sitemap.xml`.
-- `resources/views/tools/*.blade.php` — one Blade view per tool.
-- `resources/js/pages/*.js` — Vite entry point per tool, mounting that tool's Vue component.
-- `resources/js/islands/` — Vue components ("islands") mounted into Blade pages, grouped by page (e.g. `islands/home/` for the homepage's search + tool browser).
-- `app/Services/CrawlerService.php` — shared HTTP/HTML crawling logic used by tools that analyze a live URL.
-
-## Tools
-
-Tools are organized into three categories: **SEO**, **Code**, and **Web**. The current catalog (see `config/tools.php` for the source of truth):
-
-| Tool | Category | Route |
-|------|----------|-------|
-| SEO Analyzer | SEO | `/seo-analyzer` |
-| Link Checker | SEO | `/link-checker` |
-| Alt Checker Pro | SEO | `/alt-checker` |
-| FAQ Extractor | SEO | `/faq-extractor` |
-| Social OG Preview | SEO | `/og-preview` |
-| Heading Hierarchy Checker | SEO | `/heading-checker` |
-| Schema / JSON-LD Extractor | SEO | `/schema-extractor` |
-| Broken Image Finder | SEO | `/broken-image-finder` |
-| Anchor Text Analyzer | SEO | `/anchor-text-analyzer` |
-| Typography SEO Checker | SEO | `/typography-seo-checker` |
-| Redirect Chain Tracer | SEO | `/redirect-chain` |
-| Sitemap vs Crawl Diff | SEO | `/sitemap-diff` |
-| Tailwind Extractor | Code | `/tailwind-extractor` |
-| CSS Variable Scanner | Code | `/css-variable-scanner` |
-| CSS to Tailwind Converter | Code | `/css-to-tailwind` |
-| Security Headers Auditor | Web | `/security-headers` |
-| Tracker Inventory | Web | `/tracker-inventory` |
-| Color Palette Extractor | Web | `/color-palette` |
-| Font Detector | Web | `/font-detector` |
-| Tech Stack Detector | Web | `/tech-stack-detector` |
-| Page Weight Breakdown | Web | `/page-weight` |
-| Script Bloat Detector | Web | `/script-audit` |
-| DNS Lookup Tool | Web | `/dns-lookup` |
-
-### Adding a new tool
-
-1. Add a controller/route in `routes/web.php` and a Blade view under `resources/views/tools/`.
-2. Add a Vite entry in `resources/js/pages/` (and register it in `vite.config.js`) if the tool needs its own Vue component.
-3. Add an entry to `config/tools.php` so it appears in the homepage tool browser.
-4. Run `npm run build` to regenerate compiled assets.
+Check this repository for a LICENSE file before redistributing or reusing the project.
