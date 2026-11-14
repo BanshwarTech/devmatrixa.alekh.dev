@@ -56,7 +56,7 @@
             </div>
 
             @if ($hasRightPanel)
-                <div class="tool-hero-visual relative mx-auto w-full max-w-xl lg:ml-auto">
+                <div class="tool-hero-visual hidden relative mx-auto w-full max-w-xl lg:ml-auto lg:block">
                     {{ $rightPanel }}
                 </div>
             @endif

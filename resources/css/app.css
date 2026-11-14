@@ -988,10 +988,13 @@ footer a:hover { color: #b8e3e4 !important; }
 }
 .home-hero .hero-title,
 .about-hero .hero-title,
-.contact-hero .hero-title {
+.contact-hero .hero-title,
+.tool-hero .tool-hero-title {
   color: #f8f7ff;
   font-family: "Fira Sans", "Noto Sans JP", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem) !important;
   font-weight: 750;
+  line-height: 1.03 !important;
   letter-spacing: -0.055em !important;
 }
 .home-hero .hero-title .text-accent,
