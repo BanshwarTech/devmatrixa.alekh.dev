@@ -61,9 +61,9 @@ async function copy() {
           <i :class="copied ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[10px]"></i>{{ copied ? 'Copied!' : 'Copy' }}
         </button>
       </div>
-      <pre class="p-4 rounded-2xl text-sm font-mono min-h-[340px] whitespace-pre-wrap break-words" style="background:#0a2f36;color:#a3e635">{{ output || '// Click Convert' }}</pre>
+      <pre class="p-4 rounded-2xl text-sm font-mono min-h-[340px] whitespace-pre-wrap break-words" style="background:#0a2f36;color:#0098f0">{{ output || '// Click Convert' }}</pre>
       <div v-if="results" class="flex items-center gap-3 mt-3 text-xs">
-        <span class="flex items-center gap-1.5" style="color:#65a30d"><i class="fa-solid fa-check text-xs"></i> {{ matched }} matched</span>
+        <span class="flex items-center gap-1.5" style="color:#4010b0"><i class="fa-solid fa-check text-xs"></i> {{ matched }} matched</span>
         <span v-if="unmatched > 0" class="flex items-center gap-1.5" style="color:#f87171"><i class="fa-solid fa-xmark text-xs"></i> {{ unmatched }} unmatched</span>
       </div>
     </div>
@@ -76,9 +76,9 @@ async function copy() {
     <div class="divide-y" style="border-color:var(--c-border)">
       <div v-for="(r, i) in results" :key="i" class="grid grid-cols-3 gap-3 px-5 py-3 text-xs">
         <div class="font-mono truncate" style="color:var(--c-text)">{{ r.property }}: <span style="color:var(--c-muted)">{{ r.value }}</span></div>
-        <div class="font-mono" :style="{ color: r.matched ? '#a3e635' : '#f87171' }">{{ r.tailwind ?? '—' }}</div>
+        <div class="font-mono" :style="{ color: r.matched ? '#0098f0' : '#f87171' }">{{ r.tailwind ?? '—' }}</div>
         <div class="text-right">
-          <span v-if="r.matched" class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(163,230,53,0.12);color:#65a30d">matched</span>
+          <span v-if="r.matched" class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(0, 152, 240,0.12);color:#4010b0">matched</span>
           <span v-else class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(248,113,113,0.12);color:#f87171">no match</span>
         </div>
       </div>

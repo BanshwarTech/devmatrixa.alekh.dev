@@ -9,19 +9,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
-    <script>
-        (function () {
-            try {
-                var stored = localStorage.getItem('theme');
-                var theme = (stored === 'light' || stored === 'dark') ? stored : 'light';
-                document.documentElement.classList.toggle('dark', theme === 'dark');
-            } catch (e) {
-                document.documentElement.classList.remove('dark');
-            }
-        })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0694a2">
+    <meta name="theme-color" content="#6818E8">
 
     <title>{{ $title ?? 'Devmatrixa – Free Developer and SEO Tools for Modern Workflows' }}</title>
     <meta name="description" content="{{ $description ?? config('seo.site_description') }}">
@@ -38,27 +27,20 @@
     <meta name="twitter:title" content="{{ $ogTitle ?? ($title ?? 'Devmatrixa') }}">
     <meta name="twitter:description" content="{{ $ogDescription ?? ($description ?? config('seo.site_description')) }}">
 
-    <link rel="icon" href="{{ asset('favicon.ico?v=2') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png?v=4') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png?v=4') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png?v=4') }}">
+    <link rel="manifest" href="{{ asset('site.webmanifest?v=4') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('head')
 </head>
 <body>
-    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div class="absolute -top-24 left-[-4rem] h-72 w-72 rounded-full bg-teal-300/10 dark:bg-teal-300/30 blur-3xl"></div>
-        <div class="absolute right-[-3rem] top-1/3 h-80 w-80 rounded-full bg-lime-300/8 dark:bg-lime-300/25 blur-3xl"></div>
-        <div class="absolute bottom-[-5rem] left-1/3 h-96 w-96 rounded-full bg-cyan-300/8 dark:bg-cyan-300/20 blur-3xl"></div>
-    </div>
-
     <x-navbar />
 
     {{ $slot }}

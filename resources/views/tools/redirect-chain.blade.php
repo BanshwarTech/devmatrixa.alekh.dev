@@ -25,7 +25,7 @@
                             ['u' => 'http://example.com', 's' => 301, 'c' => '#f59e0b'],
                             ['u' => 'https://example.com', 's' => 301, 'c' => '#f59e0b'],
                             ['u' => 'https://www.example.com', 's' => 302, 'c' => '#f59e0b'],
-                            ['u' => 'https://www.example.com/home', 's' => 200, 'c' => '#65a30d'],
+                            ['u' => 'https://www.example.com/home', 's' => 200, 'c' => '#4010b0'],
                         ] as $r)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
                                 <span class="text-[9px] font-bold px-1.5 py-0.5 rounded shrink-0" style="background:{{ $r['c'] }}22;color:{{ $r['c'] }}">{{ $r['s'] }}</span>
@@ -41,14 +41,14 @@
             ['icon' => 'fa-solid fa-rotate', 'color' => '#f59e0b', 'label' => '301 / 302'],
             ['icon' => 'fa-solid fa-code-branch', 'color' => '#0694a2', 'label' => '307 / 308'],
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#f87171', 'label' => 'HTTPS Downgrade'],
-            ['icon' => 'fa-solid fa-shuffle', 'color' => '#a3e635', 'label' => 'Loop Detection'],
+            ['icon' => 'fa-solid fa-shuffle', 'color' => '#0098f0', 'label' => 'Loop Detection'],
             ['icon' => 'fa-solid fa-globe', 'color' => '#16bdca', 'label' => 'Cross-Domain'],
             ['icon' => 'fa-solid fa-stopwatch', 'color' => '#0694a2', 'label' => 'Per-Hop Latency'],
-            ['icon' => 'fa-solid fa-wave-square', 'color' => '#a3e635', 'label' => 'Total RTT'],
+            ['icon' => 'fa-solid fa-wave-square', 'color' => '#0098f0', 'label' => 'Total RTT'],
             ['icon' => 'fa-solid fa-network-wired', 'color' => '#16bdca', 'label' => 'Location Header'],
-            ['icon' => 'fa-solid fa-lock', 'color' => '#65a30d', 'label' => 'HTTPS'],
+            ['icon' => 'fa-solid fa-lock', 'color' => '#4010b0', 'label' => 'HTTPS'],
             ['icon' => 'fa-solid fa-unlock', 'color' => '#f87171', 'label' => 'HTTP'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#a3e635', 'label' => 'Instant Trace'],
+            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Instant Trace'],
             ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#0694a2', 'label' => 'Final URL'],
         ]" />
 

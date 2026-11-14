@@ -28,22 +28,20 @@
         <div class="orb w-[380px] h-[380px] opacity-15" style="background:radial-gradient(circle,#0694a2,transparent 65%);top:20%;right:-8%"></div>
     </div>
     <div class="max-w-7xl mx-auto relative">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8">
-            <div>
+        <div class="text-center mb-8">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-3" style="background:rgba(22,189,202,0.10);border:1px solid rgba(22,189,202,0.28);color:#16bdca">
                     <i class="fa-solid fa-wrench text-[11px]"></i> {{ $badge }}
                 </div>
                 <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">{{ $title }}</h2>
-                <p class="text-sm sm:text-[15px] mt-2 max-w-xl" style="color:var(--c-muted)">{{ $description }}</p>
-            </div>
-            <a href="{{ url('/#tools') }}" class="btn-outline px-5 py-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-2 self-start sm:self-end">
+                <p class="text-sm sm:text-[15px] mt-2 max-w-xl mx-auto" style="color:var(--c-muted)">{{ $description }}</p>
+            <a href="{{ url('/#tools') }}" class="btn-outline mt-4 px-5 py-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-2">
                 View All Tools <i class="fa-solid fa-arrow-right text-xs" style="color:var(--c-muted)"></i>
             </a>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             @foreach ($items as $t)
-                @php $iconColor = ($t['g1'] === '#a3e635' || $t['g2'] === '#a3e635') ? '#061c21' : '#fff'; @endphp
+                @php $iconColor = ($t['g1'] === '#0098f0' || $t['g2'] === '#0098f0') ? '#061c21' : '#fff'; @endphp
                 <a href="{{ url($t['url']) }}" class="tool-card rounded-[20px] p-5 flex flex-col relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60">
                     <div class="tc-spotlight" style="background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%), {{ $t['g1'] }}26, transparent 50%)"></div>
                     <div class="relative flex items-start justify-between z-10">

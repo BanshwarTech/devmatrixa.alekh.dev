@@ -26,7 +26,7 @@ const visible = computed(() => {
 
 function statusColor(s) {
   if (s === null) return '#a3a3a3';
-  if (s >= 200 && s < 300) return '#65a30d';
+  if (s >= 200 && s < 300) return '#4010b0';
   if (s >= 300 && s < 400) return '#f59e0b';
   return '#f87171';
 }
@@ -116,7 +116,7 @@ async function checkAll(urls) {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -128,7 +128,7 @@ async function checkAll(urls) {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to crawl.</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast &amp; free
         </div>
@@ -173,19 +173,19 @@ async function checkAll(urls) {
   <div v-if="data" class="space-y-4">
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
       <StatTile :value="data.length" label="Found" color="#0694a2" clickable :active="filter === 'all'" @click="filter = 'all'" />
-      <StatTile :value="okCount" label="OK" color="#65a30d" clickable :active="filter === 'ok'" @click="filter = filter === 'ok' ? 'all' : 'ok'" />
+      <StatTile :value="okCount" label="OK" color="#4010b0" clickable :active="filter === 'ok'" @click="filter = filter === 'ok' ? 'all' : 'ok'" />
       <StatTile :value="errCount" label="Errors" color="#f87171" clickable :active="filter === 'errors'" @click="filter = filter === 'errors' ? 'all' : 'errors'" />
       <StatTile :value="`${progress}/${data.length}`" label="Checked" color="#0694a2" />
     </div>
 
     <div v-if="checking" class="h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,0.06)">
-      <div class="h-full transition-all duration-300" :style="{ width: `${(progress / data.length) * 100}%`, background: 'linear-gradient(90deg,#0694a2,#a3e635)' }"></div>
+      <div class="h-full transition-all duration-300" :style="{ width: `${(progress / data.length) * 100}%`, background: 'linear-gradient(90deg,#0694a2,#0098f0)' }"></div>
     </div>
 
     <div class="glass rounded-3xl p-4 space-y-2 max-h-[600px] overflow-y-auto">
       <div class="flex items-center justify-between gap-3 px-3 py-2.5 mb-2 sticky top-0 z-10 rounded-xl backdrop-blur-md" style="background:rgba(10, 20, 24, 0.75);border:1px solid var(--c-border);box-shadow:0 4px 16px rgba(0,0,0,0.25)">
         <div class="flex items-center gap-2.5">
-          <span class="flex items-center justify-center w-7 h-7 rounded-lg shrink-0" style="background:linear-gradient(135deg,#0694a2,#a3e635)">
+          <span class="flex items-center justify-center w-7 h-7 rounded-lg shrink-0" style="background:linear-gradient(135deg,#0694a2,#0098f0)">
             <i class="fa-solid fa-list text-xs" style="color:#0b1316"></i>
           </span>
           <div class="flex flex-col leading-tight">
@@ -203,9 +203,9 @@ async function checkAll(urls) {
           @click="copyAll(visible)"
           class="flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-md transition-all hover:scale-[1.03] active:scale-[0.97]"
           :style="{
-            background: copiedAll ? 'linear-gradient(135deg,#65a30d,#84cc16)' : 'linear-gradient(135deg,#0694a2,#16bdca)',
+            background: copiedAll ? 'linear-gradient(135deg,#4010b0,#0078e0)' : 'linear-gradient(135deg,#0694a2,#16bdca)',
             color: copiedAll ? '#0b1316' : '#ffffff',
-            boxShadow: copiedAll ? '0 0 0 1px #84cc1655, 0 2px 8px #65a30d33' : '0 0 0 1px #16bdca55, 0 2px 8px #0694a233',
+            boxShadow: copiedAll ? '0 0 0 1px #0078e055, 0 2px 8px #4010b033' : '0 0 0 1px #16bdca55, 0 2px 8px #0694a233',
           }"
         >
           <i :class="copiedAll ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[11px]"></i>
@@ -218,7 +218,7 @@ async function checkAll(urls) {
           type="button"
           @click="copyOne(u.url, i)"
           class="shrink-0 p-1 rounded transition-colors hover:bg-white/10"
-          :style="{ color: copiedIdx === i ? '#65a30d' : 'var(--c-muted)' }"
+          :style="{ color: copiedIdx === i ? '#4010b0' : 'var(--c-muted)' }"
           aria-label="Copy URL"
           title="Copy URL"
         >

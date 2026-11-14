@@ -13,10 +13,10 @@ const onlyFound = ref(false);
 const examples = ['example.com', 'google.com', 'github.com', 'cloudflare.com'];
 
 const typeColor = {
-  A: '#a3e635', AAAA: '#84cc16', CNAME: '#16bdca', MX: '#0694a2', TXT: '#f59e0b',
-  NS: '#7edce2', SOA: '#16bdca', CAA: '#f97316', DMARC: '#f59e0b', PTR: '#a3e635',
+  A: '#0098f0', AAAA: '#0078e0', CNAME: '#16bdca', MX: '#0694a2', TXT: '#f59e0b',
+  NS: '#7edce2', SOA: '#16bdca', CAA: '#f97316', DMARC: '#f59e0b', PTR: '#0098f0',
 };
-const tagColor = { SPF: '#0694a2', DKIM: '#16bdca', DMARC: '#f59e0b', Verification: '#a3e635' };
+const tagColor = { SPF: '#0694a2', DKIM: '#16bdca', DMARC: '#f59e0b', Verification: '#0098f0' };
 
 const visibleRecords = computed(() => {
   if (!data.value) return [];
@@ -66,7 +66,7 @@ async function copyVal(key, text) {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -78,7 +78,7 @@ async function copyVal(key, text) {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a domain to resolve.</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast & free
         </div>
@@ -140,7 +140,7 @@ async function copyVal(key, text) {
 
   <div v-if="data" class="space-y-4">
     <div class="glass rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-5">
-      <div class="flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl shrink-0" style="background:linear-gradient(135deg, #16bdca22, #a3e63511);border:2px solid #16bdca;box-shadow:0 0 32px #16bdca33">
+      <div class="flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl shrink-0" style="background:linear-gradient(135deg, #16bdca22, #0098f011);border:2px solid #16bdca;box-shadow:0 0 32px #16bdca33">
         <i class="fa-solid fa-server text-5xl" style="color:#16bdca"></i>
       </div>
       <div class="flex-1 text-center sm:text-left">
@@ -154,7 +154,7 @@ async function copyVal(key, text) {
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-      <StatTile :value="data.counts.total" label="Total Records" color="#a3e635" />
+      <StatTile :value="data.counts.total" label="Total Records" color="#0098f0" />
       <StatTile :value="data.counts.found" label="Record Types" color="#16bdca" />
       <StatTile :value="data.counts.types - data.counts.found" label="Empty" color="#7edce2" />
       <StatTile :value="data.counts.errors" label="Errors" color="#f87171" clickable :active="onlyFound" @click="onlyFound = !onlyFound" />
@@ -203,7 +203,7 @@ async function copyVal(key, text) {
               @click="copyVal(`${r.type}-${i}`, v.value)"
               aria-label="Copy value"
               class="shrink-0 w-6 h-6 rounded-md flex items-center justify-center transition-colors"
-              :style="{ background: copiedKey === `${r.type}-${i}` ? '#65a30d22' : 'rgba(255,255,255,0.06)', color: copiedKey === `${r.type}-${i}` ? '#65a30d' : 'var(--c-muted)' }"
+              :style="{ background: copiedKey === `${r.type}-${i}` ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedKey === `${r.type}-${i}` ? '#4010b0' : 'var(--c-muted)' }"
             >
               <i :class="copiedKey === `${r.type}-${i}` ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[11px]"></i>
             </button>
@@ -217,7 +217,7 @@ async function copyVal(key, text) {
     </div>
 
     <div class="flex items-center gap-2 text-[11px] justify-center pt-1" style="color:var(--c-muted)">
-      <i class="fa-solid fa-circle-check" style="color:#65a30d"></i>
+      <i class="fa-solid fa-circle-check" style="color:#4010b0"></i>
       Live results — nothing is stored. Re-run anytime to see propagation changes.
     </div>
   </div>

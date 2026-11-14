@@ -19,11 +19,11 @@
         >
             <x-slot:title>Grade your<br><span class="s-it text-accent">security headers.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-shield" icon-bg="linear-gradient(135deg,#0694a2,#a3e635)" icon-color="#0b1316" title="Header Grade" subtitle="Live audit">
+                <x-preview-card variant="gauge" icon="fa-solid fa-shield" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" icon-color="#0b1316" title="Header Grade" subtitle="Live audit">
                     <div class="space-y-1.5">
                         @foreach ([
-                            ['h' => 'Content-Security-Policy', 's' => 'good', 'c' => '#65a30d'],
-                            ['h' => 'Strict-Transport-Security', 's' => 'good', 'c' => '#65a30d'],
+                            ['h' => 'Content-Security-Policy', 's' => 'good', 'c' => '#4010b0'],
+                            ['h' => 'Strict-Transport-Security', 's' => 'good', 'c' => '#4010b0'],
                             ['h' => 'X-Frame-Options', 's' => 'weak', 'c' => '#f59e0b'],
                             ['h' => 'Referrer-Policy', 's' => 'missing', 'c' => '#f87171'],
                             ['h' => 'Permissions-Policy', 's' => 'missing', 'c' => '#f87171'],
@@ -42,15 +42,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-shield', 'color' => '#0694a2', 'label' => 'CSP'],
             ['icon' => 'fa-solid fa-lock', 'color' => '#16bdca', 'label' => 'HSTS'],
-            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#a3e635', 'label' => 'X-Frame-Options'],
+            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#0098f0', 'label' => 'X-Frame-Options'],
             ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#7edce2', 'label' => 'X-Content-Type'],
             ['icon' => 'fa-solid fa-eye', 'color' => '#0694a2', 'label' => 'Referrer-Policy'],
             ['icon' => 'fa-solid fa-key', 'color' => '#16bdca', 'label' => 'Permissions-Policy'],
-            ['icon' => 'fa-solid fa-globe', 'color' => '#a3e635', 'label' => 'COOP / COEP'],
+            ['icon' => 'fa-solid fa-globe', 'color' => '#0098f0', 'label' => 'COOP / COEP'],
             ['icon' => 'fa-solid fa-user-shield', 'color' => '#f59e0b', 'label' => 'Clickjacking'],
             ['icon' => 'fa-solid fa-shield-virus', 'color' => '#f87171', 'label' => 'Info Leaks'],
             ['icon' => 'fa-solid fa-server', 'color' => '#16bdca', 'label' => 'Server Header'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#a3e635', 'label' => 'Instant Grade'],
+            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Instant Grade'],
             ['icon' => 'fa-solid fa-file-circle-exclamation', 'color' => '#f97316', 'label' => 'Fix Snippets'],
         ]" />
 

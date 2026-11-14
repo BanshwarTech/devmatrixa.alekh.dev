@@ -17,11 +17,11 @@
         >
             <x-slot:title>Steal the <span class="s-it text-accent">color palette.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card icon="fa-solid fa-palette" icon-bg="linear-gradient(135deg,#a3e635,#0694a2)" title="Site Palette" subtitle="6 dominant colors">
+                <x-preview-card icon="fa-solid fa-palette" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" title="Site Palette" subtitle="6 dominant colors">
                     <div class="grid grid-cols-3 gap-2">
                         @foreach ([
                             ['hex' => '#0694a2', 'count' => 84],
-                            ['hex' => '#a3e635', 'count' => 56],
+                            ['hex' => '#0098f0', 'count' => 56],
                             ['hex' => '#16bdca', 'count' => 42],
                             ['hex' => '#061c21', 'count' => 28],
                             ['hex' => '#f87171', 'count' => 14],
@@ -43,15 +43,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-palette', 'color' => '#0694a2', 'label' => 'Color Palette'],
             ['icon' => 'fa-solid fa-hashtag', 'color' => '#16bdca', 'label' => 'Hex Codes'],
-            ['icon' => 'fa-solid fa-droplet', 'color' => '#a3e635', 'label' => 'RGB Values'],
+            ['icon' => 'fa-solid fa-droplet', 'color' => '#0098f0', 'label' => 'RGB Values'],
             ['icon' => 'fa-solid fa-eye-dropper', 'color' => '#7edce2', 'label' => 'HSL'],
             ['icon' => 'fa-solid fa-fill-drip', 'color' => '#0694a2', 'label' => 'Color Tokens'],
             ['icon' => 'fa-solid fa-copy', 'color' => '#16bdca', 'label' => 'Click to Copy'],
-            ['icon' => 'fa-solid fa-trophy', 'color' => '#a3e635', 'label' => 'Frequency'],
+            ['icon' => 'fa-solid fa-trophy', 'color' => '#0098f0', 'label' => 'Frequency'],
             ['icon' => 'fa-solid fa-paintbrush', 'color' => '#7edce2', 'label' => 'Inline Styles'],
             ['icon' => 'fa-solid fa-file-code', 'color' => '#0694a2', 'label' => 'CSS Files'],
             ['icon' => 'fa-solid fa-palette', 'color' => '#16bdca', 'label' => 'Swatches'],
-            ['icon' => 'fa-solid fa-circle-half-stroke', 'color' => '#a3e635', 'label' => 'RGBA'],
+            ['icon' => 'fa-solid fa-circle-half-stroke', 'color' => '#0098f0', 'label' => 'RGBA'],
             ['icon' => 'fa-solid fa-paintbrush', 'color' => '#7edce2', 'label' => 'Brand Colors'],
         ]" />
 

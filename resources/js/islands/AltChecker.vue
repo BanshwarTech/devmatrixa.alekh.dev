@@ -38,7 +38,7 @@ async function analyze() {
           <p class="text-xs uppercase tracking-widest font-semibold mb-1" style="color:#0694a2">Analyze Image Alt Text</p>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight">Enter your website URL for alt tag analysis.</h2>
         </div>
-        <span class="text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full" style="background:rgba(166,230,53,0.12);color:#a3e635;border:1px solid rgba(166,230,53,0.25)">Instant results</span>
+        <span class="text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full" style="background:rgba(0, 152, 240,0.12);color:#0098f0;border:1px solid rgba(0, 152, 240,0.25)">Instant results</span>
       </div>
       <textarea
         v-model="urls"
@@ -61,7 +61,7 @@ async function analyze() {
       <div class="px-5 py-3 flex items-center justify-between" style="border-bottom:1px solid var(--c-border);background:rgba(255,255,255,0.06)">
         <a :href="url" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold truncate" style="color:#0694a2">{{ url }}</a>
         <span v-if="r.error" class="text-xs font-bold" style="color:#f87171">{{ r.error }}</span>
-        <span v-else class="text-xs font-bold" :style="{ color: r.issues.length > 0 ? '#f97316' : '#65a30d' }">
+        <span v-else class="text-xs font-bold" :style="{ color: r.issues.length > 0 ? '#f97316' : '#4010b0' }">
           {{ r.issues.length }} issues / {{ r.total }} images
         </span>
       </div>

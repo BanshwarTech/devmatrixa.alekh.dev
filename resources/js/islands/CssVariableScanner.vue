@@ -56,7 +56,7 @@ async function copy(text) {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -69,7 +69,7 @@ async function copy(text) {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to scan CSS variables.</h2>
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">Fast and free.</p>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast & free
         </div>
@@ -134,7 +134,7 @@ async function copy(text) {
             <p class="font-mono text-xs font-semibold truncate" style="color:var(--c-text)">{{ copied === `var(${v.name})` ? 'Copied!' : v.name }}</p>
             <p class="font-mono text-[10px] truncate" style="color:var(--c-muted)">{{ v.value }}</p>
           </div>
-          <span class="text-[10px] font-semibold shrink-0" style="color:#a3e635">&times;{{ v.usageCount }}</span>
+          <span class="text-[10px] font-semibold shrink-0" style="color:#0098f0">&times;{{ v.usageCount }}</span>
         </button>
       </div>
     </div>

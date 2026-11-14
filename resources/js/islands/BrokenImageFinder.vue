@@ -47,7 +47,7 @@ async function analyze() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -60,7 +60,7 @@ async function analyze() {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to scan images.</h2>
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">Fast and free.</p>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast &amp; free
         </div>
@@ -104,9 +104,9 @@ async function analyze() {
 
   <div v-if="data" class="space-y-4">
     <div class="grid grid-cols-3 gap-3">
-      <StatTile :value="data.total" label="Total" color="#a3e635" />
+      <StatTile :value="data.total" label="Total" color="#0098f0" />
       <StatTile :value="data.broken" label="Broken" color="#f87171" />
-      <StatTile :value="data.working" label="Working" color="#65a30d" />
+      <StatTile :value="data.working" label="Working" color="#4010b0" />
     </div>
 
     <div class="flex gap-2">
@@ -124,11 +124,11 @@ async function analyze() {
         v-for="(img, i) in filtered"
         :key="i"
         class="flex items-center gap-3 rounded-xl px-3 py-2 text-xs"
-        :style="{ background: img.broken ? 'rgba(248,113,113,0.06)' : 'rgba(163,230,53,0.06)', border: `1px solid ${img.broken ? 'rgba(248,113,113,0.15)' : 'rgba(163,230,53,0.15)'}` }"
+        :style="{ background: img.broken ? 'rgba(248,113,113,0.06)' : 'rgba(0, 152, 240,0.06)', border: `1px solid ${img.broken ? 'rgba(248,113,113,0.15)' : 'rgba(0, 152, 240,0.15)'}` }"
       >
-        <i :class="img.broken ? 'fa-solid fa-circle-xmark' : 'fa-solid fa-image'" class="shrink-0" :style="{ color: img.broken ? '#f87171' : '#65a30d' }"></i>
+        <i :class="img.broken ? 'fa-solid fa-circle-xmark' : 'fa-solid fa-image'" class="shrink-0" :style="{ color: img.broken ? '#f87171' : '#4010b0' }"></i>
         <a :href="img.url" target="_blank" rel="noopener noreferrer" class="font-mono truncate flex-1" style="color:var(--c-muted)">{{ img.url }}</a>
-        <span class="text-[10px] font-bold px-2 py-0.5 rounded shrink-0" :style="{ background: img.broken ? 'rgba(248,113,113,0.15)' : 'rgba(163,230,53,0.15)', color: img.broken ? '#f87171' : '#65a30d' }">{{ img.status || '—' }}</span>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded shrink-0" :style="{ background: img.broken ? 'rgba(248,113,113,0.15)' : 'rgba(0, 152, 240,0.15)', color: img.broken ? '#f87171' : '#4010b0' }">{{ img.status || '—' }}</span>
       </div>
     </div>
   </div>

@@ -39,7 +39,7 @@ async function analyze() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -51,7 +51,7 @@ async function analyze() {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL, we'll crawl up to 15 pages</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast & free
         </div>
@@ -95,16 +95,16 @@ async function analyze() {
       </div>
 
       <div class="mt-6 pt-5 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-[11px] font-semibold" style="border-top:1px solid var(--c-border);color:var(--c-muted)">
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-bolt text-xs" style="color:#a3e635"></i>Lightning fast</span>
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-bolt text-xs" style="color:#0098f0"></i>Lightning fast</span>
         <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-shield text-xs" style="color:#16bdca"></i>Privacy-first</span>
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-xs" style="color:#a3e635"></i>No signup</span>
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-xs" style="color:#0098f0"></i>No signup</span>
         <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-infinity text-xs" style="color:#16bdca"></i>Unlimited use</span>
         <span class="inline-flex items-center gap-1.5 ml-auto">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background:#65a30d"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2" style="background:#65a30d"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background:#4010b0"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2" style="background:#4010b0"></span>
           </span>
-          <span style="color:#65a30d">Ready</span>
+          <span style="color:#4010b0">Ready</span>
         </span>
       </div>
     </div>
@@ -114,8 +114,8 @@ async function analyze() {
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
       <StatTile :value="data.pagesScanned" label="Pages" color="#0694a2" />
       <StatTile :value="data.uniqueScripts" label="Unique Scripts" color="#0694a2" />
-      <StatTile :value="data.totalRefs" label="Total Refs" color="#a3e635" />
-      <StatTile :value="data.totalIssues" label="Issues" :color="data.totalIssues > 0 ? '#f97316' : '#65a30d'" />
+      <StatTile :value="data.totalRefs" label="Total Refs" color="#0098f0" />
+      <StatTile :value="data.totalIssues" label="Issues" :color="data.totalIssues > 0 ? '#f97316' : '#4010b0'" />
     </div>
 
     <div v-if="data.issues.multiVersion.length > 0" class="glass rounded-3xl p-5">

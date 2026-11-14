@@ -18,9 +18,9 @@
         >
             <x-slot:title>How it looks<br><span class="s-it text-accent">when shared.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card icon="fa-solid fa-share-nodes" icon-bg="linear-gradient(135deg,#16bdca,#a3e635)" title="Share Preview" subtitle="OG card mock">
+                <x-preview-card icon="fa-solid fa-share-nodes" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" title="Share Preview" subtitle="OG card mock">
                     <div class="rounded-lg overflow-hidden" style="background:rgba(255,255,255,0.04);border:1px solid var(--c-border)">
-                        <div class="h-24" style="background:linear-gradient(135deg,#0694a2,#a3e635)"></div>
+                        <div class="h-24" style="background:linear-gradient(135deg,#0694a2,#0098f0)"></div>
                         <div class="p-3">
                             <p class="text-[10px] uppercase" style="color:var(--c-muted)">example.com</p>
                             <p class="text-sm font-semibold mt-0.5" style="color:var(--c-text)">Devmatrixa - Modern Toolkit</p>
@@ -34,15 +34,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-share-nodes', 'color' => '#0694a2', 'label' => 'Open Graph'],
             ['icon' => 'fa-brands fa-x-twitter', 'color' => '#16bdca', 'label' => 'Twitter Cards'],
-            ['icon' => 'fa-brands fa-facebook', 'color' => '#a3e635', 'label' => 'Facebook Preview'],
+            ['icon' => 'fa-brands fa-facebook', 'color' => '#0098f0', 'label' => 'Facebook Preview'],
             ['icon' => 'fa-brands fa-linkedin', 'color' => '#7edce2', 'label' => 'LinkedIn Preview'],
             ['icon' => 'fa-brands fa-whatsapp', 'color' => '#0694a2', 'label' => 'WhatsApp Card'],
             ['icon' => 'fa-brands fa-google', 'color' => '#16bdca', 'label' => 'Google Snippet'],
-            ['icon' => 'fa-solid fa-image', 'color' => '#a3e635', 'label' => 'og:image'],
+            ['icon' => 'fa-solid fa-image', 'color' => '#0098f0', 'label' => 'og:image'],
             ['icon' => 'fa-solid fa-heading', 'color' => '#7edce2', 'label' => 'og:title'],
             ['icon' => 'fa-solid fa-align-left', 'color' => '#0694a2', 'label' => 'og:description'],
             ['icon' => 'fa-solid fa-id-card', 'color' => '#16bdca', 'label' => 'twitter:card'],
-            ['icon' => 'fa-solid fa-tags', 'color' => '#a3e635', 'label' => 'Meta Tags'],
+            ['icon' => 'fa-solid fa-tags', 'color' => '#0098f0', 'label' => 'Meta Tags'],
             ['icon' => 'fa-solid fa-eye', 'color' => '#7edce2', 'label' => 'Live Preview'],
         ]" />
 

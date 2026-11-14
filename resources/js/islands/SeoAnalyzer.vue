@@ -17,7 +17,7 @@ function useExample(ex) {
   url.value = /^https?:\/\//i.test(ex) ? ex : `https://${ex}`;
 }
 
-function scoreColor(s) { return s >= 80 ? '#65a30d' : s >= 60 ? '#f59e0b' : '#ef4444'; }
+function scoreColor(s) { return s >= 80 ? '#4010b0' : s >= 60 ? '#f59e0b' : '#ef4444'; }
 function scoreLabel(s) { return s >= 80 ? 'Excellent' : s >= 60 ? 'Needs Work' : 'Poor'; }
 
 async function analyze() {
@@ -48,16 +48,16 @@ function dashOffset(score) { return Math.round(circumference() * (1 - score / 10
 
 const titleStatus = (d) => (d.title && d.title.length >= 30 && d.title.length <= 70 ? 'ok' : d.title ? 'warn' : 'err');
 const descStatus = (d) => (d.metaDesc && d.metaDesc.length >= 70 && d.metaDesc.length <= 170 ? 'ok' : d.metaDesc ? 'warn' : 'err');
-const dotColor = (s) => (s === 'ok' ? '#65a30d' : s === 'warn' ? '#f59e0b' : '#f87171');
+const dotColor = (s) => (s === 'ok' ? '#4010b0' : s === 'warn' ? '#f59e0b' : '#f87171');
 
 function hostOf(u) {
   try { return new URL(u).hostname; } catch { return u; }
 }
 
 const statCards = (d) => ([
-  { icon: 'fa-solid fa-clock', value: `${d.loadTime}ms`, label: 'Load Time', color: d.loadTime > 3000 ? '#f87171' : '#65a30d' },
+  { icon: 'fa-solid fa-clock', value: `${d.loadTime}ms`, label: 'Load Time', color: d.loadTime > 3000 ? '#f87171' : '#4010b0' },
   { icon: 'fa-solid fa-file-code', value: `${d.pageSize} KB`, label: 'Page Size', color: '#0694a2' },
-  { icon: 'fa-solid fa-pen', value: d.wordCount.toLocaleString(), label: 'Word Count', color: '#a3e635' },
+  { icon: 'fa-solid fa-pen', value: d.wordCount.toLocaleString(), label: 'Word Count', color: '#0098f0' },
   { icon: 'fa-solid fa-image', value: d.totalImages, label: 'Images', color: '#16bdca' },
   { icon: 'fa-solid fa-link', value: d.internalLinks, label: 'Internal Links', color: '#0694a2' },
   { icon: 'fa-solid fa-arrow-up-right-from-square', value: d.externalLinks, label: 'External Links', color: '#7edce2' },
@@ -66,7 +66,7 @@ const statCards = (d) => ([
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -79,7 +79,7 @@ const statCards = (d) => ([
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to audit</h2>
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">We'll fetch the HTML, parse 10+ on-page SEO signals, and surface every issue with a clear, actionable fix.</p>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           10+ signals checked
         </div>
@@ -145,7 +145,7 @@ const statCards = (d) => ([
         </div>
         <div class="flex flex-wrap gap-1.5">
           <span v-for="s in signals" :key="s" class="url-signal-chip text-[11px] font-semibold px-2.5 py-1 rounded-md inline-flex items-center gap-1.5">
-            <i class="fa-solid fa-check text-[10px]" style="color:#65a30d"></i>
+            <i class="fa-solid fa-check text-[10px]" style="color:#4010b0"></i>
             {{ s }}
           </span>
         </div>
@@ -154,8 +154,8 @@ const statCards = (d) => ([
   </div>
 
   <div v-if="loading" class="glass rounded-3xl p-12 text-center mb-8 relative overflow-hidden">
-    <div class="absolute top-0 left-1/4 right-1/4 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #a3e635, #0694a2, transparent)"></div>
-    <div class="w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center animate-spin" style="background:linear-gradient(135deg,#a3e635,#0694a2);box-shadow:0 14px 32px rgba(163,230,53,0.35)">
+    <div class="absolute top-0 left-1/4 right-1/4 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0098f0, #0694a2, transparent)"></div>
+    <div class="w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center animate-spin" style="background:linear-gradient(135deg,#0098f0,#0694a2);box-shadow:0 14px 32px rgba(0, 152, 240,0.35)">
       <i class="fa-solid fa-magnifying-glass-chart" style="color:#061c21"></i>
     </div>
     <p class="font-sans text-lg font-700 mb-2">Analyzing your page...</p>
@@ -171,7 +171,7 @@ const statCards = (d) => ([
             <circle cx="60" cy="60" r="52" fill="none" stroke="url(#sg)" stroke-width="10" stroke-linecap="round" :stroke-dasharray="circumference()" :stroke-dashoffset="dashOffset(data.score)" style="transition:stroke-dashoffset 1s ease" />
             <defs>
               <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#a3e635" />
+                <stop offset="0%" stop-color="#0098f0" />
                 <stop offset="100%" stop-color="#0694a2" />
               </linearGradient>
             </defs>
@@ -185,7 +185,7 @@ const statCards = (d) => ([
           <p class="text-xs uppercase tracking-widest font-semibold mb-1" style="color:var(--c-muted)">SEO Score</p>
           <p class="font-sans text-2xl font-700 mb-1" :style="{ color: scoreColor(data.score) }">{{ scoreLabel(data.score) }}</p>
           <p class="text-xs mb-1" style="color:var(--c-muted)">{{ data.issues.length }} issue(s) - {{ data.passes.length }} passed</p>
-          <span v-if="data.isHttps" class="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full" style="background:rgba(101,163,13,0.12);color:#65a30d;border:1px solid rgba(101,163,13,0.25)">
+          <span v-if="data.isHttps" class="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full" style="background:rgba(64, 16, 176,0.12);color:#4010b0;border:1px solid rgba(64, 16, 176,0.25)">
             <i class="fa-solid fa-lock text-[10px]"></i> HTTPS
           </span>
           <span v-else class="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full" style="background:rgba(248,113,113,0.12);color:#f87171;border:1px solid rgba(248,113,113,0.25)">
@@ -214,9 +214,9 @@ const statCards = (d) => ([
           <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--c-muted)">{{ data.issues.length }} Issues Found</span>
         </div>
         <div class="p-5 space-y-3">
-          <div v-if="data.issues.length === 0" class="flex items-center gap-2 rounded-xl px-4 py-3" style="background:rgba(163,230,53,0.07);border:1px solid rgba(163,230,53,0.15)">
-            <i class="fa-solid fa-thumbs-up text-xs" style="color:#65a30d"></i>
-            <p class="text-sm" style="color:#65a30d">No issues found!</p>
+          <div v-if="data.issues.length === 0" class="flex items-center gap-2 rounded-xl px-4 py-3" style="background:rgba(0, 152, 240,0.07);border:1px solid rgba(0, 152, 240,0.15)">
+            <i class="fa-solid fa-thumbs-up text-xs" style="color:#4010b0"></i>
+            <p class="text-sm" style="color:#4010b0">No issues found!</p>
           </div>
           <div v-for="(i, idx) in data.issues" :key="idx" class="rounded-lg px-3 py-2.5 space-y-1.5" style="background:rgba(249,115,22,0.07);border:1px solid rgba(249,115,22,0.15)">
             <div class="flex items-start gap-2">
@@ -238,13 +238,13 @@ const statCards = (d) => ([
 
       <div class="glass rounded-3xl overflow-hidden">
         <div class="px-6 py-4 flex items-center gap-3" style="border-bottom:1px solid var(--c-border);background:rgba(255,255,255,0.06)">
-          <i class="fa-solid fa-circle-check text-xs" style="color:#65a30d"></i>
+          <i class="fa-solid fa-circle-check text-xs" style="color:#4010b0"></i>
           <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--c-muted)">{{ data.passes.length }} Checks Passed</span>
         </div>
         <div class="p-5 grid grid-cols-2 gap-2">
           <p v-if="data.passes.length === 0" class="text-xs col-span-2" style="color:var(--c-muted)">No checks passed.</p>
-          <div v-for="(p, i) in data.passes" :key="i" class="flex items-start gap-2 rounded-lg px-3 py-2" style="background:rgba(163,230,53,0.07);border:1px solid rgba(163,230,53,0.15)">
-            <i class="fa-solid fa-circle-check shrink-0 mt-0.5 text-xs" style="color:#65a30d"></i>
+          <div v-for="(p, i) in data.passes" :key="i" class="flex items-start gap-2 rounded-lg px-3 py-2" style="background:rgba(0, 152, 240,0.07);border:1px solid rgba(0, 152, 240,0.15)">
+            <i class="fa-solid fa-circle-check shrink-0 mt-0.5 text-xs" style="color:#4010b0"></i>
             <p class="text-xs leading-snug" style="color:var(--c-text)">{{ p }}</p>
           </div>
         </div>
@@ -306,14 +306,14 @@ const statCards = (d) => ([
 
     <div class="glass rounded-3xl overflow-hidden">
       <div class="px-6 py-4 flex items-center gap-3" style="border-bottom:1px solid var(--c-border);background:rgba(255,255,255,0.06)">
-        <i class="fa-solid fa-code text-xs" style="color:#a3e635"></i>
+        <i class="fa-solid fa-code text-xs" style="color:#0098f0"></i>
         <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--c-muted)">Structured Data (Schema.org)</span>
       </div>
       <div class="p-6">
         <template v-if="data.hasSchema && data.schemaTypes.length">
           <p class="text-xs mb-3" style="color:var(--c-muted)">JSON-LD schema types detected on this page:</p>
           <div class="flex flex-wrap gap-2">
-            <span v-for="(t, i) in data.schemaTypes" :key="i" class="text-xs font-semibold px-3 py-1 rounded-full inline-flex items-center gap-1" style="background:rgba(163,230,53,0.12);color:#65a30d;border:1px solid rgba(163,230,53,0.25)">
+            <span v-for="(t, i) in data.schemaTypes" :key="i" class="text-xs font-semibold px-3 py-1 rounded-full inline-flex items-center gap-1" style="background:rgba(0, 152, 240,0.12);color:#4010b0;border:1px solid rgba(0, 152, 240,0.25)">
               <i class="fa-solid fa-check text-[10px]"></i>{{ t }}
             </span>
           </div>
@@ -339,7 +339,7 @@ const statCards = (d) => ([
         <div v-for="block in [
           { tag: 'H1', items: data.h1, color: '#0694a2' },
           { tag: 'H2', items: data.h2, color: '#16bdca' },
-          { tag: 'H3', items: data.h3, color: '#a3e635' },
+          { tag: 'H3', items: data.h3, color: '#0098f0' },
         ]" :key="block.tag">
           <template v-if="block.items.length">
             <p class="text-[10px] font-black uppercase tracking-widest mb-2" :style="{ color: block.color }">{{ block.tag }} ({{ block.items.length }})</p>

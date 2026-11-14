@@ -16,7 +16,7 @@
 
         <div class="space-y-3">
             @foreach ($items as $f)
-                <details class="glass rounded-2xl overflow-hidden group">
+                <details class="faq-item glass rounded-2xl overflow-hidden group">
                     <summary class="cursor-pointer px-5 py-4 flex items-center justify-between gap-4 text-sm font-semibold list-none" style="color:var(--c-text)">
                         <span>{{ $f['q'] }}</span>
                         <span class="shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-transform duration-300 group-open:rotate-45" style="background:rgba(6,148,162,0.08);color:#0694a2">

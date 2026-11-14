@@ -17,12 +17,12 @@
         >
             <x-slot:title>Identify any site's <span class="s-it text-accent">tech stack.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-magnifying-glass-plus" icon-bg="linear-gradient(135deg,#a3e635,#0694a2)" title="Detected Stack" subtitle="Site fingerprint">
+                <x-preview-card variant="terminal" icon="fa-solid fa-magnifying-glass-plus" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" title="Detected Stack" subtitle="Site fingerprint">
                     <div class="space-y-2">
                         @foreach ([
                             ['cat' => 'CMS', 'tech' => 'WordPress', 'icon' => 'fa-solid fa-layer-group', 'color' => '#0694a2'],
                             ['cat' => 'JS', 'tech' => 'Next.js, React', 'icon' => 'fa-brands fa-js', 'color' => '#16bdca'],
-                            ['cat' => 'Hosting', 'tech' => 'Vercel', 'icon' => 'fa-solid fa-cloud', 'color' => '#a3e635'],
+                            ['cat' => 'Hosting', 'tech' => 'Vercel', 'icon' => 'fa-solid fa-cloud', 'color' => '#0098f0'],
                             ['cat' => 'Analytics', 'tech' => 'GA4, GTM', 'icon' => 'fa-solid fa-chart-bar', 'color' => '#7edce2'],
                         ] as $t)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
@@ -39,15 +39,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-brands fa-react', 'color' => '#0694a2', 'label' => 'React'],
             ['icon' => 'fa-brands fa-vuejs', 'color' => '#16bdca', 'label' => 'Vue'],
-            ['icon' => 'fa-brands fa-js', 'color' => '#a3e635', 'label' => 'Next.js'],
+            ['icon' => 'fa-brands fa-js', 'color' => '#0098f0', 'label' => 'Next.js'],
             ['icon' => 'fa-brands fa-wordpress', 'color' => '#7edce2', 'label' => 'WordPress'],
             ['icon' => 'fa-solid fa-boxes-stacked', 'color' => '#0694a2', 'label' => 'Webpack'],
             ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => 'jQuery'],
-            ['icon' => 'fa-solid fa-cloud', 'color' => '#a3e635', 'label' => 'CDN'],
+            ['icon' => 'fa-solid fa-cloud', 'color' => '#0098f0', 'label' => 'CDN'],
             ['icon' => 'fa-solid fa-chart-bar', 'color' => '#7edce2', 'label' => 'Analytics'],
             ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Fonts'],
             ['icon' => 'fa-solid fa-server', 'color' => '#16bdca', 'label' => 'Hosting'],
-            ['icon' => 'fa-solid fa-shield', 'color' => '#a3e635', 'label' => 'Headers'],
+            ['icon' => 'fa-solid fa-shield', 'color' => '#0098f0', 'label' => 'Headers'],
             ['icon' => 'fa-solid fa-fingerprint', 'color' => '#7edce2', 'label' => 'Fingerprint'],
         ]" />
 

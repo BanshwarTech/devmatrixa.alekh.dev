@@ -36,7 +36,7 @@ async function analyze() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -98,9 +98,9 @@ async function analyze() {
         <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--c-muted)">{{ data.issues.length }} Issues</span>
       </div>
       <div class="p-5 space-y-3">
-        <div v-if="data.issues.length === 0" class="flex items-center gap-2 rounded-xl px-4 py-3" style="background:rgba(163,230,53,0.07);border:1px solid rgba(163,230,53,0.15)">
-          <i class="fa-solid fa-circle-check text-xs" style="color:#65a30d"></i>
-          <p class="text-sm" style="color:#65a30d">Heading structure looks great!</p>
+        <div v-if="data.issues.length === 0" class="flex items-center gap-2 rounded-xl px-4 py-3" style="background:rgba(0, 152, 240,0.07);border:1px solid rgba(0, 152, 240,0.15)">
+          <i class="fa-solid fa-circle-check text-xs" style="color:#4010b0"></i>
+          <p class="text-sm" style="color:#4010b0">Heading structure looks great!</p>
         </div>
         <div v-for="(i, idx) in data.issues" :key="idx" class="rounded-lg px-3 py-2.5 space-y-1.5" :style="{ background: `${issueColor(i.type)}10`, border: `1px solid ${issueColor(i.type)}30` }">
           <div class="flex items-start gap-2">
@@ -129,13 +129,13 @@ async function analyze() {
 
     <div v-if="data.hasChanges" class="glass rounded-3xl overflow-hidden">
       <div class="px-6 py-4 flex items-center gap-3" style="border-bottom:1px solid var(--c-border);background:rgba(255,255,255,0.06)">
-        <i class="fa-solid fa-wand-magic-sparkles text-xs" style="color:#a3e635"></i>
+        <i class="fa-solid fa-wand-magic-sparkles text-xs" style="color:#0098f0"></i>
         <span class="text-xs font-bold uppercase tracking-widest" style="color:var(--c-muted)">Suggested Fix</span>
       </div>
       <div class="p-5 space-y-1.5">
-        <div v-for="(s, i) in data.suggested" :key="i" class="rounded-lg px-3 py-2 flex items-center gap-3 text-sm" :style="{ background: s.changed ? 'rgba(163,230,53,0.07)' : 'rgba(255,255,255,0.04)', border: `1px solid ${s.changed ? 'rgba(163,230,53,0.25)' : 'var(--c-border)'}`, marginLeft: `${(s.suggestedLevel - 1) * 20}px` }">
+        <div v-for="(s, i) in data.suggested" :key="i" class="rounded-lg px-3 py-2 flex items-center gap-3 text-sm" :style="{ background: s.changed ? 'rgba(0, 152, 240,0.07)' : 'rgba(255,255,255,0.04)', border: `1px solid ${s.changed ? 'rgba(0, 152, 240,0.25)' : 'var(--c-border)'}`, marginLeft: `${(s.suggestedLevel - 1) * 20}px` }">
           <span v-if="s.changed" class="text-[10px] font-bold px-2 py-0.5 rounded line-through opacity-60" style="background:rgba(248,113,113,0.15);color:#f87171">H{{ s.level }}</span>
-          <span class="text-[10px] font-black px-2 py-0.5 rounded" style="background:rgba(163,230,53,0.15);color:#65a30d">H{{ s.suggestedLevel }}</span>
+          <span class="text-[10px] font-black px-2 py-0.5 rounded" style="background:rgba(0, 152, 240,0.15);color:#4010b0">H{{ s.suggestedLevel }}</span>
           <span style="color:var(--c-text)">{{ s.text }}</span>
         </div>
       </div>

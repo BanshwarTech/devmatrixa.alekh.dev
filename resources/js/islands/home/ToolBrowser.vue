@@ -12,7 +12,7 @@ const shownCount = ref(INITIAL_VISIBLE);
 
 const CATS = [
   { key: 'all', label: 'All Tools' },
-  { key: 'seo', label: 'SEO', icon: 'fa-magnifying-glass-chart', color: '#a3e635' },
+  { key: 'seo', label: 'SEO', icon: 'fa-magnifying-glass-chart', color: '#0098f0' },
   { key: 'code', label: 'Code', icon: 'fa-code', color: '#0694a2' },
   { key: 'web', label: 'Web', icon: 'fa-globe', color: '#7edce2' },
 ];
@@ -34,7 +34,7 @@ watch([() => toolState.activeCat, () => toolState.query], () => {
 });
 
 function iconColor(t) {
-  return t.g1 === '#a3e635' || t.g2 === '#a3e635' ? '#061c21' : '#fff';
+  return t.g1 === '#0098f0' || t.g2 === '#0098f0' ? '#061c21' : '#fff';
 }
 
 function countFor(catKey) {
@@ -43,8 +43,8 @@ function countFor(catKey) {
 </script>
 
 <template>
-  <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-10">
-    <div class="cat-bar flex flex-wrap gap-2 justify-center lg:justify-start p-2 rounded-full mx-auto lg:mx-0" style="max-width:fit-content">
+  <div class="tool-browser-toolbar flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-10">
+    <div class="tool-category-bar cat-bar flex flex-wrap gap-2 justify-center lg:justify-start p-2 rounded-full mx-auto lg:mx-0" style="max-width:fit-content">
       <button
         v-for="c in CATS"
         :key="c.key"
@@ -57,8 +57,8 @@ function countFor(catKey) {
       </button>
     </div>
 
-    <div class="w-full lg:w-auto lg:min-w-[280px] relative">
-      <div class="flex items-center gap-3 rounded-2xl px-4 py-3" style="background:var(--c-surface);border:1px solid var(--c-border)">
+    <div class="tool-search w-full lg:w-auto lg:min-w-[280px] relative">
+      <div class="tool-search-field flex items-center gap-3 rounded-2xl px-4 py-3" style="background:var(--c-surface);border:1px solid var(--c-border)">
         <i class="fa-solid fa-magnifying-glass text-sm shrink-0" style="color:#0694a2"></i>
         <input
           v-model="toolState.query"
@@ -82,8 +82,8 @@ function countFor(catKey) {
   </div>
 
   <template v-else>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-      <a v-for="t in visible" :key="t.id" :href="t.url" class="tool-card rounded-[20px] p-5 flex flex-col relative overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60">
+    <div class="tool-card-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <a v-for="t in visible" :key="t.id" :href="t.url" class="tool-card rounded-[20px] p-5 flex flex-col relative overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60" :style="{ '--tool-accent': t.g1, '--tool-accent-secondary': t.g2 }">
         <div class="relative flex items-start justify-between z-10">
           <div class="t-icon-wrap">
             <div class="t-icon w-12 h-12 rounded-2xl flex items-center justify-center relative" :style="{ background: `linear-gradient(135deg,${t.g1},${t.g2})`, boxShadow: `0 10px 24px ${t.g1}55, inset 0 1px 0 rgba(255,255,255,0.35)` }">
@@ -109,7 +109,7 @@ function countFor(catKey) {
 
         <div class="relative flex items-center justify-between pt-4 mt-4 z-10" style="border-top:1px dashed var(--c-border)">
           <span class="text-[10.5px] flex items-center gap-1.5 font-medium" style="color:var(--c-muted)">
-            <template v-if="t.feat"><i class="fa-solid fa-star text-[9px]" style="color:#a3e635"></i> Featured</template>
+            <template v-if="t.feat"><i class="fa-solid fa-star text-[9px]" style="color:#0098f0"></i> Featured</template>
             <template v-else><i class="fa-solid fa-shield-halved text-[9px]" style="color:#16bdca"></i> Free</template>
           </span>
           <span class="tc-cta text-[11.5px] font-bold inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg" style="color:#0694a2">

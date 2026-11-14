@@ -11,7 +11,7 @@ const copiedKey = ref(null);
 const filter = ref('all');
 
 const statusMeta = {
-  good: { color: '#65a30d', bg: '#65a30d22', label: 'GOOD', icon: 'fa-solid fa-circle-check' },
+  good: { color: '#4010b0', bg: '#4010b022', label: 'GOOD', icon: 'fa-solid fa-circle-check' },
   weak: { color: '#f59e0b', bg: '#f59e0b22', label: 'WEAK', icon: 'fa-solid fa-triangle-exclamation' },
   missing: { color: '#f87171', bg: '#f8717122', label: 'MISSING', icon: 'fa-solid fa-circle-xmark' },
   leak: { color: '#f97316', bg: '#f9731622', label: 'LEAK', icon: 'fa-solid fa-file-circle-exclamation' },
@@ -55,7 +55,7 @@ async function copyFix(key, fix) {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -67,7 +67,7 @@ async function copyFix(key, fix) {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to audit.</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast &amp; free
         </div>
@@ -126,7 +126,7 @@ async function copyFix(key, fix) {
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-      <StatTile :value="data.counts.good" label="Good" color="#65a30d" clickable :active="filter === 'good'" @click="filter = filter === 'good' ? 'all' : 'good'" />
+      <StatTile :value="data.counts.good" label="Good" color="#4010b0" clickable :active="filter === 'good'" @click="filter = filter === 'good' ? 'all' : 'good'" />
       <StatTile :value="data.counts.weak" label="Weak" color="#f59e0b" clickable :active="filter === 'weak'" @click="filter = filter === 'weak' ? 'all' : 'weak'" />
       <StatTile :value="data.counts.missing" label="Missing" color="#f87171" clickable :active="filter === 'missing'" @click="filter = filter === 'missing' ? 'all' : 'missing'" />
       <StatTile :value="data.counts.leak" label="Info Leaks" color="#f97316" clickable :active="filter === 'leak'" @click="filter = filter === 'leak' ? 'all' : 'leak'" />
@@ -157,7 +157,7 @@ async function copyFix(key, fix) {
                   type="button"
                   @click="copyFix(c.key, c.fix)"
                   class="flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded"
-                  :style="{ background: copiedKey === c.key ? '#65a30d22' : 'rgba(255,255,255,0.06)', color: copiedKey === c.key ? '#65a30d' : 'var(--c-muted)' }"
+                  :style="{ background: copiedKey === c.key ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedKey === c.key ? '#4010b0' : 'var(--c-muted)' }"
                 >
                   <i :class="copiedKey === c.key ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[10px]"></i>
                   {{ copiedKey === c.key ? 'Copied' : 'Copy' }}

@@ -19,11 +19,11 @@
         >
             <x-slot:title>Resolve every<br><span class="s-it text-accent">DNS record.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-server" icon-bg="linear-gradient(135deg,#16bdca,#a3e635)" icon-color="#0b1316" title="dig devmatrixa.com" subtitle="DNS resolve">
+                <x-preview-card variant="terminal" icon="fa-solid fa-server" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" icon-color="#0b1316" title="dig devmatrixa.com" subtitle="DNS resolve">
                     <div class="space-y-1.5 font-mono text-[11px]">
                         @foreach ([
-                            ['t' => 'A', 'v' => '76.76.21.21', 'c' => '#a3e635'],
-                            ['t' => 'AAAA', 'v' => '2606:4700::6810', 'c' => '#84cc16'],
+                            ['t' => 'A', 'v' => '76.76.21.21', 'c' => '#0098f0'],
+                            ['t' => 'AAAA', 'v' => '2606:4700::6810', 'c' => '#0078e0'],
                             ['t' => 'MX', 'v' => '10 mx.example.com', 'c' => '#0694a2'],
                             ['t' => 'NS', 'v' => 'ns1.vercel-dns.com', 'c' => '#7edce2'],
                             ['t' => 'TXT', 'v' => 'v=spf1 include:_spf…', 'c' => '#f59e0b'],
@@ -40,7 +40,7 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-globe', 'color' => '#a3e635', 'label' => 'A / AAAA'],
+            ['icon' => 'fa-solid fa-globe', 'color' => '#0098f0', 'label' => 'A / AAAA'],
             ['icon' => 'fa-solid fa-link', 'color' => '#16bdca', 'label' => 'CNAME'],
             ['icon' => 'fa-solid fa-envelope', 'color' => '#0694a2', 'label' => 'MX'],
             ['icon' => 'fa-solid fa-file-lines', 'color' => '#f59e0b', 'label' => 'TXT'],
@@ -49,9 +49,9 @@
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#f97316', 'label' => 'CAA'],
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#f59e0b', 'label' => 'DMARC'],
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#0694a2', 'label' => 'SPF'],
-            ['icon' => 'fa-solid fa-rotate-left', 'color' => '#a3e635', 'label' => 'Reverse DNS'],
+            ['icon' => 'fa-solid fa-rotate-left', 'color' => '#0098f0', 'label' => 'Reverse DNS'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#16bdca', 'label' => 'TTL Values'],
-            ['icon' => 'fa-solid fa-server', 'color' => '#a3e635', 'label' => 'dig Alternative'],
+            ['icon' => 'fa-solid fa-server', 'color' => '#0098f0', 'label' => 'dig Alternative'],
         ]" />
 
         <x-how-it-works :steps="[

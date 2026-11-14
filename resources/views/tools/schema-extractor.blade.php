@@ -18,8 +18,8 @@
         >
             <x-slot:title>Inspect every<br><span class="s-it text-accent">schema block.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-diagram-project" icon-bg="linear-gradient(135deg,#a3e635,#047481)" title="JSON-LD Block" subtitle="Article schema">
-                    <pre class="text-[10px] font-mono leading-relaxed overflow-hidden" style="color:#daf2f4"><span style="color:#16bdca">&lbrace;</span><br>  <span style="color:#7edce2">"@type"</span>: <span style="color:#a3e635">"Article"</span>,<br>  <span style="color:#7edce2">"headline"</span>: <span style="color:#a3e635">"How to ..."</span>,<br>  <span style="color:#7edce2">"author"</span>: <span style="color:#a3e635">"Alekh B."</span>,<br>  <span style="color:#7edce2">"datePublished"</span>: <span style="color:#a3e635">"2026-05"</span><br><span style="color:#16bdca">&rbrace;</span></pre>
+                <x-preview-card variant="terminal" icon="fa-solid fa-diagram-project" icon-bg="linear-gradient(135deg,#0098f0,#047481)" title="JSON-LD Block" subtitle="Article schema">
+                    <pre class="text-[10px] font-mono leading-relaxed overflow-hidden" style="color:#daf2f4"><span style="color:#16bdca">&lbrace;</span><br>  <span style="color:#7edce2">"@type"</span>: <span style="color:#0098f0">"Article"</span>,<br>  <span style="color:#7edce2">"headline"</span>: <span style="color:#0098f0">"How to ..."</span>,<br>  <span style="color:#7edce2">"author"</span>: <span style="color:#0098f0">"Alekh B."</span>,<br>  <span style="color:#7edce2">"datePublished"</span>: <span style="color:#0098f0">"2026-05"</span><br><span style="color:#16bdca">&rbrace;</span></pre>
                 </x-preview-card>
             </x-slot:rightPanel>
         </x-tool-hero>
@@ -27,15 +27,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-diagram-project', 'color' => '#0694a2', 'label' => 'JSON-LD'],
             ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => 'Microdata'],
-            ['icon' => 'fa-solid fa-tags', 'color' => '#a3e635', 'label' => 'RDFa'],
+            ['icon' => 'fa-solid fa-tags', 'color' => '#0098f0', 'label' => 'RDFa'],
             ['icon' => 'fa-solid fa-building', 'color' => '#7edce2', 'label' => 'Organization'],
             ['icon' => 'fa-solid fa-newspaper', 'color' => '#0694a2', 'label' => 'Article'],
             ['icon' => 'fa-solid fa-circle-question', 'color' => '#16bdca', 'label' => 'FAQPage'],
-            ['icon' => 'fa-solid fa-box', 'color' => '#a3e635', 'label' => 'Product'],
+            ['icon' => 'fa-solid fa-box', 'color' => '#0098f0', 'label' => 'Product'],
             ['icon' => 'fa-solid fa-list', 'color' => '#7edce2', 'label' => 'Breadcrumb'],
             ['icon' => 'fa-solid fa-utensils', 'color' => '#0694a2', 'label' => 'Recipe'],
             ['icon' => 'fa-solid fa-video', 'color' => '#16bdca', 'label' => 'VideoObject'],
-            ['icon' => 'fa-solid fa-copy', 'color' => '#a3e635', 'label' => 'Copy JSON'],
+            ['icon' => 'fa-solid fa-copy', 'color' => '#0098f0', 'label' => 'Copy JSON'],
             ['icon' => 'fa-solid fa-star', 'color' => '#7edce2', 'label' => 'Rich Results'],
         ]" />
 

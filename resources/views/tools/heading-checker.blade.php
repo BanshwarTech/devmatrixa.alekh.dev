@@ -24,8 +24,8 @@
                         @foreach ([
                             ['tag' => 'H1', 'text' => 'Best Running Shoes 2025', 'color' => '#0694a2', 'indent' => 0],
                             ['tag' => 'H2', 'text' => 'Top Picks This Year', 'color' => '#16bdca', 'indent' => 12],
-                            ['tag' => 'H3', 'text' => 'Nike Pegasus 41', 'color' => '#a3e635', 'indent' => 24],
-                            ['tag' => 'H3', 'text' => 'Adidas Ultraboost 5', 'color' => '#a3e635', 'indent' => 24],
+                            ['tag' => 'H3', 'text' => 'Nike Pegasus 41', 'color' => '#0098f0', 'indent' => 24],
+                            ['tag' => 'H3', 'text' => 'Adidas Ultraboost 5', 'color' => '#0098f0', 'indent' => 24],
                             ['tag' => 'H2', 'text' => 'How We Tested', 'color' => '#16bdca', 'indent' => 12],
                         ] as $h)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04);margin-left:{{ $h['indent'] }}px">
@@ -41,15 +41,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-heading', 'color' => '#0694a2', 'label' => 'H1 Tag'],
             ['icon' => 'fa-solid fa-list-ol', 'color' => '#16bdca', 'label' => 'H2 - H6'],
-            ['icon' => 'fa-solid fa-sitemap', 'color' => '#a3e635', 'label' => 'Hierarchy'],
+            ['icon' => 'fa-solid fa-sitemap', 'color' => '#0098f0', 'label' => 'Hierarchy'],
             ['icon' => 'fa-solid fa-arrow-down-1-9', 'color' => '#7edce2', 'label' => 'Skipped Levels'],
             ['icon' => 'fa-solid fa-ban', 'color' => '#0694a2', 'label' => 'Empty Headings'],
             ['icon' => 'fa-solid fa-tree', 'color' => '#16bdca', 'label' => 'Outline Tree'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#a3e635', 'label' => 'Fix Suggestions'],
+            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#0098f0', 'label' => 'Fix Suggestions'],
             ['icon' => 'fa-solid fa-circle-exclamation', 'color' => '#7edce2', 'label' => 'Missing H1'],
             ['icon' => 'fa-solid fa-copy', 'color' => '#0694a2', 'label' => 'Duplicate H1'],
             ['icon' => 'fa-solid fa-list', 'color' => '#16bdca', 'label' => 'DOM Order'],
-            ['icon' => 'fa-solid fa-magnifying-glass-chart', 'color' => '#a3e635', 'label' => 'Structure Audit'],
+            ['icon' => 'fa-solid fa-magnifying-glass-chart', 'color' => '#0098f0', 'label' => 'Structure Audit'],
             ['icon' => 'fa-solid fa-universal-access', 'color' => '#7edce2', 'label' => 'Accessibility'],
         ]" />
 

@@ -17,15 +17,15 @@
         >
             <x-slot:title>Find every<br><span class="s-it text-accent">broken link.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-bug" icon-bg="linear-gradient(135deg,#0694a2,#a3e635)" title="Live Crawl" subtitle="Status by URL">
+                <x-preview-card variant="scope" icon="fa-solid fa-bug" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" title="Live Crawl" subtitle="Status by URL">
                     <div class="space-y-1.5">
                         @foreach ([
-                            ['url' => '/blog/welcome', 'status' => 200, 'c' => '#65a30d'],
+                            ['url' => '/blog/welcome', 'status' => 200, 'c' => '#4010b0'],
                             ['url' => '/products/new', 'status' => 301, 'c' => '#f59e0b'],
                             ['url' => '/about-old', 'status' => 404, 'c' => '#f87171'],
-                            ['url' => '/team/sarah', 'status' => 200, 'c' => '#65a30d'],
+                            ['url' => '/team/sarah', 'status' => 200, 'c' => '#4010b0'],
                             ['url' => '/api/v1', 'status' => 500, 'c' => '#f87171'],
-                            ['url' => '/contact', 'status' => 200, 'c' => '#65a30d'],
+                            ['url' => '/contact', 'status' => 200, 'c' => '#4010b0'],
                         ] as $u)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
                                 <span class="font-mono text-[10px] truncate flex-1" style="color:var(--c-muted)">{{ $u['url'] }}</span>
@@ -40,15 +40,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-link', 'color' => '#0694a2', 'label' => 'Internal Links'],
             ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#16bdca', 'label' => 'External Links'],
-            ['icon' => 'fa-solid fa-link-slash', 'color' => '#a3e635', 'label' => 'Broken Links'],
+            ['icon' => 'fa-solid fa-link-slash', 'color' => '#0098f0', 'label' => 'Broken Links'],
             ['icon' => 'fa-solid fa-circle-xmark', 'color' => '#7edce2', 'label' => '404s'],
             ['icon' => 'fa-solid fa-rotate', 'color' => '#0694a2', 'label' => 'Redirects'],
             ['icon' => 'fa-solid fa-gauge-high', 'color' => '#16bdca', 'label' => 'HTTP Status'],
-            ['icon' => 'fa-solid fa-bug', 'color' => '#a3e635', 'label' => 'Live Crawl'],
+            ['icon' => 'fa-solid fa-bug', 'color' => '#0098f0', 'label' => 'Live Crawl'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#7edce2', 'label' => 'Parallel Checks'],
             ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#0694a2', 'label' => '5xx Errors'],
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#16bdca', 'label' => 'HTTPS'],
-            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#a3e635', 'label' => 'URL Audit'],
+            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#0098f0', 'label' => 'URL Audit'],
             ['icon' => 'fa-solid fa-list', 'color' => '#7edce2', 'label' => 'Status Map'],
         ]" />
 

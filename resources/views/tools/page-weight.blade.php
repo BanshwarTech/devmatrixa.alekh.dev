@@ -18,10 +18,10 @@
         >
             <x-slot:title>Where every<br><span class="s-it text-accent">byte goes.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-scale-balanced" icon-bg="linear-gradient(135deg,#a3e635,#f59e0b)" icon-color="#061c21" title="Page Weight" subtitle="2.4 MB total">
+                <x-preview-card variant="gauge" icon="fa-solid fa-scale-balanced" icon-bg="linear-gradient(135deg,#0098f0,#f59e0b)" icon-color="#061c21" title="Page Weight" subtitle="2.4 MB total">
                     <div class="space-y-2">
                         @foreach ([
-                            ['type' => 'Images', 'size' => '1.2 MB', 'pct' => 50, 'color' => '#a3e635'],
+                            ['type' => 'Images', 'size' => '1.2 MB', 'pct' => 50, 'color' => '#0098f0'],
                             ['type' => 'JavaScript', 'size' => '680 KB', 'pct' => 28, 'color' => '#f59e0b'],
                             ['type' => 'CSS', 'size' => '180 KB', 'pct' => 7, 'color' => '#0694a2'],
                             ['type' => 'Media', 'size' => '240 KB', 'pct' => 10, 'color' => '#16bdca'],
@@ -45,15 +45,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-scale-balanced', 'color' => '#0694a2', 'label' => 'Total Weight'],
             ['icon' => 'fa-solid fa-file-code', 'color' => '#16bdca', 'label' => 'HTML Size'],
-            ['icon' => 'fa-brands fa-css3-alt', 'color' => '#a3e635', 'label' => 'CSS Size'],
+            ['icon' => 'fa-brands fa-css3-alt', 'color' => '#0098f0', 'label' => 'CSS Size'],
             ['icon' => 'fa-brands fa-js', 'color' => '#7edce2', 'label' => 'JS Size'],
             ['icon' => 'fa-solid fa-image', 'color' => '#0694a2', 'label' => 'Image Bytes'],
             ['icon' => 'fa-solid fa-film', 'color' => '#16bdca', 'label' => 'Media Files'],
-            ['icon' => 'fa-solid fa-list-ol', 'color' => '#a3e635', 'label' => 'Total Requests'],
+            ['icon' => 'fa-solid fa-list-ol', 'color' => '#0098f0', 'label' => 'Total Requests'],
             ['icon' => 'fa-solid fa-chart-pie', 'color' => '#7edce2', 'label' => 'Type Breakdown'],
             ['icon' => 'fa-solid fa-file-zipper', 'color' => '#0694a2', 'label' => 'Compression'],
             ['icon' => 'fa-solid fa-gauge-high', 'color' => '#16bdca', 'label' => 'Largest Assets'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#a3e635', 'label' => 'Parallel Probes'],
+            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Parallel Probes'],
             ['icon' => 'fa-solid fa-ruler', 'color' => '#7edce2', 'label' => 'Content-Length'],
         ]" />
 

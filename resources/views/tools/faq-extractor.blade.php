@@ -37,15 +37,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-circle-question', 'color' => '#0694a2', 'label' => 'Questions'],
             ['icon' => 'fa-solid fa-comment-dots', 'color' => '#16bdca', 'label' => 'Answers'],
-            ['icon' => 'fa-solid fa-diagram-project', 'color' => '#a3e635', 'label' => 'FAQ Schema'],
+            ['icon' => 'fa-solid fa-diagram-project', 'color' => '#0098f0', 'label' => 'FAQ Schema'],
             ['icon' => 'fa-solid fa-code', 'color' => '#7edce2', 'label' => 'JSON-LD'],
             ['icon' => 'fa-solid fa-star', 'color' => '#0694a2', 'label' => 'Rich Snippets'],
             ['icon' => 'fa-solid fa-bars', 'color' => '#16bdca', 'label' => 'Accordion'],
-            ['icon' => 'fa-solid fa-download', 'color' => '#a3e635', 'label' => 'Export JS'],
+            ['icon' => 'fa-solid fa-download', 'color' => '#0098f0', 'label' => 'Export JS'],
             ['icon' => 'fa-solid fa-list', 'color' => '#7edce2', 'label' => 'Q&A Pairs'],
             ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#0694a2', 'label' => 'Auto Detect'],
             ['icon' => 'fa-solid fa-layer-group', 'color' => '#16bdca', 'label' => 'FAQPage'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#a3e635', 'label' => 'Fast Scrape'],
+            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Fast Scrape'],
             ['icon' => 'fa-solid fa-tags', 'color' => '#7edce2', 'label' => 'Structured Data'],
         ]" />
 

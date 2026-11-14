@@ -20,8 +20,8 @@
                 <x-preview-card icon="fa-solid fa-font" icon-bg="linear-gradient(135deg,#16bdca,#0694a2)" icon-color="#fff" title="Detected Fonts" subtitle="Per page">
                     <div class="space-y-2">
                         @foreach ([
-                            ['name' => 'Inter', 'source' => 'Google Fonts', 'weights' => '400, 500, 600, 700', 'color' => '#65a30d'],
-                            ['name' => 'JetBrains Mono', 'source' => 'Google Fonts', 'weights' => '400, 500', 'color' => '#65a30d'],
+                            ['name' => 'Inter', 'source' => 'Google Fonts', 'weights' => '400, 500, 600, 700', 'color' => '#4010b0'],
+                            ['name' => 'JetBrains Mono', 'source' => 'Google Fonts', 'weights' => '400, 500', 'color' => '#4010b0'],
                             ['name' => 'Helvetica Neue', 'source' => 'System', 'weights' => 'Fallback', 'color' => '#7edce2'],
                         ] as $f)
                             <div class="rounded-lg px-3 py-2" style="background:rgba(255,255,255,0.04)">
@@ -37,15 +37,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Font Family'],
             ['icon' => 'fa-brands fa-google', 'color' => '#16bdca', 'label' => 'Google Fonts'],
-            ['icon' => 'fa-solid fa-at', 'color' => '#a3e635', 'label' => '@font-face'],
+            ['icon' => 'fa-solid fa-at', 'color' => '#0098f0', 'label' => '@font-face'],
             ['icon' => 'fa-solid fa-font', 'color' => '#7edce2', 'label' => 'Font Weight'],
             ['icon' => 'fa-solid fa-italic', 'color' => '#0694a2', 'label' => 'Font Style'],
             ['icon' => 'fa-solid fa-server', 'color' => '#16bdca', 'label' => 'System Fonts'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#a3e635', 'label' => 'CSS Stack'],
+            ['icon' => 'fa-solid fa-layer-group', 'color' => '#0098f0', 'label' => 'CSS Stack'],
             ['icon' => 'fa-solid fa-sliders', 'color' => '#7edce2', 'label' => 'Variable Fonts'],
             ['icon' => 'fa-solid fa-list', 'color' => '#0694a2', 'label' => 'Usage Counts'],
             ['icon' => 'fa-solid fa-file-import', 'color' => '#16bdca', 'label' => '@import'],
-            ['icon' => 'fa-solid fa-link', 'color' => '#a3e635', 'label' => 'Linked Sheets'],
+            ['icon' => 'fa-solid fa-link', 'color' => '#0098f0', 'label' => 'Linked Sheets'],
             ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#7edce2', 'label' => 'Auto Detect'],
         ]" />
 

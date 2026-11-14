@@ -1,31 +1,30 @@
-<footer style="border-top:1px solid var(--c-border)" class="py-14 px-5 sm:px-8">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-16 mb-12">
-            <div class="lg:w-[20%] shrink-0">
-                <a href="{{ url('/') }}" class="inline-flex items-center mb-4" aria-label="devmatrixa home">
-                    <img src="{{ asset('logo-light.png') }}" alt="devmatrixa" width="180" height="45" class="h-10 w-auto dark:hidden">
-                    <img src="{{ asset('logo.png') }}" alt="devmatrixa" width="180" height="45" class="hidden h-10 w-auto dark:block">
+<footer style="background:#000;color:#edf4f5;--c-bg2:#172e34;--c-border:rgba(255,255,255,0.13);--c-text:#edf4f5;--c-muted:#b2c2c7;border-top:1px solid var(--c-border)" class="pt-14 pb-6 px-5 sm:px-8">
+    <div class="max-w-[1300px] mx-auto">
+        <div class="footer-layout flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-16 mb-12">
+            <div class="footer-brand lg:w-[20%] shrink-0">
+                <a href="{{ url('/') }}" class="footer-logo-lockup inline-flex items-center mb-4" aria-label="devmatrixa home">
+                    <img src="{{ asset('logo-footer.png') }}" alt="devmatrixa" width="180" height="45" class="brand-logo h-10 w-auto">
                 </a>
                 <p class="text-sm leading-relaxed max-w-xs mb-5" style="color:var(--c-muted)">
                     Premium developer tools crafted for creators who value speed, simplicity, and clean workflows.
                 </p>
                 <div class="flex gap-3">
-                    <a href="https://github.com/BanshwarTech" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:var(--c-bg2);border:1px solid var(--c-border);color:var(--c-muted)">
+                    <a href="https://github.com/BanshwarTech" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/alekh-banshwar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:var(--c-bg2);border:1px solid var(--c-border);color:var(--c-muted)">
+                    <a href="https://www.linkedin.com/in/alekh-banshwar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="mailto:contact@alekh.dev" aria-label="Email" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:var(--c-bg2);border:1px solid var(--c-border);color:var(--c-muted)">
+                    <a href="mailto:contact@alekh.dev" aria-label="Email" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
-                    <a href="{{ url('/contact') }}" aria-label="Contact" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:var(--c-bg2);border:1px solid var(--c-border);color:var(--c-muted)">
+                    <a href="{{ url('/contact') }}" aria-label="Contact" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
                         <i class="fa-solid fa-paper-plane"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="lg:w-[15%] shrink-0">
+            <div class="footer-link-group lg:w-[15%] shrink-0">
                 <h3 class="font-sans font-600 text-sm mb-4">Product</h3>
                 <ul class="space-y-2.5 text-sm" style="color:var(--c-muted)">
                     <li><a href="{{ url('/') }}" class="hover:text-accent transition-colors duration-200">Home</a></li>
@@ -36,7 +35,7 @@
                 </ul>
             </div>
 
-            <div class="lg:w-[15%] shrink-0">
+            <div class="footer-link-group lg:w-[15%] shrink-0">
                 <h3 class="font-sans font-600 text-sm mb-4">SEO Tools</h3>
                 <ul class="space-y-2.5 text-sm" style="color:var(--c-muted)">
                     <li><a href="{{ url('/seo-analyzer') }}" class="hover:text-accent transition-colors duration-200">SEO Analyzer</a></li>
@@ -47,7 +46,7 @@
                 </ul>
             </div>
 
-            <div class="lg:w-[15%] shrink-0">
+            <div class="footer-link-group lg:w-[15%] shrink-0">
                 <h3 class="font-sans font-600 text-sm mb-4">Dev Tools</h3>
                 <ul class="space-y-2.5 text-sm" style="color:var(--c-muted)">
                     <li><a href="{{ url('/tailwind-extractor') }}" class="hover:text-accent transition-colors duration-200">Tailwind Extractor</a></li>
@@ -57,7 +56,7 @@
                 </ul>
             </div>
 
-            <div class="lg:w-[15%] shrink-0">
+            <div class="footer-link-group lg:w-[15%] shrink-0">
                 <h3 class="font-sans font-600 text-sm mb-4">More Tools</h3>
                 <ul class="space-y-2.5 text-sm" style="color:var(--c-muted)">
                     <li><a href="{{ url('/color-palette') }}" class="hover:text-accent transition-colors duration-200">Color Palette</a></li>

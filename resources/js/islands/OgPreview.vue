@@ -47,7 +47,7 @@ async function analyze() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -60,7 +60,7 @@ async function analyze() {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to preview.</h2>
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">Fast and free.</p>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast &amp; free
         </div>
@@ -141,7 +141,7 @@ async function analyze() {
       </div>
     </div>
 
-    <div v-else-if="platform === 'whatsapp'" class="rounded-2xl overflow-hidden max-w-md" style="background:#dcf8c6;border:1px solid #cfdfb6">
+    <div v-else-if="platform === 'whatsapp'" class="rounded-2xl overflow-hidden max-w-md" style="background:#e9ddfc;border:1px solid #c8b5ed">
       <img v-if="data.og.image" :src="data.og.image" alt="" class="w-full h-[180px] object-cover">
       <div class="p-3" style="color:#000">
         <p class="font-semibold text-[14px]">{{ data.og.title }}</p>

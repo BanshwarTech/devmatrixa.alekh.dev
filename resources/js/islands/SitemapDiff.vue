@@ -11,7 +11,7 @@ const bucket = ref('missing');
 const copiedAll = ref(false);
 
 const bucketMeta = {
-  both: { label: 'Healthy (in both)', color: '#65a30d', hint: 'These pages are linked AND in your sitemap. No action needed.', icon: 'fa-solid fa-circle-check' },
+  both: { label: 'Healthy (in both)', color: '#4010b0', hint: 'These pages are linked AND in your sitemap. No action needed.', icon: 'fa-solid fa-circle-check' },
   orphan: { label: 'Orphan (sitemap only)', color: '#f59e0b', hint: 'Listed in sitemap but no internal link reaches them. Add internal links or remove from sitemap.', icon: 'fa-solid fa-link-slash' },
   missing: { label: 'Missing from sitemap', color: '#f87171', hint: 'Linked across the site but absent from sitemap.xml. Add them so search engines discover them faster.', icon: 'fa-solid fa-file-circle-xmark' },
 };
@@ -26,8 +26,8 @@ const list = computed(() => {
 const meta = computed(() => bucketMeta[bucket.value]);
 
 const coverageColor = computed(() => {
-  if (!data.value) return '#65a30d';
-  return data.value.coverage >= 90 ? '#65a30d' : data.value.coverage >= 70 ? '#f59e0b' : '#f87171';
+  if (!data.value) return '#4010b0';
+  return data.value.coverage >= 90 ? '#4010b0' : data.value.coverage >= 70 ? '#f59e0b' : '#f87171';
 });
 
 async function analyze() {
@@ -64,7 +64,7 @@ async function copyList() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -76,7 +76,7 @@ async function copyList() {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter your homepage URL.</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast &amp; free
         </div>
@@ -120,7 +120,7 @@ async function copyList() {
 
   <div v-if="data" class="space-y-4">
     <div class="glass rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-5">
-      <div class="relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl shrink-0" :style="{ background: 'linear-gradient(135deg, #0694a222, #a3e63522)', border: `2px solid ${coverageColor}`, boxShadow: `0 0 32px ${coverageColor}33` }">
+      <div class="relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl shrink-0" :style="{ background: 'linear-gradient(135deg, #0694a222, #0098f022)', border: `2px solid ${coverageColor}`, boxShadow: `0 0 32px ${coverageColor}33` }">
         <span class="font-sans font-700 text-4xl sm:text-5xl tracking-tighter" :style="{ color: coverageColor }">{{ data.coverage }}%</span>
       </div>
       <div class="flex-1 text-center sm:text-left">
@@ -137,7 +137,7 @@ async function copyList() {
     </div>
 
     <div class="grid grid-cols-3 gap-3">
-      <StatTile :value="data.inBothCount" label="In Both" color="#65a30d" clickable :active="bucket === 'both'" @click="bucket = 'both'" />
+      <StatTile :value="data.inBothCount" label="In Both" color="#4010b0" clickable :active="bucket === 'both'" @click="bucket = 'both'" />
       <StatTile :value="data.orphanCount" label="Orphan" color="#f59e0b" clickable :active="bucket === 'orphan'" @click="bucket = 'orphan'" />
       <StatTile :value="data.missingCount" label="Missing" color="#f87171" clickable :active="bucket === 'missing'" @click="bucket = 'missing'" />
     </div>
@@ -160,7 +160,7 @@ async function copyList() {
           @click="copyList"
           :disabled="list.length === 0"
           class="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition-colors disabled:opacity-40"
-          :style="{ background: copiedAll ? '#65a30d22' : 'rgba(255,255,255,0.06)', color: copiedAll ? '#65a30d' : '#e5e7eb', border: '1px solid var(--c-border)' }"
+          :style="{ background: copiedAll ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedAll ? '#4010b0' : '#e5e7eb', border: '1px solid var(--c-border)' }"
         >
           <i :class="copiedAll ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[12px]"></i>
           {{ copiedAll ? 'Copied!' : 'Copy List' }}
@@ -168,7 +168,7 @@ async function copyList() {
       </div>
 
       <div v-if="list.length === 0" class="text-center py-8 text-sm" style="color:var(--c-muted)">
-        <i class="fa-solid fa-circle-check text-2xl block mb-2" style="color:#65a30d"></i>
+        <i class="fa-solid fa-circle-check text-2xl block mb-2" style="color:#4010b0"></i>
         Nothing in this bucket — clean on this dimension.
       </div>
       <div v-else class="space-y-1.5 max-h-[500px] overflow-y-auto">

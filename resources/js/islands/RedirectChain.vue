@@ -13,7 +13,7 @@ const copiedHop = ref(null);
 function statusColor(s) {
   if (s === -1) return '#f87171';
   if (s === 0) return '#a3a3a3';
-  if (s >= 200 && s < 300) return '#65a30d';
+  if (s >= 200 && s < 300) return '#4010b0';
   if (s >= 300 && s < 400) return '#f59e0b';
   if (s >= 400 && s < 500) return '#f87171';
   if (s >= 500) return '#dc2626';
@@ -62,7 +62,7 @@ function copyHop(hopUrl, idx) {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -74,7 +74,7 @@ function copyHop(hopUrl, idx) {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to trace.</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast &amp; free
         </div>
@@ -131,7 +131,7 @@ function copyHop(hopUrl, idx) {
           type="button"
           @click="copy(data.finalUrl, (v) => (copiedFinal = v))"
           class="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition-colors"
-          :style="{ background: copiedFinal ? '#65a30d22' : 'rgba(255,255,255,0.06)', color: copiedFinal ? '#65a30d' : '#e5e7eb', border: '1px solid var(--c-border)' }"
+          :style="{ background: copiedFinal ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedFinal ? '#4010b0' : '#e5e7eb', border: '1px solid var(--c-border)' }"
         >
           <i :class="copiedFinal ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[12px]"></i>
           {{ copiedFinal ? 'Copied!' : 'Copy Final URL' }}
@@ -153,7 +153,7 @@ function copyHop(hopUrl, idx) {
                   {{ h.status === -1 ? 'LOOP' : h.status === 0 ? 'ERR' : h.status }}
                 </span>
                 <span v-if="h.statusText" class="text-[11px]" style="color:var(--c-muted)">{{ h.statusText }}</span>
-                <span class="text-[10px] inline-flex items-center gap-1 font-semibold px-1.5 py-0.5 rounded" :style="{ background: h.protocol === 'https:' ? '#65a30d22' : '#f8717122', color: h.protocol === 'https:' ? '#65a30d' : '#f87171' }">
+                <span class="text-[10px] inline-flex items-center gap-1 font-semibold px-1.5 py-0.5 rounded" :style="{ background: h.protocol === 'https:' ? '#4010b022' : '#f8717122', color: h.protocol === 'https:' ? '#4010b0' : '#f87171' }">
                   <i :class="h.protocol === 'https:' ? 'fa-solid fa-lock' : 'fa-solid fa-unlock'" class="text-[9px]"></i>
                   {{ h.protocol.replace(':', '').toUpperCase() }}
                 </span>
@@ -167,7 +167,7 @@ function copyHop(hopUrl, idx) {
                   type="button"
                   @click="copyHop(h.url, idx)"
                   class="shrink-0 p-1 rounded transition-colors hover:bg-white/10"
-                  :style="{ color: copiedHop === idx ? '#65a30d' : 'var(--c-muted)' }"
+                  :style="{ color: copiedHop === idx ? '#4010b0' : 'var(--c-muted)' }"
                   aria-label="Copy hop URL"
                   title="Copy hop URL"
                 >
@@ -209,8 +209,8 @@ function copyHop(hopUrl, idx) {
       </div>
     </div>
 
-    <div v-if="data.issues.length === 0" class="glass rounded-2xl p-4 flex items-center gap-3" style="background:rgba(101,163,13,0.06);border:1px solid rgba(101,163,13,0.25)">
-      <i class="fa-solid fa-circle-check text-xl" style="color:#65a30d"></i>
+    <div v-if="data.issues.length === 0" class="glass rounded-2xl p-4 flex items-center gap-3" style="background:rgba(64, 16, 176,0.06);border:1px solid rgba(64, 16, 176,0.25)">
+      <i class="fa-solid fa-circle-check text-xl" style="color:#4010b0"></i>
       <div class="text-sm" style="color:#e5e7eb">
         No issues detected. The redirect chain is clean — no downgrades, loops, or excessive hops.
       </div>

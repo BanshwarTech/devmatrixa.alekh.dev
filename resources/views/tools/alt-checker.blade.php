@@ -15,13 +15,13 @@
         >
             <x-slot:title>Check Missing Image Alt Tags <span class="s-it text-accent">Instantly</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-magnifying-glass" icon-bg="linear-gradient(135deg,#16bdca,#a3e635)" icon-color="#061c21" title="Alt Analysis" subtitle="Image SEO insights">
+                <x-preview-card variant="scope" icon="fa-solid fa-magnifying-glass" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" icon-color="#061c21" title="Alt Analysis" subtitle="Image SEO insights">
                     <div class="space-y-2">
                         @foreach ([
-                            ['alt' => 'Product showcase image', 'status' => 'Optimized', 'ok' => true, 'color' => '#65a30d'],
+                            ['alt' => 'Product showcase image', 'status' => 'Optimized', 'ok' => true, 'color' => '#4010b0'],
                             ['alt' => '', 'status' => 'Missing', 'ok' => false, 'color' => '#f87171'],
                             ['alt' => 'Product', 'status' => 'Generic', 'ok' => false, 'color' => '#f59e0b'],
-                            ['alt' => 'Team collaboration', 'status' => 'Good', 'ok' => true, 'color' => '#65a30d'],
+                            ['alt' => 'Team collaboration', 'status' => 'Good', 'ok' => true, 'color' => '#4010b0'],
                         ] as $p)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
                                 <i class="fa-solid {{ $p['ok'] ? 'fa-circle-check' : 'fa-circle-xmark' }} text-xs" style="color:{{ $p['color'] }}"></i>
@@ -37,15 +37,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#0694a2', 'label' => 'Missing Alt Tags'],
             ['icon' => 'fa-solid fa-circle-exclamation', 'color' => '#16bdca', 'label' => 'Empty Attributes'],
-            ['icon' => 'fa-solid fa-list-check', 'color' => '#a3e635', 'label' => 'Duplicate Alt Text'],
+            ['icon' => 'fa-solid fa-list-check', 'color' => '#0098f0', 'label' => 'Duplicate Alt Text'],
             ['icon' => 'fa-solid fa-wave-square', 'color' => '#7edce2', 'label' => 'Quality Analysis'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#0694a2', 'label' => 'Fast Scanning'],
             ['icon' => 'fa-solid fa-globe', 'color' => '#16bdca', 'label' => 'Website Audit'],
-            ['icon' => 'fa-solid fa-circle-check', 'color' => '#a3e635', 'label' => 'Accessibility'],
+            ['icon' => 'fa-solid fa-circle-check', 'color' => '#0098f0', 'label' => 'Accessibility'],
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#7edce2', 'label' => 'SEO Friendly'],
             ['icon' => 'fa-solid fa-palette', 'color' => '#0694a2', 'label' => 'Image Indexing'],
             ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#16bdca', 'label' => 'Optimization Tips'],
-            ['icon' => 'fa-solid fa-clipboard', 'color' => '#a3e635', 'label' => 'Detailed Report'],
+            ['icon' => 'fa-solid fa-clipboard', 'color' => '#0098f0', 'label' => 'Detailed Report'],
             ['icon' => 'fa-solid fa-arrow-right', 'color' => '#7edce2', 'label' => '100% Free'],
         ]" />
 

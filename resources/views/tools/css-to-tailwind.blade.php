@@ -15,14 +15,14 @@
         >
             <x-slot:title>Convert any CSS to<br><span class="s-it text-accent">Tailwind classes.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-wand-magic-sparkles" icon-bg="linear-gradient(135deg,#16bdca,#a3e635)" title="CSS &rarr; Tailwind" subtitle="Instant mapping">
+                <x-preview-card variant="terminal" icon="fa-solid fa-wand-magic-sparkles" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" title="CSS &rarr; Tailwind" subtitle="Instant mapping">
                     <div class="space-y-2 text-[11px] font-mono">
                         <div class="rounded p-2" style="background:rgba(248,113,113,0.06)">
                             <span style="color:#f87171">padding</span>: <span style="color:var(--c-muted)">16px</span>
                         </div>
-                        <div class="text-center text-base" style="color:#a3e635">&darr;</div>
-                        <div class="rounded p-2" style="background:rgba(163,230,53,0.08)">
-                            <span style="color:#a3e635">p-4</span>
+                        <div class="text-center text-base" style="color:#0098f0">&darr;</div>
+                        <div class="rounded p-2" style="background:rgba(0, 152, 240,0.08)">
+                            <span style="color:#0098f0">p-4</span>
                         </div>
                     </div>
                 </x-preview-card>
@@ -32,15 +32,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#0694a2', 'label' => 'CSS to Tailwind'],
             ['icon' => 'fa-brands fa-css3-alt', 'color' => '#16bdca', 'label' => 'Utility Classes'],
-            ['icon' => 'fa-solid fa-arrows-left-right', 'color' => '#a3e635', 'label' => 'Spacing'],
+            ['icon' => 'fa-solid fa-arrows-left-right', 'color' => '#0098f0', 'label' => 'Spacing'],
             ['icon' => 'fa-solid fa-arrow-up-short-wide', 'color' => '#7edce2', 'label' => 'Padding'],
             ['icon' => 'fa-solid fa-grip', 'color' => '#0694a2', 'label' => 'Flexbox'],
             ['icon' => 'fa-solid fa-table-cells-large', 'color' => '#16bdca', 'label' => 'Grid'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#a3e635', 'label' => 'Typography'],
+            ['icon' => 'fa-solid fa-font', 'color' => '#0098f0', 'label' => 'Typography'],
             ['icon' => 'fa-solid fa-fill-drip', 'color' => '#7edce2', 'label' => 'Backgrounds'],
             ['icon' => 'fa-solid fa-border-all', 'color' => '#0694a2', 'label' => 'Borders'],
             ['icon' => 'fa-solid fa-text-height', 'color' => '#16bdca', 'label' => 'Font Size'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#a3e635', 'label' => 'Z-Index'],
+            ['icon' => 'fa-solid fa-layer-group', 'color' => '#0098f0', 'label' => 'Z-Index'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#7edce2', 'label' => 'Instant Convert'],
         ]" />
 

@@ -19,13 +19,13 @@
         >
             <x-slot:title>Every pixel<br><span class="s-it text-accent">on your page.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-satellite-dish" icon-bg="linear-gradient(135deg,#0694a2,#a3e635)" icon-color="#061c21" title="Detected Trackers" subtitle="By purpose">
+                <x-preview-card variant="scope" icon="fa-solid fa-satellite-dish" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" icon-color="#061c21" title="Detected Trackers" subtitle="By purpose">
                     <div class="space-y-1.5">
                         @foreach ([
                             ['h' => 'google-analytics.com', 't' => 'Analytics', 'c' => '#0694a2'],
                             ['h' => 'connect.facebook.net', 't' => 'Advertising', 'c' => '#f87171'],
                             ['h' => 'static.hotjar.com', 't' => 'Session Replay', 'c' => '#f87171'],
-                            ['h' => 'js.stripe.com', 't' => 'Payment', 'c' => '#65a30d'],
+                            ['h' => 'js.stripe.com', 't' => 'Payment', 'c' => '#4010b0'],
                             ['h' => 'fonts.googleapis.com', 't' => 'Fonts', 'c' => '#7edce2'],
                             ['h' => 'platform.twitter.com', 't' => 'Social', 'c' => '#16bdca'],
                         ] as $r)
@@ -45,12 +45,12 @@
             ['icon' => 'fa-solid fa-share-nodes', 'color' => '#16bdca', 'label' => 'Social'],
             ['icon' => 'fa-solid fa-film', 'color' => '#f87171', 'label' => 'Session Replay'],
             ['icon' => 'fa-solid fa-tag', 'color' => '#f59e0b', 'label' => 'Tag Manager'],
-            ['icon' => 'fa-solid fa-comment-dots', 'color' => '#a3e635', 'label' => 'Chat'],
+            ['icon' => 'fa-solid fa-comment-dots', 'color' => '#0098f0', 'label' => 'Chat'],
             ['icon' => 'fa-solid fa-font', 'color' => '#7edce2', 'label' => 'Fonts'],
             ['icon' => 'fa-solid fa-server', 'color' => '#0694a2', 'label' => 'CDN'],
             ['icon' => 'fa-solid fa-shield-halved', 'color' => '#f87171', 'label' => 'Privacy Grade'],
             ['icon' => 'fa-solid fa-eye', 'color' => '#f59e0b', 'label' => 'GDPR Audit'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#a3e635', 'label' => 'Instant Scan'],
+            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Instant Scan'],
             ['icon' => 'fa-solid fa-globe', 'color' => '#16bdca', 'label' => 'Per-Domain'],
         ]" />
 

@@ -15,13 +15,13 @@ const CAT_META = {
   advertising: { label: 'Advertising', color: '#f87171', icon: 'fa-solid fa-bullhorn' },
   social: { label: 'Social', color: '#16bdca', icon: 'fa-solid fa-share-nodes' },
   'tag-manager': { label: 'Tag Manager', color: '#f59e0b', icon: 'fa-solid fa-tag' },
-  chat: { label: 'Chat / Support', color: '#a3e635', icon: 'fa-solid fa-comment-dots' },
+  chat: { label: 'Chat / Support', color: '#0098f0', icon: 'fa-solid fa-comment-dots' },
   video: { label: 'Video', color: '#f97316', icon: 'fa-solid fa-video' },
   fonts: { label: 'Fonts', color: '#7edce2', icon: 'fa-solid fa-font' },
   cdn: { label: 'CDN', color: '#0694a2', icon: 'fa-solid fa-server' },
   maps: { label: 'Maps', color: '#16bdca', icon: 'fa-solid fa-map' },
-  payment: { label: 'Payment', color: '#65a30d', icon: 'fa-solid fa-credit-card' },
-  captcha: { label: 'Captcha', color: '#a3e635', icon: 'fa-solid fa-shield-halved' },
+  payment: { label: 'Payment', color: '#4010b0', icon: 'fa-solid fa-credit-card' },
+  captcha: { label: 'Captcha', color: '#0098f0', icon: 'fa-solid fa-shield-halved' },
   'error-tracking': { label: 'Error Tracking', color: '#16bdca', icon: 'fa-solid fa-bug' },
   'ab-testing': { label: 'A/B Testing', color: '#0694a2', icon: 'fa-solid fa-flask' },
   'session-replay': { label: 'Session Replay', color: '#f87171', icon: 'fa-solid fa-film' },
@@ -31,7 +31,7 @@ const CAT_META = {
 const PRIVACY_META = {
   high: { label: 'High Impact', color: '#f87171' },
   medium: { label: 'Medium', color: '#f59e0b' },
-  low: { label: 'Low', color: '#65a30d' },
+  low: { label: 'Low', color: '#4010b0' },
   unknown: { label: 'Unknown', color: '#a3a3a3' },
 };
 
@@ -89,7 +89,7 @@ async function copyAll() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -101,7 +101,7 @@ async function copyAll() {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to scan.</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast & free
         </div>
@@ -189,7 +189,7 @@ async function copyAll() {
           @click="copyAll"
           :disabled="visibleDomains.length === 0"
           class="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition-colors disabled:opacity-40"
-          :style="{ background: copiedAll ? '#65a30d22' : 'rgba(255,255,255,0.06)', color: copiedAll ? '#65a30d' : 'var(--c-text)', border: '1px solid var(--c-border)' }"
+          :style="{ background: copiedAll ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedAll ? '#4010b0' : 'var(--c-text)', border: '1px solid var(--c-border)' }"
         >
           <i :class="copiedAll ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[11px]"></i>
           {{ copiedAll ? 'Copied!' : 'Copy Hosts' }}

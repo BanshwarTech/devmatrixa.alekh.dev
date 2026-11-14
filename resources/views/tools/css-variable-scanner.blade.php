@@ -17,7 +17,7 @@
         >
             <x-slot:title>Audit every <span class="s-it text-accent">CSS variable.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-sliders" icon-bg="linear-gradient(135deg,#0694a2,#a3e635)" title="CSS Variables" subtitle="Grouped by type">
+                <x-preview-card variant="terminal" icon="fa-solid fa-sliders" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" title="CSS Variables" subtitle="Grouped by type">
                     <div class="space-y-1.5">
                         @foreach ([
                             ['name' => '--c-bg', 'value' => '#061c21', 'color' => true, 'count' => 42],
@@ -31,7 +31,7 @@
                                 @endif
                                 <span class="font-mono text-[10px] font-semibold truncate" style="color:var(--c-text)">{{ $v['name'] }}</span>
                                 <span class="font-mono text-[10px] ml-auto" style="color:var(--c-muted)">{{ $v['value'] }}</span>
-                                <span class="text-[9px]" style="color:#a3e635">&times;{{ $v['count'] }}</span>
+                                <span class="text-[9px]" style="color:#0098f0">&times;{{ $v['count'] }}</span>
                             </div>
                         @endforeach
                     </div>
@@ -42,15 +42,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-sliders', 'color' => '#0694a2', 'label' => 'Custom Properties'],
             ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => '--color Tokens'],
-            ['icon' => 'fa-solid fa-droplet', 'color' => '#a3e635', 'label' => 'Color Vars'],
+            ['icon' => 'fa-solid fa-droplet', 'color' => '#0098f0', 'label' => 'Color Vars'],
             ['icon' => 'fa-solid fa-ruler', 'color' => '#7edce2', 'label' => 'Size Vars'],
             ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Font Vars'],
             ['icon' => 'fa-solid fa-layer-group', 'color' => '#16bdca', 'label' => 'Design Tokens'],
-            ['icon' => 'fa-solid fa-percent', 'color' => '#a3e635', 'label' => 'Usage Counts'],
+            ['icon' => 'fa-solid fa-percent', 'color' => '#0098f0', 'label' => 'Usage Counts'],
             ['icon' => 'fa-solid fa-bullseye', 'color' => '#7edce2', 'label' => 'Scopes'],
             ['icon' => 'fa-solid fa-file-code', 'color' => '#0694a2', 'label' => 'Inline Styles'],
             ['icon' => 'fa-solid fa-folder-tree', 'color' => '#16bdca', 'label' => 'Linked CSS'],
-            ['icon' => 'fa-solid fa-tags', 'color' => '#a3e635', 'label' => 'Token Names'],
+            ['icon' => 'fa-solid fa-tags', 'color' => '#0098f0', 'label' => 'Token Names'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#7edce2', 'label' => 'Auto Classify'],
         ]" />
 

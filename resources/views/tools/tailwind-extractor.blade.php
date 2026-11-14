@@ -30,15 +30,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-brands fa-css3-alt', 'color' => '#0694a2', 'label' => 'Utility Classes'],
             ['icon' => 'fa-solid fa-ruler', 'color' => '#16bdca', 'label' => 'Spacing'],
-            ['icon' => 'fa-solid fa-palette', 'color' => '#a3e635', 'label' => 'Colors'],
+            ['icon' => 'fa-solid fa-palette', 'color' => '#0098f0', 'label' => 'Colors'],
             ['icon' => 'fa-solid fa-font', 'color' => '#7edce2', 'label' => 'Typography'],
             ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#0694a2', 'label' => 'Breakpoints'],
             ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#16bdca', 'label' => 'Variants'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#a3e635', 'label' => 'Arbitrary Values'],
+            ['icon' => 'fa-solid fa-code', 'color' => '#0098f0', 'label' => 'Arbitrary Values'],
             ['icon' => 'fa-solid fa-table-cells', 'color' => '#7edce2', 'label' => 'Layout'],
             ['icon' => 'fa-solid fa-sparkles', 'color' => '#0694a2', 'label' => 'Effects'],
             ['icon' => 'fa-solid fa-layer-group', 'color' => '#16bdca', 'label' => 'Grouped'],
-            ['icon' => 'fa-solid fa-copy', 'color' => '#a3e635', 'label' => 'One-Click Copy'],
+            ['icon' => 'fa-solid fa-copy', 'color' => '#0098f0', 'label' => 'One-Click Copy'],
             ['icon' => 'fa-solid fa-filter', 'color' => '#7edce2', 'label' => 'Filtered'],
         ]" />
 

@@ -28,9 +28,9 @@
                             ['name' => 'icon-32.png', 'status' => 200, 'ok' => true],
                         ] as $img)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
-                                <i class="{{ $img['ok'] ? 'fa-solid fa-image' : 'fa-solid fa-circle-xmark' }} text-xs" style="color:{{ $img['ok'] ? '#65a30d' : '#f87171' }}"></i>
+                                <i class="{{ $img['ok'] ? 'fa-solid fa-image' : 'fa-solid fa-circle-xmark' }} text-xs" style="color:{{ $img['ok'] ? '#4010b0' : '#f87171' }}"></i>
                                 <span class="font-mono text-[10px] truncate flex-1" style="color:var(--c-muted)">{{ $img['name'] }}</span>
-                                <span class="text-[9px] font-bold px-1.5 py-0.5 rounded" style="background:{{ $img['ok'] ? 'rgba(163,230,53,0.15)' : 'rgba(248,113,113,0.15)' }};color:{{ $img['ok'] ? '#65a30d' : '#f87171' }}">{{ $img['status'] }}</span>
+                                <span class="text-[9px] font-bold px-1.5 py-0.5 rounded" style="background:{{ $img['ok'] ? 'rgba(0, 152, 240,0.15)' : 'rgba(248,113,113,0.15)' }};color:{{ $img['ok'] ? '#4010b0' : '#f87171' }}">{{ $img['status'] }}</span>
                             </div>
                         @endforeach
                     </div>
@@ -41,15 +41,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-circle-xmark', 'color' => '#0694a2', 'label' => '404 Images'],
             ['icon' => 'fa-solid fa-image', 'color' => '#16bdca', 'label' => 'Working Images'],
-            ['icon' => 'fa-solid fa-ban', 'color' => '#a3e635', 'label' => '403 Forbidden'],
+            ['icon' => 'fa-solid fa-ban', 'color' => '#0098f0', 'label' => '403 Forbidden'],
             ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#7edce2', 'label' => 'Broken Sources'],
             ['icon' => 'fa-solid fa-link', 'color' => '#0694a2', 'label' => 'Image URLs'],
             ['icon' => 'fa-solid fa-gauge', 'color' => '#16bdca', 'label' => 'HTTP Status'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#a3e635', 'label' => 'Parallel HEAD'],
+            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Parallel HEAD'],
             ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#7edce2', 'label' => 'Source Scan'],
             ['icon' => 'fa-solid fa-xmark', 'color' => '#0694a2', 'label' => 'Missing Files'],
             ['icon' => 'fa-solid fa-file-image', 'color' => '#16bdca', 'label' => 'img Tags'],
-            ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#a3e635', 'label' => 'Hotlinks'],
+            ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#0098f0', 'label' => 'Hotlinks'],
             ['icon' => 'fa-solid fa-rotate', 'color' => '#7edce2', 'label' => 'Redirects'],
         ]" />
 

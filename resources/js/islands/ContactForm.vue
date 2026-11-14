@@ -120,7 +120,7 @@ function onSubmit() {
       {{ status === 'sending' ? 'Opening mail client...' : 'Send Message' }}
     </button>
 
-    <p v-if="status === 'sent'" class="mt-4 text-center text-xs font-600" style="color:#65a30d">
+    <p v-if="status === 'sent'" class="mt-4 text-center text-xs font-600" style="color:#4010b0">
       Your mail client should have opened. Thanks!
     </p>
     <p v-if="status === 'error'" class="mt-4 text-center text-xs font-600" style="color:#f87171">

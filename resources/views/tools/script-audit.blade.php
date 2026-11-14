@@ -37,15 +37,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-code-branch', 'color' => '#0694a2', 'label' => 'Script Audit'],
             ['icon' => 'fa-solid fa-copy', 'color' => '#16bdca', 'label' => 'Duplicates'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#a3e635', 'label' => 'Multi-Version'],
+            ['icon' => 'fa-solid fa-layer-group', 'color' => '#0098f0', 'label' => 'Multi-Version'],
             ['icon' => 'fa-solid fa-bug', 'color' => '#7edce2', 'label' => 'Site Crawl'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#0694a2', 'label' => 'Async'],
             ['icon' => 'fa-solid fa-pause', 'color' => '#16bdca', 'label' => 'Defer'],
-            ['icon' => 'fa-solid fa-ban', 'color' => '#a3e635', 'label' => 'Render-Blocking'],
+            ['icon' => 'fa-solid fa-ban', 'color' => '#0098f0', 'label' => 'Render-Blocking'],
             ['icon' => 'fa-solid fa-network-wired', 'color' => '#7edce2', 'label' => 'Third-Party'],
             ['icon' => 'fa-solid fa-file-code', 'color' => '#0694a2', 'label' => 'Inline Scripts'],
             ['icon' => 'fa-solid fa-chart-line', 'color' => '#16bdca', 'label' => 'Tracking'],
-            ['icon' => 'fa-solid fa-cloud', 'color' => '#a3e635', 'label' => 'CDN'],
+            ['icon' => 'fa-solid fa-cloud', 'color' => '#0098f0', 'label' => 'CDN'],
             ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#7edce2', 'label' => 'JS Bloat'],
         ]" />
 

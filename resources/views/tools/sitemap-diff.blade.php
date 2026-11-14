@@ -19,11 +19,11 @@
         >
             <x-slot:title>Find every<br><span class="s-it text-accent">orphan page.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-code-compare" icon-bg="linear-gradient(135deg,#0694a2,#a3e635)" icon-color="#061c21" title="Coverage Diff" subtitle="Sitemap vs Crawl">
+                <x-preview-card variant="scope" icon="fa-solid fa-code-compare" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" icon-color="#061c21" title="Coverage Diff" subtitle="Sitemap vs Crawl">
                     <div class="space-y-1.5">
                         @foreach ([
-                            ['p' => '/about', 't' => 'both', 'c' => '#65a30d'],
-                            ['p' => '/products', 't' => 'both', 'c' => '#65a30d'],
+                            ['p' => '/about', 't' => 'both', 'c' => '#4010b0'],
+                            ['p' => '/products', 't' => 'both', 'c' => '#4010b0'],
                             ['p' => '/old-landing', 't' => 'orphan', 'c' => '#f59e0b'],
                             ['p' => '/blog/new-post', 't' => 'missing', 'c' => '#f87171'],
                             ['p' => '/case-study/acme', 't' => 'missing', 'c' => '#f87171'],
@@ -42,13 +42,13 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-map', 'color' => '#0694a2', 'label' => 'sitemap.xml'],
             ['icon' => 'fa-solid fa-network-wired', 'color' => '#16bdca', 'label' => 'Live Crawl'],
-            ['icon' => 'fa-solid fa-code-compare', 'color' => '#a3e635', 'label' => 'Diff'],
+            ['icon' => 'fa-solid fa-code-compare', 'color' => '#0098f0', 'label' => 'Diff'],
             ['icon' => 'fa-solid fa-link-slash', 'color' => '#f59e0b', 'label' => 'Orphan Pages'],
             ['icon' => 'fa-solid fa-file-circle-xmark', 'color' => '#f87171', 'label' => 'Missing Pages'],
-            ['icon' => 'fa-solid fa-circle-check', 'color' => '#65a30d', 'label' => 'Coverage'],
+            ['icon' => 'fa-solid fa-circle-check', 'color' => '#4010b0', 'label' => 'Coverage'],
             ['icon' => 'fa-solid fa-scroll', 'color' => '#16bdca', 'label' => 'robots.txt'],
             ['icon' => 'fa-solid fa-list-tree', 'color' => '#0694a2', 'label' => 'Sitemap Index'],
-            ['icon' => 'fa-solid fa-crosshairs', 'color' => '#a3e635', 'label' => 'Indexability'],
+            ['icon' => 'fa-solid fa-crosshairs', 'color' => '#0098f0', 'label' => 'Indexability'],
             ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#7edce2', 'label' => 'SEO Audit'],
             ['icon' => 'fa-solid fa-bolt', 'color' => '#0694a2', 'label' => 'One Click'],
             ['icon' => 'fa-solid fa-link', 'color' => '#16bdca', 'label' => 'Internal Links'],

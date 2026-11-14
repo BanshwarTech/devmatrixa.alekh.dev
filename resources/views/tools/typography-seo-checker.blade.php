@@ -15,12 +15,12 @@
         >
             <x-slot:title>Typography that<br><span class="s-it text-accent">ranks higher.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-font" icon-bg="linear-gradient(135deg,#a3e635,#0694a2)" icon-color="#061c21" title="Type Scale" subtitle="Per element">
+                <x-preview-card variant="gauge" icon="fa-solid fa-font" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="Type Scale" subtitle="Per element">
                     <div class="space-y-2">
                         @foreach ([
-                            ['tag' => 'H1', 'size' => '48px', 'status' => 'ideal', 'col' => '#65a30d'],
-                            ['tag' => 'H2', 'size' => '32px', 'status' => 'ideal', 'col' => '#65a30d'],
-                            ['tag' => 'H3', 'size' => '20px', 'status' => 'ideal', 'col' => '#65a30d'],
+                            ['tag' => 'H1', 'size' => '48px', 'status' => 'ideal', 'col' => '#4010b0'],
+                            ['tag' => 'H2', 'size' => '32px', 'status' => 'ideal', 'col' => '#4010b0'],
+                            ['tag' => 'H3', 'size' => '20px', 'status' => 'ideal', 'col' => '#4010b0'],
                             ['tag' => 'body', 'size' => '12px', 'status' => 'too small', 'col' => '#f87171'],
                             ['tag' => 'small', 'size' => '10px', 'status' => 'too small', 'col' => '#f87171'],
                         ] as $e)
@@ -38,15 +38,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Font Size'],
             ['icon' => 'fa-solid fa-heading', 'color' => '#16bdca', 'label' => 'Heading Scale'],
-            ['icon' => 'fa-solid fa-paragraph', 'color' => '#a3e635', 'label' => 'Body Copy'],
+            ['icon' => 'fa-solid fa-paragraph', 'color' => '#0098f0', 'label' => 'Body Copy'],
             ['icon' => 'fa-solid fa-arrows-up-down', 'color' => '#7edce2', 'label' => 'Line Height'],
             ['icon' => 'fa-solid fa-book-open', 'color' => '#0694a2', 'label' => 'Readability'],
             ['icon' => 'fa-solid fa-sitemap', 'color' => '#16bdca', 'label' => 'Hierarchy'],
-            ['icon' => 'fa-solid fa-circle-half-stroke', 'color' => '#a3e635', 'label' => 'Contrast'],
+            ['icon' => 'fa-solid fa-circle-half-stroke', 'color' => '#0098f0', 'label' => 'Contrast'],
             ['icon' => 'fa-solid fa-ruler', 'color' => '#7edce2', 'label' => 'px / rem / em'],
             ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#0694a2', 'label' => 'Responsive'],
             ['icon' => 'fa-solid fa-font', 'color' => '#16bdca', 'label' => 'Typography'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#a3e635', 'label' => 'CSS Fixes'],
+            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#0098f0', 'label' => 'CSS Fixes'],
             ['icon' => 'fa-solid fa-universal-access', 'color' => '#7edce2', 'label' => 'Accessibility'],
         ]" />
 

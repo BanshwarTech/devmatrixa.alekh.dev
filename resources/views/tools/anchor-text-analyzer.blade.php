@@ -15,10 +15,10 @@
         >
             <x-slot:title>Audit every<br><span class="s-it text-accent">anchor on the page.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-link" icon-bg="linear-gradient(135deg,#a3e635,#0694a2)" icon-color="#061c21" title="Anchor Audit" subtitle="On-page links">
+                <x-preview-card variant="scope" icon="fa-solid fa-link" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="Anchor Audit" subtitle="On-page links">
                     <div class="space-y-2">
                         @foreach ([
-                            ['type' => 'Keyword', 'count' => 24, 'color' => '#65a30d', 'pct' => 60],
+                            ['type' => 'Keyword', 'count' => 24, 'color' => '#4010b0', 'pct' => 60],
                             ['type' => 'Generic', 'count' => 8, 'color' => '#f97316', 'pct' => 20],
                             ['type' => 'Naked URL', 'count' => 5, 'color' => '#16bdca', 'pct' => 12],
                             ['type' => 'Empty', 'count' => 3, 'color' => '#f87171', 'pct' => 8],
@@ -39,15 +39,15 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-link', 'color' => '#0694a2', 'label' => 'Anchor Text'],
             ['icon' => 'fa-solid fa-arrow-right-arrow-left', 'color' => '#16bdca', 'label' => 'Internal Links'],
-            ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#a3e635', 'label' => 'External Links'],
+            ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#0098f0', 'label' => 'External Links'],
             ['icon' => 'fa-solid fa-link-slash', 'color' => '#7edce2', 'label' => 'NoFollow'],
             ['icon' => 'fa-solid fa-quote-right', 'color' => '#0694a2', 'label' => 'Generic Anchors'],
             ['icon' => 'fa-solid fa-copy', 'color' => '#16bdca', 'label' => 'Duplicates'],
-            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#a3e635', 'label' => 'Keyword Anchors'],
+            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#0098f0', 'label' => 'Keyword Anchors'],
             ['icon' => 'fa-solid fa-image', 'color' => '#7edce2', 'label' => 'Image Anchors'],
             ['icon' => 'fa-solid fa-ban', 'color' => '#0694a2', 'label' => 'Empty Anchors'],
             ['icon' => 'fa-solid fa-globe', 'color' => '#16bdca', 'label' => 'Naked URLs'],
-            ['icon' => 'fa-solid fa-tags', 'color' => '#a3e635', 'label' => 'Rel Attribute'],
+            ['icon' => 'fa-solid fa-tags', 'color' => '#0098f0', 'label' => 'Rel Attribute'],
             ['icon' => 'fa-solid fa-list', 'color' => '#7edce2', 'label' => 'Top Anchors'],
         ]" />
 

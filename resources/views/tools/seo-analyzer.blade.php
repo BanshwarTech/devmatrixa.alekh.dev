@@ -18,17 +18,17 @@
         >
             <x-slot:title>Analyze. Score.<br><span class="s-it text-accent">Rank higher.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-magnifying-glass-chart" icon-bg="linear-gradient(135deg,#a3e635,#0694a2)" icon-color="#061c21" title="SEO Analyzer" subtitle="On-page audit">
+                <x-preview-card variant="gauge" icon="fa-solid fa-magnifying-glass-chart" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="SEO Analyzer" subtitle="On-page audit">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-[11px] uppercase tracking-[0.25em] font-semibold" style="color:#76d0d9">SEO Score</span>
-                        <span class="text-2xl font-700" style="color:#a3e635">84<span class="text-sm opacity-60">/100</span></span>
+                        <span class="text-2xl font-700" style="color:#0098f0">84<span class="text-sm opacity-60">/100</span></span>
                     </div>
                     <div class="h-2 rounded-full overflow-hidden mb-4" style="background:rgba(255,255,255,0.08)">
-                        <div class="h-full rounded-full" style="width:84%;background:linear-gradient(90deg,#0694a2,#16bdca,#a3e635)"></div>
+                        <div class="h-full rounded-full" style="width:84%;background:linear-gradient(90deg,#0694a2,#16bdca,#0098f0)"></div>
                     </div>
                     <div class="grid grid-cols-3 gap-2 text-center">
                         @foreach ([
-                            ['l' => 'Passed', 'v' => 18, 'c' => '#a3e635'],
+                            ['l' => 'Passed', 'v' => 18, 'c' => '#0098f0'],
                             ['l' => 'Warnings', 'v' => 3, 'c' => '#fbbf24'],
                             ['l' => 'Issues', 'v' => 1, 'c' => '#f87171'],
                         ] as $s)
@@ -45,18 +45,18 @@
         <x-tool-ticker :items="[
             ['icon' => 'fa-solid fa-heading', 'color' => '#0694a2', 'label' => 'Title Tag'],
             ['icon' => 'fa-solid fa-align-left', 'color' => '#16bdca', 'label' => 'Meta Description'],
-            ['icon' => 'fa-solid fa-list-ol', 'color' => '#a3e635', 'label' => 'Headings H1-H3'],
+            ['icon' => 'fa-solid fa-list-ol', 'color' => '#0098f0', 'label' => 'Headings H1-H3'],
             ['icon' => 'fa-solid fa-share-nodes', 'color' => '#7edce2', 'label' => 'Open Graph'],
             ['icon' => 'fa-brands fa-x-twitter', 'color' => '#0694a2', 'label' => 'Twitter Cards'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#a3e635', 'label' => 'Schema.org JSON-LD'],
+            ['icon' => 'fa-solid fa-code', 'color' => '#0098f0', 'label' => 'Schema.org JSON-LD'],
             ['icon' => 'fa-solid fa-link', 'color' => '#16bdca', 'label' => 'Canonical URL'],
             ['icon' => 'fa-solid fa-image', 'color' => '#7edce2', 'label' => 'ALT Text Audit'],
             ['icon' => 'fa-solid fa-robot', 'color' => '#0694a2', 'label' => 'Robots Meta'],
-            ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#a3e635', 'label' => 'Viewport'],
+            ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#0098f0', 'label' => 'Viewport'],
             ['icon' => 'fa-solid fa-bookmark', 'color' => '#16bdca', 'label' => 'Favicon'],
             ['icon' => 'fa-solid fa-gauge-high', 'color' => '#7edce2', 'label' => 'Page Weight'],
             ['icon' => 'fa-solid fa-language', 'color' => '#0694a2', 'label' => 'HTML Lang'],
-            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#a3e635', 'label' => 'HTTPS Check'],
+            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#0098f0', 'label' => 'HTTPS Check'],
         ]" />
 
         <x-how-it-works :steps="[

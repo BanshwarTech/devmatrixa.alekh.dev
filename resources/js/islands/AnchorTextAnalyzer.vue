@@ -10,7 +10,7 @@ const error = ref('');
 const filter = ref('all');
 
 const typeBg = {
-  keyword: { bg: 'rgba(101,163,13,0.12)', col: '#65a30d' },
+  keyword: { bg: 'rgba(64, 16, 176,0.12)', col: '#4010b0' },
   generic: { bg: 'rgba(249,115,22,0.12)', col: '#f97316' },
   naked_url: { bg: 'rgba(22,189,202,0.12)', col: '#16bdca' },
   image: { bg: 'rgba(6,148,162,0.12)', col: '#0694a2' },
@@ -54,7 +54,7 @@ async function analyze() {
 
 <template>
   <div class="url-form relative glass rounded-[28px] p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
-    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #a3e635, #16bdca, transparent)"></div>
+    <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, #16bdca, transparent)"></div>
     <div class="url-form-mesh"></div>
 
     <div class="relative z-10">
@@ -66,7 +66,7 @@ async function analyze() {
           </div>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Audit anchor links on any URL</h2>
         </div>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(163,230,53,0.10);border:1px solid rgba(163,230,53,0.28);color:#65a30d">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
           <i class="fa-solid fa-bolt text-xs"></i>
           Fast & free
         </div>
@@ -110,16 +110,16 @@ async function analyze() {
       </div>
 
       <div class="mt-6 pt-5 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-[11px] font-semibold" style="border-top:1px solid var(--c-border);color:var(--c-muted)">
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-bolt text-xs" style="color:#a3e635"></i>Lightning fast</span>
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-bolt text-xs" style="color:#0098f0"></i>Lightning fast</span>
         <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-shield text-xs" style="color:#16bdca"></i>Privacy-first</span>
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-xs" style="color:#a3e635"></i>No signup</span>
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-xs" style="color:#0098f0"></i>No signup</span>
         <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-infinity text-xs" style="color:#16bdca"></i>Unlimited use</span>
         <span class="inline-flex items-center gap-1.5 ml-auto">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background:#65a30d"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2" style="background:#65a30d"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background:#4010b0"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2" style="background:#4010b0"></span>
           </span>
-          <span style="color:#65a30d">Ready</span>
+          <span style="color:#4010b0">Ready</span>
         </span>
       </div>
     </div>
