@@ -30,10 +30,10 @@
 
                         <div class="flex flex-wrap items-center gap-4">
                             <a href="#tools" class="btn-primary px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2.5 font-700">
-                                <i class="fa-solid fa-bolt" style="color:#061c21"></i> Explore All Tools
+                                <i data-lucide="bolt"></i> Explore All Tools
                             </a>
                             <a href="#featured" class="btn-outline px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2.5 font-semibold">
-                                View Featured <i class="fa-solid fa-arrow-right text-xs" style="color:var(--c-muted)"></i>
+                                View Featured <i class="text-xs" data-lucide="arrow-right"></i>
                             </a>
                         </div>
 
@@ -47,10 +47,10 @@
                                 <span class="text-xs"><strong style="color:var(--c-text)">{{ count($tools) }}+</strong> tools live</span>
                             </div>
                             <div class="flex items-center gap-1.5 text-xs">
-                                <i class="fa-solid fa-infinity text-xs" style="color:#0098f0"></i>
+                                <i class="text-xs" style="color:#0098f0" data-lucide="infinity"></i>
                                 <strong style="color:var(--c-text)">100% Free</strong> · No signup
                             </div>
-                            <div class="text-xs flex items-center gap-1.5"><i class="fa-solid fa-lock text-xs" style="color:#16bdca"></i>Privacy-first</div>
+                            <div class="text-xs flex items-center gap-1.5"><i class="text-xs" style="color:#16bdca" data-lucide="lock"></i>Privacy-first</div>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@
                             <div class="absolute top-0 left-8 right-8 h-[2px] rounded-b-full" style="background:linear-gradient(90deg, transparent, #0694a2, #0098f0, transparent)"></div>
                             <div class="flex items-center gap-3 mb-5">
                                 <div class="w-10 h-10 rounded-xl flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#0694a2,#0098f0);box-shadow:0 8px 22px rgba(6,148,162,0.4), inset 0 1px 0 rgba(255,255,255,0.4)">
-                                    <i class="fa-solid fa-code text-xs font-bold relative z-10" style="color:#061c21"></i>
+                                    <i class="text-xs font-bold relative z-10" style="color:#061c21" data-lucide="code"></i>
                                 </div>
                                 <div>
                                     <p class="text-sm font-700" style="color:var(--c-text)">JSON Formatter</p>
@@ -91,7 +91,7 @@
                                     <div class="h-full rounded-full" style="width:88%;background:linear-gradient(90deg,#0694a2,#16bdca,#0098f0)"></div>
                                 </div>
                                 <span class="text-[10px] font-bold inline-flex items-center gap-1" style="color:#0098f0">
-                                    <i class="fa-solid fa-circle-check text-[10px]"></i> Valid
+                                    <i class="text-[10px]" data-lucide="circle-check"></i> Valid
                                 </span>
                             </div>
                         </div>
@@ -99,21 +99,21 @@
                         <div class="hero-card-mini absolute bottom-16 left-2 glass rounded-2xl p-4 animate-drift" style="animation-delay:2s;width:170px">
                             <div class="flex items-center gap-2 mb-2.5">
                                 <div class="w-8 h-8 rounded-lg flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#16bdca,#0098f0);box-shadow:0 6px 14px rgba(22,189,202,0.35)">
-                                    <i class="fa-solid fa-compress text-xs relative z-10" style="color:#061c21"></i>
+                                    <i class="text-xs relative z-10" style="color:#061c21" data-lucide="minimize"></i>
                                 </div>
                                 <p class="text-xs font-700" style="color:var(--c-text)">Compressor</p>
                             </div>
-                            <p class="text-[10px] mb-1" style="color:var(--c-muted)">2.4MB <i class="fa-solid fa-arrow-right text-[8px] mx-0.5"></i> <span style="color:#0098f0;font-weight:700">180KB</span></p>
+                            <p class="text-[10px] mb-1" style="color:var(--c-muted)">2.4MB <i class="text-[8px] mx-0.5" data-lucide="arrow-right"></i> <span style="color:#0098f0;font-weight:700">180KB</span></p>
                             <div class="flex items-center gap-1.5">
                                 <span class="text-[9px] font-bold px-1.5 py-0.5 rounded" style="background:rgba(0, 152, 240,0.15);color:#4010b0">−93%</span>
-                                <i class="fa-solid fa-arrow-trend-down text-[9px]" style="color:#0098f0"></i>
+                                <i class="text-[9px]" style="color:#0098f0" data-lucide="trending-down"></i>
                             </div>
                         </div>
 
                         <div class="hero-card-mini absolute bottom-6 right-2 glass rounded-2xl p-4 animate-drift2" style="animation-delay:1s;width:180px">
                             <div class="flex items-center gap-2 mb-2.5">
                                 <div class="w-8 h-8 rounded-lg flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#0694a2,#16bdca);box-shadow:0 6px 14px rgba(6,148,162,0.35)">
-                                    <i class="fa-solid fa-key text-white text-xs relative z-10"></i>
+                                    <i class="text-white text-xs relative z-10" data-lucide="key"></i>
                                 </div>
                                 <p class="text-xs font-700" style="color:var(--c-text)">Password Gen</p>
                             </div>
@@ -124,7 +124,7 @@
                                 <div class="h-1.5 flex-1 rounded-full" style="background:#0098f0"></div>
                             </div>
                             <p class="text-[10px] font-700 inline-flex items-center gap-1" style="color:#0098f0">
-                                <i class="fa-solid fa-shield-halved text-[9px]"></i> Strong
+                                <i class="text-[9px]" data-lucide="shield-check"></i> Strong
                             </p>
                         </div>
 
@@ -141,15 +141,15 @@
         </section>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-compress', 'color' => '#0694a2', 'label' => 'Image Compressor'],
-            ['icon' => 'fa-solid fa-key', 'color' => '#0098f0', 'label' => 'Password Generator'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => 'JSON Formatter'],
-            ['icon' => 'fa-solid fa-qrcode', 'color' => '#7edce2', 'label' => 'QR Code Generator'],
-            ['icon' => 'fa-solid fa-link', 'color' => '#0694a2', 'label' => 'URL Encoder'],
-            ['icon' => 'fa-solid fa-rotate', 'color' => '#0098f0', 'label' => 'Base64 Converter'],
-            ['icon' => 'fa-solid fa-chart-line', 'color' => '#16bdca', 'label' => 'SEO Analyzer'],
-            ['icon' => 'fa-solid fa-align-left', 'color' => '#7edce2', 'label' => 'Word Counter'],
-            ['icon' => 'fa-solid fa-text-height', 'color' => '#0098f0', 'label' => 'Typography SEO Checker'],
+            ['icon' => 'minimize', 'color' => '#0694a2', 'label' => 'Image Compressor'],
+            ['icon' => 'key', 'color' => '#0098f0', 'label' => 'Password Generator'],
+            ['icon' => 'code', 'color' => '#16bdca', 'label' => 'JSON Formatter'],
+            ['icon' => 'qr-code', 'color' => '#7edce2', 'label' => 'QR Code Generator'],
+            ['icon' => 'link', 'color' => '#0694a2', 'label' => 'URL Encoder'],
+            ['icon' => 'rotate-cw', 'color' => '#0098f0', 'label' => 'Base64 Converter'],
+            ['icon' => 'chart-line', 'color' => '#16bdca', 'label' => 'SEO Analyzer'],
+            ['icon' => 'align-left', 'color' => '#7edce2', 'label' => 'Word Counter'],
+            ['icon' => 'text', 'color' => '#0098f0', 'label' => 'Typography SEO Checker'],
         ]" />
 
         {{-- STATS --}}
@@ -237,7 +237,7 @@
                             <span class="tools-overview-label">Categories</span>
                         </div>
                         <span class="tools-overview-divider" aria-hidden="true"></span>
-                        <span class="tools-overview-note"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> No signup</span>
+                        <span class="tools-overview-note"><i aria-hidden="true" data-lucide="shield-check"></i> No signup</span>
                     </div>
                 </div>
 
@@ -246,9 +246,9 @@
         </section>
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-arrow-pointer', 'title' => 'Choose a Tool', 'desc' => 'Browse tools by category or search instantly to find the utility you need.'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'Run the Process', 'desc' => 'Paste content, upload files, or enter a URL. Most tools work directly in your browser for faster results.'],
-            ['icon' => 'fa-solid fa-rocket', 'title' => 'Copy and Use', 'desc' => 'Get accurate outputs instantly with quick copy and export options ready for your workflow.'],
+            ['icon' => 'pointer', 'title' => 'Choose a Tool', 'desc' => 'Browse tools by category or search instantly to find the utility you need.'],
+            ['icon' => 'wand-sparkles', 'title' => 'Run the Process', 'desc' => 'Paste content, upload files, or enter a URL. Most tools work directly in your browser for faster results.'],
+            ['icon' => 'rocket', 'title' => 'Copy and Use', 'desc' => 'Get accurate outputs instantly with quick copy and export options ready for your workflow.'],
         ]">
             <x-slot:subtitle>Simple workflow. <span class="s-it text-accent">Instant results.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -262,7 +262,7 @@
             <div class="max-w-7xl mx-auto relative">
                 <div class="text-center mb-10">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.30);color:#4010b0">
-                        <i class="fa-solid fa-star text-[9px]"></i> Editor's Picks
+                        <i class="text-[9px]" data-lucide="star"></i> Editor's Picks
                     </div>
                     <h2 class="font-sans text-3xl sm:text-5xl font-700 tracking-tight leading-tight">
                         Trusted by <span class="s-it text-accent">power users</span>
@@ -284,37 +284,36 @@
                     <div class="featured-showcase">
                         <a href="{{ url($spotlight['url']) }}" class="featured-spotlight group" style="--featured-accent:{{ $spotlight['g1'] }};--featured-accent-secondary:{{ $spotlight['g2'] }}">
                             <div class="featured-spotlight-top">
-                                <span class="featured-spotlight-kicker"><i class="fa-solid fa-star" aria-hidden="true"></i> Spotlight tool</span>
+                                <span class="featured-spotlight-kicker"><i aria-hidden="true" data-lucide="star"></i> Spotlight tool</span>
                                 @if (!empty($spotlight['badge']))
                                     <span class="featured-spotlight-badge">{{ $spotlight['badge'] }}</span>
                                 @endif
                             </div>
                             <span class="featured-spotlight-number" aria-hidden="true">01</span>
                             <div class="featured-spotlight-icon">
-                                <i class="{{ $spotlight['icon'] }}" style="color:{{ $spotlightIconColor }}" aria-hidden="true"></i>
+                                <i style="color:{{ $spotlightIconColor }}" aria-hidden="true" data-lucide="{{ $spotlight['icon'] }}"></i>
                             </div>
                             <span class="featured-spotlight-category">{{ ucfirst($spotlight['cat']) }} toolkit</span>
                             <h3 class="featured-spotlight-title">{{ $spotlight['name'] }}</h3>
                             <p class="featured-spotlight-description">{{ $spotlight['desc'] }}</p>
                             <span class="featured-spotlight-action">
-                                Open tool <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                Open tool <i aria-hidden="true" data-lucide="arrow-right"></i>
                             </span>
                         </a>
 
                         <div class="featured-picks" aria-label="More editor's picks">
                             @foreach ($featuredPicks as $t)
                                 @php
-                                    $pickIconColor = ($t['g1'] === '#0098f0' || $t['g2'] === '#0098f0') ? '#061c21' : '#fff';
                                     $num = str_pad($loop->iteration + 1, 2, '0', STR_PAD_LEFT);
                                 @endphp
                                 <a href="{{ url($t['url']) }}" class="featured-pick group" style="--featured-accent:{{ $t['g1'] }};--featured-accent-secondary:{{ $t['g2'] }}">
                                     <span class="featured-pick-number">{{ $num }}</span>
                                     <span class="featured-pick-icon">
-                                        <i class="{{ $t['icon'] }}" style="color:{{ $pickIconColor }}" aria-hidden="true"></i>
+                                        <i aria-hidden="true" data-lucide="{{ $t['icon'] }}"></i>
                                     </span>
                                     <span class="featured-pick-content">
                                         <span class="featured-pick-meta">
-                                            <span>{{ ucfirst($t['cat']) }}</span>
+                                            <span class="featured-pick-category">{{ ucfirst($t['cat']) }}</span>
                                             @if (!empty($t['badge']))
                                                 <span class="featured-pick-badge">{{ $t['badge'] }}</span>
                                             @endif
@@ -322,7 +321,7 @@
                                         <span class="featured-pick-title">{{ $t['name'] }}</span>
                                         <span class="featured-pick-description">{{ $t['desc'] }}</span>
                                     </span>
-                                    <span class="featured-pick-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="featured-pick-arrow"><i aria-hidden="true" data-lucide="arrow-right"></i></span>
                                 </a>
                             @endforeach
                         </div>
@@ -350,7 +349,7 @@
                         Most online utility websites feel outdated, overloaded, and difficult to trust. Devmatrixa is designed differently with a focus on performance, privacy, and usability.
                     </p>
                     <div class="why-proof">
-                        <span class="why-proof-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <span class="why-proof-mark"><i aria-hidden="true" data-lucide="check"></i></span>
                         <span>{{ count($tools) }}+ tools</span>
                         <span class="why-proof-divider" aria-hidden="true"></span>
                         <span>No signup required</span>

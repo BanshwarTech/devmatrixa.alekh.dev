@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 
 const name = ref('');
@@ -116,7 +117,7 @@ function onSubmit() {
       :disabled="status === 'sending'"
       class="btn-primary mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-sm font-700 disabled:opacity-70"
     >
-      <i class="fa-solid fa-paper-plane text-xs" style="color:#061c21"></i>
+      <LucideIcon class="text-xs" style="color:#061c21" name="send"></LucideIcon>
       {{ status === 'sending' ? 'Opening mail client...' : 'Send Message' }}
     </button>
 

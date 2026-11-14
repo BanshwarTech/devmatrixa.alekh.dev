@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref } from 'vue';
 
 const url = ref('');
@@ -9,11 +10,11 @@ const error = ref('');
 const platform = ref('facebook');
 
 const platforms = [
-  { key: 'facebook', label: 'facebook', icon: 'fa-brands fa-facebook' },
-  { key: 'twitter', label: 'twitter', icon: 'fa-brands fa-x-twitter' },
-  { key: 'linkedin', label: 'linkedin', icon: 'fa-brands fa-linkedin' },
-  { key: 'whatsapp', label: 'whatsapp', icon: 'fa-brands fa-whatsapp' },
-  { key: 'google', label: 'google', icon: 'fa-brands fa-google' },
+  { key: 'facebook', label: 'facebook', icon: 'share-2' },
+  { key: 'twitter', label: 'twitter', icon: 'at-sign' },
+  { key: 'linkedin', label: 'linkedin', icon: 'briefcase-business' },
+  { key: 'whatsapp', label: 'whatsapp', icon: 'message-circle' },
+  { key: 'google', label: 'google', icon: 'search' },
 ];
 
 async function analyze() {
@@ -61,14 +62,14 @@ async function analyze() {
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">Fast and free.</p>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast &amp; free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="url"
@@ -89,14 +90,14 @@ async function analyze() {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-share-nodes text-xs"></i>
+            <LucideIcon class="text-xs" name="share-2"></LucideIcon>
             Generate
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -111,7 +112,7 @@ async function analyze() {
         @click="platform = p.key"
         :class="['cpill', 'px-4', 'py-2', 'rounded-full', 'text-xs', 'inline-flex', 'items-center', 'gap-1.5', platform === p.key ? 'active' : '']"
       >
-        <i :class="p.icon"></i>{{ p.label }}
+        <LucideIcon :name="p.icon"></LucideIcon>{{ p.label }}
       </button>
     </div>
 
@@ -129,7 +130,7 @@ async function analyze() {
       <div class="p-3">
         <p class="text-[14px] font-semibold">{{ data.twitter.title }}</p>
         <p class="text-[13px] mt-0.5" style="color:#536471">{{ data.twitter.description }}</p>
-        <p class="text-[12px] mt-1 inline-flex items-center gap-1" style="color:#536471"><i class="fa-solid fa-link text-[11px]"></i>{{ data.domain }}</p>
+        <p class="text-[12px] mt-1 inline-flex items-center gap-1" style="color:#536471"><LucideIcon class="text-[11px]" name="link"></LucideIcon>{{ data.domain }}</p>
       </div>
     </div>
 

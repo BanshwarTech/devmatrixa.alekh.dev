@@ -18,7 +18,7 @@
         >
             <x-slot:title>Find every<br><span class="s-it text-accent">broken image.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-image" icon-bg="linear-gradient(135deg,#f87171,#0694a2)" icon-color="#fff" title="Image Status" subtitle="HTTP check">
+                <x-preview-card variant="scope" icon="image" icon-bg="linear-gradient(135deg,#f87171,#0694a2)" icon-color="#fff" title="Image Status" subtitle="HTTP check">
                     <div class="space-y-2">
                         @foreach ([
                             ['name' => 'hero.webp', 'status' => 200, 'ok' => true],
@@ -28,7 +28,7 @@
                             ['name' => 'icon-32.png', 'status' => 200, 'ok' => true],
                         ] as $img)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
-                                <i class="{{ $img['ok'] ? 'fa-solid fa-image' : 'fa-solid fa-circle-xmark' }} text-xs" style="color:{{ $img['ok'] ? '#4010b0' : '#f87171' }}"></i>
+                                <i class="text-xs" style="color:{{ $img['ok'] ? '#4010b0' : '#f87171' }}" data-lucide="{{ $img['ok'] ? 'image' : 'circle-x' }}"></i>
                                 <span class="font-mono text-[10px] truncate flex-1" style="color:var(--c-muted)">{{ $img['name'] }}</span>
                                 <span class="text-[9px] font-bold px-1.5 py-0.5 rounded" style="background:{{ $img['ok'] ? 'rgba(0, 152, 240,0.15)' : 'rgba(248,113,113,0.15)' }};color:{{ $img['ok'] ? '#4010b0' : '#f87171' }}">{{ $img['status'] }}</span>
                             </div>
@@ -39,24 +39,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-circle-xmark', 'color' => '#0694a2', 'label' => '404 Images'],
-            ['icon' => 'fa-solid fa-image', 'color' => '#16bdca', 'label' => 'Working Images'],
-            ['icon' => 'fa-solid fa-ban', 'color' => '#0098f0', 'label' => '403 Forbidden'],
-            ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#7edce2', 'label' => 'Broken Sources'],
-            ['icon' => 'fa-solid fa-link', 'color' => '#0694a2', 'label' => 'Image URLs'],
-            ['icon' => 'fa-solid fa-gauge', 'color' => '#16bdca', 'label' => 'HTTP Status'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Parallel HEAD'],
-            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#7edce2', 'label' => 'Source Scan'],
-            ['icon' => 'fa-solid fa-xmark', 'color' => '#0694a2', 'label' => 'Missing Files'],
-            ['icon' => 'fa-solid fa-file-image', 'color' => '#16bdca', 'label' => 'img Tags'],
-            ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#0098f0', 'label' => 'Hotlinks'],
-            ['icon' => 'fa-solid fa-rotate', 'color' => '#7edce2', 'label' => 'Redirects'],
+            ['icon' => 'circle-x', 'color' => '#0694a2', 'label' => '404 Images'],
+            ['icon' => 'image', 'color' => '#16bdca', 'label' => 'Working Images'],
+            ['icon' => 'ban', 'color' => '#0098f0', 'label' => '403 Forbidden'],
+            ['icon' => 'triangle-alert', 'color' => '#7edce2', 'label' => 'Broken Sources'],
+            ['icon' => 'link', 'color' => '#0694a2', 'label' => 'Image URLs'],
+            ['icon' => 'gauge', 'color' => '#16bdca', 'label' => 'HTTP Status'],
+            ['icon' => 'bolt', 'color' => '#0098f0', 'label' => 'Parallel HEAD'],
+            ['icon' => 'search', 'color' => '#7edce2', 'label' => 'Source Scan'],
+            ['icon' => 'x', 'color' => '#0694a2', 'label' => 'Missing Files'],
+            ['icon' => 'file-image', 'color' => '#16bdca', 'label' => 'img Tags'],
+            ['icon' => 'arrow-up-right-from-square', 'color' => '#0098f0', 'label' => 'Hotlinks'],
+            ['icon' => 'rotate-cw', 'color' => '#7edce2', 'label' => 'Redirects'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any page URL and the tool extracts up to 50 image sources directly from the HTML,no browser extension or crawl setup needed.'],
-            ['icon' => 'fa-solid fa-image', 'title' => 'HEAD Every Image', 'desc' => 'Each image URL is checked in parallel using HEAD requests, with an automatic fallback to GET for servers that block lightweight HEAD probes.'],
-            ['icon' => 'fa-solid fa-triangle-exclamation', 'title' => 'Status Per Image', 'desc' => 'Every image is returned with its exact HTTP status code,200, 301, 403, 404, or 0 for network failures,so you can filter broken from working in one view.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any page URL and the tool extracts up to 50 image sources directly from the HTML,no browser extension or crawl setup needed.'],
+            ['icon' => 'image', 'title' => 'HEAD Every Image', 'desc' => 'Each image URL is checked in parallel using HEAD requests, with an automatic fallback to GET for servers that block lightweight HEAD probes.'],
+            ['icon' => 'triangle-alert', 'title' => 'Status Per Image', 'desc' => 'Every image is returned with its exact HTTP status code,200, 301, 403, 404, or 0 for network failures,so you can filter broken from working in one view.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">a clean image audit.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -65,12 +65,12 @@
             badge="Why This Tool"
             description="HTTP-level image verification that catches 404s, 403s, and hotlink failures before your users,or search crawlers,ever encounter them."
             :features="[
-                ['icon' => 'fa-solid fa-bolt', 'title' => 'Parallel HEAD Probes', 'desc' => 'All image URLs are checked simultaneously using HEAD requests,meaning the entire page audit completes in seconds rather than waiting on each image in sequence.'],
-                ['icon' => 'fa-solid fa-rotate', 'title' => 'Auto GET Fallback', 'desc' => 'Servers that block HEAD requests are silently retried with a full GET request, so you never receive a false positive caused by server configuration rather than a missing file.'],
-                ['icon' => 'fa-solid fa-gauge', 'title' => 'Exact HTTP Status', 'desc' => 'Every image is annotated with its raw HTTP status code,200 for working, 301 for redirects, 403 for blocked, 404 for missing, and 0 for complete network failures.'],
-                ['icon' => 'fa-solid fa-globe', 'title' => 'Hotlink and CDN Safe', 'desc' => 'Cross-origin CDN images and hotlinked assets from third-party hosts are verified with the same thoroughness as first-party files hosted on your own domain.'],
-                ['icon' => 'fa-solid fa-file-image', 'title' => 'Up to 50 Images', 'desc' => 'The tool audits the first 50 image sources per page,enough to cover any realistic content page, product listing, or marketing landing page in full.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Nothing Stored', 'desc' => 'Image URLs and response data never touch a database. Everything is processed entirely in memory and discarded immediately after the audit completes.'],
+                ['icon' => 'bolt', 'title' => 'Parallel HEAD Probes', 'desc' => 'All image URLs are checked simultaneously using HEAD requests,meaning the entire page audit completes in seconds rather than waiting on each image in sequence.'],
+                ['icon' => 'rotate-cw', 'title' => 'Auto GET Fallback', 'desc' => 'Servers that block HEAD requests are silently retried with a full GET request, so you never receive a false positive caused by server configuration rather than a missing file.'],
+                ['icon' => 'gauge', 'title' => 'Exact HTTP Status', 'desc' => 'Every image is annotated with its raw HTTP status code,200 for working, 301 for redirects, 403 for blocked, 404 for missing, and 0 for complete network failures.'],
+                ['icon' => 'globe', 'title' => 'Hotlink and CDN Safe', 'desc' => 'Cross-origin CDN images and hotlinked assets from third-party hosts are verified with the same thoroughness as first-party files hosted on your own domain.'],
+                ['icon' => 'file-image', 'title' => 'Up to 50 Images', 'desc' => 'The tool audits the first 50 image sources per page,enough to cover any realistic content page, product listing, or marketing landing page in full.'],
+                ['icon' => 'database', 'title' => 'Nothing Stored', 'desc' => 'Image URLs and response data never touch a database. Everything is processed entirely in memory and discarded immediately after the audit completes.'],
             ]"
         >
             <x-slot:title>Catch every <span class="s-it text-accent">broken image.</span></x-slot:title>

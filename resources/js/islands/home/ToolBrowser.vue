@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../../components/LucideIcon.js';
 import { ref, computed, watch } from 'vue';
 import { toolState } from './toolStore';
 
@@ -12,9 +13,9 @@ const shownCount = ref(INITIAL_VISIBLE);
 
 const CATS = [
   { key: 'all', label: 'All Tools' },
-  { key: 'seo', label: 'SEO', icon: 'fa-magnifying-glass-chart', color: '#0098f0' },
-  { key: 'code', label: 'Code', icon: 'fa-code', color: '#0694a2' },
-  { key: 'web', label: 'Web', icon: 'fa-globe', color: '#7edce2' },
+  { key: 'seo', label: 'SEO', icon: 'chart-no-axes-combined', color: '#0098f0' },
+  { key: 'code', label: 'Code', icon: 'code', color: '#0694a2' },
+  { key: 'web', label: 'Web', icon: 'globe', color: '#7edce2' },
 ];
 const CAT_LABEL = { seo: 'SEO', code: 'Code', web: 'Web' };
 
@@ -33,10 +34,6 @@ watch([() => toolState.activeCat, () => toolState.query], () => {
   shownCount.value = INITIAL_VISIBLE;
 });
 
-function iconColor(t) {
-  return t.g1 === '#0098f0' || t.g2 === '#0098f0' ? '#061c21' : '#fff';
-}
-
 function countFor(catKey) {
   return catKey === 'all' ? props.tools.length : props.tools.filter((t) => t.cat === catKey).length;
 }
@@ -51,25 +48,26 @@ function countFor(catKey) {
         @click="toolState.activeCat = c.key"
         :class="['cpill px-5 py-2 rounded-full text-sm', toolState.activeCat === c.key ? 'active' : '']"
       >
-        <i v-if="c.icon" class="fa-solid mr-1.5" :class="c.icon" :style="{ color: toolState.activeCat === c.key ? '#061c21' : c.color }"></i>
+        <LucideIcon v-if="c.icon" class="mr-1.5" :style="{ color: toolState.activeCat === c.key ? '#061c21' : c.color }" :name="c.icon"></LucideIcon>
         {{ c.label }}
         <span class="ml-2 text-[10px] font-bold opacity-70">{{ countFor(c.key) }}</span>
       </button>
     </div>
 
     <div class="tool-search w-full lg:w-auto lg:min-w-[280px] relative">
-      <div class="tool-search-field flex items-center gap-3 rounded-2xl px-4 py-3" style="background:var(--c-surface);border:1px solid var(--c-border)">
-        <i class="fa-solid fa-magnifying-glass text-sm shrink-0" style="color:#0694a2"></i>
+      <div class="tool-search-field site-search-field flex items-center gap-3 rounded-2xl px-4 py-3">
+        <LucideIcon class="site-search-icon text-sm shrink-0" aria-hidden="true" name="search"></LucideIcon>
         <input
           v-model="toolState.query"
           type="text"
           placeholder="Search tools..."
+          aria-label="Search tools"
           autocomplete="off"
           class="w-full bg-transparent text-sm outline-none"
           style="color:var(--c-text);font-weight:500"
         >
-        <button v-if="toolState.query" @click="toolState.query = ''" class="shrink-0 w-7 h-7 rounded-xl flex items-center justify-center text-sm font-bold transition-all" style="color:#0694a2;background:rgba(6,148,162,0.12)">
-          <i class="fa-solid fa-xmark"></i>
+        <button v-if="toolState.query" type="button" @click="toolState.query = ''" aria-label="Clear search" class="site-search-clear shrink-0 w-7 h-7 rounded-xl flex items-center justify-center text-sm font-bold transition-all">
+          <LucideIcon aria-hidden="true" name="x"></LucideIcon>
         </button>
       </div>
     </div>
@@ -87,7 +85,7 @@ function countFor(catKey) {
         <div class="relative flex items-start justify-between z-10">
           <div class="t-icon-wrap">
             <div class="t-icon w-12 h-12 rounded-2xl flex items-center justify-center relative" :style="{ background: `linear-gradient(135deg,${t.g1},${t.g2})`, boxShadow: `0 10px 24px ${t.g1}55, inset 0 1px 0 rgba(255,255,255,0.35)` }">
-              <i :class="t.icon" class="text-[16px] relative z-10" :style="{ color: iconColor(t) }"></i>
+              <LucideIcon class="text-[16px] relative z-10" :name="t.icon"></LucideIcon>
               <span class="t-icon-shine"></span>
             </div>
           </div>
@@ -109,21 +107,24 @@ function countFor(catKey) {
 
         <div class="relative flex items-center justify-between pt-4 mt-4 z-10" style="border-top:1px dashed var(--c-border)">
           <span class="text-[10.5px] flex items-center gap-1.5 font-medium" style="color:var(--c-muted)">
-            <template v-if="t.feat"><i class="fa-solid fa-star text-[9px]" style="color:#0098f0"></i> Featured</template>
-            <template v-else><i class="fa-solid fa-shield-halved text-[9px]" style="color:#16bdca"></i> Free</template>
+            <template v-if="t.feat"><LucideIcon class="text-[9px]" style="color:#0098f0" name="star"></LucideIcon> Featured</template>
+            <template v-else><LucideIcon class="text-[9px]" style="color:#16bdca" name="shield-check"></LucideIcon> Free</template>
           </span>
           <span class="tc-cta text-[11.5px] font-bold inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg" style="color:#0694a2">
             Open
-            <i class="fa-solid fa-arrow-right text-[10px] tc-arrow"></i>
+            <LucideIcon class="text-[10px] tc-arrow" name="arrow-right"></LucideIcon>
           </span>
         </div>
       </a>
     </div>
 
     <div v-if="shownCount < filtered.length" class="flex justify-center mt-8">
-      <button @click="shownCount = Math.min(shownCount + STEP, filtered.length)" class="btn-outline px-7 py-3 rounded-full text-sm font-semibold inline-flex items-center gap-2.5">
-        Load More ({{ filtered.length - shownCount }} left)
-        <i class="fa-solid fa-arrow-down text-xs" style="color:var(--c-muted)"></i>
+      <button @click="shownCount = Math.min(shownCount + STEP, filtered.length)" class="load-more-btn">
+        <span>Load more tools</span>
+        <span class="load-more-count">{{ filtered.length - shownCount }} left</span>
+        <span class="load-more-icon" aria-hidden="true">
+          <LucideIcon name="arrow-down"></LucideIcon>
+        </span>
       </button>
     </div>
   </template>

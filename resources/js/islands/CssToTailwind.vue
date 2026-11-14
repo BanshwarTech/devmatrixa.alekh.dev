@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref } from 'vue';
 import { convertCssToTailwind } from './cssToTailwindLogic.js';
 
@@ -50,7 +51,7 @@ async function copy() {
         placeholder="Paste CSS here..."
       ></textarea>
       <button @click="convert" class="btn-primary w-full mt-4 px-6 py-3 rounded-2xl text-sm font-700 inline-flex items-center justify-center gap-2">
-        <i class="fa-solid fa-wand-magic-sparkles text-xs" style="color:#061c21"></i> Convert
+        <LucideIcon class="text-xs" style="color:#061c21" name="wand-sparkles"></LucideIcon> Convert
       </button>
     </div>
 
@@ -58,13 +59,13 @@ async function copy() {
       <div class="flex items-center justify-between mb-3">
         <p class="text-xs font-bold uppercase tracking-widest" style="color:#0694a2">Tailwind Output</p>
         <button v-if="output" @click="copy" class="btn-outline text-xs px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-          <i :class="copied ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[10px]"></i>{{ copied ? 'Copied!' : 'Copy' }}
+          <LucideIcon class="text-[10px]" :name="copied ? 'check' : 'copy'"></LucideIcon>{{ copied ? 'Copied!' : 'Copy' }}
         </button>
       </div>
       <pre class="p-4 rounded-2xl text-sm font-mono min-h-[340px] whitespace-pre-wrap break-words" style="background:#0a2f36;color:#0098f0">{{ output || '// Click Convert' }}</pre>
       <div v-if="results" class="flex items-center gap-3 mt-3 text-xs">
-        <span class="flex items-center gap-1.5" style="color:#4010b0"><i class="fa-solid fa-check text-xs"></i> {{ matched }} matched</span>
-        <span v-if="unmatched > 0" class="flex items-center gap-1.5" style="color:#f87171"><i class="fa-solid fa-xmark text-xs"></i> {{ unmatched }} unmatched</span>
+        <span class="flex items-center gap-1.5" style="color:#4010b0"><LucideIcon class="text-xs" name="check"></LucideIcon> {{ matched }} matched</span>
+        <span v-if="unmatched > 0" class="flex items-center gap-1.5" style="color:#f87171"><LucideIcon class="text-xs" name="x"></LucideIcon> {{ unmatched }} unmatched</span>
       </div>
     </div>
   </div>

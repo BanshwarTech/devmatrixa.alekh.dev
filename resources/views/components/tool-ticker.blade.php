@@ -8,7 +8,7 @@
         @foreach ($doubled as $i => $t)
             <span class="flex items-center gap-2 shrink-0">
                 <span class="flex items-center gap-2">
-                    <i class="{{ $t['icon'] }} text-sm" style="color:{{ $t['color'] }}"></i>
+                    <i class="text-sm" style="color:{{ $t['color'] }}" data-lucide="{{ $t['icon'] }}"></i>
                     {{ $t['label'] }}
                 </span>
                 @if ($i < count($doubled) - 1)

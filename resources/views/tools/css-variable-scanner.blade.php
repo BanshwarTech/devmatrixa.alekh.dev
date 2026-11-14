@@ -17,7 +17,7 @@
         >
             <x-slot:title>Audit every <span class="s-it text-accent">CSS variable.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-sliders" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" title="CSS Variables" subtitle="Grouped by type">
+                <x-preview-card variant="terminal" icon="sliders-horizontal" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" title="CSS Variables" subtitle="Grouped by type">
                     <div class="space-y-1.5">
                         @foreach ([
                             ['name' => '--c-bg', 'value' => '#061c21', 'color' => true, 'count' => 42],
@@ -40,24 +40,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-sliders', 'color' => '#0694a2', 'label' => 'Custom Properties'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => '--color Tokens'],
-            ['icon' => 'fa-solid fa-droplet', 'color' => '#0098f0', 'label' => 'Color Vars'],
-            ['icon' => 'fa-solid fa-ruler', 'color' => '#7edce2', 'label' => 'Size Vars'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Font Vars'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#16bdca', 'label' => 'Design Tokens'],
-            ['icon' => 'fa-solid fa-percent', 'color' => '#0098f0', 'label' => 'Usage Counts'],
-            ['icon' => 'fa-solid fa-bullseye', 'color' => '#7edce2', 'label' => 'Scopes'],
-            ['icon' => 'fa-solid fa-file-code', 'color' => '#0694a2', 'label' => 'Inline Styles'],
-            ['icon' => 'fa-solid fa-folder-tree', 'color' => '#16bdca', 'label' => 'Linked CSS'],
-            ['icon' => 'fa-solid fa-tags', 'color' => '#0098f0', 'label' => 'Token Names'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#7edce2', 'label' => 'Auto Classify'],
+            ['icon' => 'sliders-horizontal', 'color' => '#0694a2', 'label' => 'Custom Properties'],
+            ['icon' => 'code', 'color' => '#16bdca', 'label' => '--color Tokens'],
+            ['icon' => 'droplet', 'color' => '#0098f0', 'label' => 'Color Vars'],
+            ['icon' => 'ruler', 'color' => '#7edce2', 'label' => 'Size Vars'],
+            ['icon' => 'type', 'color' => '#0694a2', 'label' => 'Font Vars'],
+            ['icon' => 'layers', 'color' => '#16bdca', 'label' => 'Design Tokens'],
+            ['icon' => 'percent', 'color' => '#0098f0', 'label' => 'Usage Counts'],
+            ['icon' => 'target', 'color' => '#7edce2', 'label' => 'Scopes'],
+            ['icon' => 'file-code', 'color' => '#0694a2', 'label' => 'Inline Styles'],
+            ['icon' => 'folder-tree', 'color' => '#16bdca', 'label' => 'Linked CSS'],
+            ['icon' => 'tags', 'color' => '#0098f0', 'label' => 'Token Names'],
+            ['icon' => 'bolt', 'color' => '#7edce2', 'label' => 'Auto Classify'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL,works on Tailwind, shadcn, MUI, custom design systems, or any site that uses CSS custom properties.'],
-            ['icon' => 'fa-solid fa-sliders', 'title' => 'Extract Variables', 'desc' => 'Every --custom-property declared in inline styles, style blocks, and linked CSS files is found and pulled into the results.'],
-            ['icon' => 'fa-solid fa-layer-group', 'title' => 'Grouped by Type', 'desc' => 'Variables are automatically classified as colors, sizes, fonts, or other,each with a usage count so you know what actually matters.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL,works on Tailwind, shadcn, MUI, custom design systems, or any site that uses CSS custom properties.'],
+            ['icon' => 'sliders-horizontal', 'title' => 'Extract Variables', 'desc' => 'Every --custom-property declared in inline styles, style blocks, and linked CSS files is found and pulled into the results.'],
+            ['icon' => 'layers', 'title' => 'Grouped by Type', 'desc' => 'Variables are automatically classified as colors, sizes, fonts, or other,each with a usage count so you know what actually matters.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">design tokens unlocked</span></x-slot:subtitle>
         </x-how-it-works>
@@ -66,12 +66,12 @@
             badge="Why This Tool"
             description="See every CSS variable a site declares,auto-typed, usage-counted, and grouped by purpose,without opening a single DevTools panel."
             :features="[
-                ['icon' => 'fa-solid fa-layer-group', 'title' => 'Auto-Grouped by Type', 'desc' => 'Colors, sizes, fonts, durations, and shadows are automatically sorted into separate buckets, making any design system readable in seconds.'],
-                ['icon' => 'fa-solid fa-percent', 'title' => 'Usage Counts', 'desc' => 'Each variable shows exactly how many times it is referenced elsewhere in the stylesheet,making it easy to spot dead or redundant tokens at a glance.'],
-                ['icon' => 'fa-solid fa-droplet', 'title' => 'Color Swatch Preview', 'desc' => 'Color variables render as an inline swatch right in the results, so you can read the full palette without copying a single value into a picker.'],
-                ['icon' => 'fa-solid fa-folder-tree', 'title' => 'Inline and Linked CSS', 'desc' => 'Scans the page\'s inline styles alongside every linked external stylesheet, giving you a complete token map from all CSS sources in one pass.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'Copy Any Variable', 'desc' => 'Click any row to copy the variable name or its value instantly,ready to paste directly into your code, no reformatting needed.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'No Data Stored', 'desc' => 'Stylesheets are fetched, parsed entirely in memory, and immediately discarded. Nothing is ever logged, cached, or persisted.'],
+                ['icon' => 'layers', 'title' => 'Auto-Grouped by Type', 'desc' => 'Colors, sizes, fonts, durations, and shadows are automatically sorted into separate buckets, making any design system readable in seconds.'],
+                ['icon' => 'percent', 'title' => 'Usage Counts', 'desc' => 'Each variable shows exactly how many times it is referenced elsewhere in the stylesheet,making it easy to spot dead or redundant tokens at a glance.'],
+                ['icon' => 'droplet', 'title' => 'Color Swatch Preview', 'desc' => 'Color variables render as an inline swatch right in the results, so you can read the full palette without copying a single value into a picker.'],
+                ['icon' => 'folder-tree', 'title' => 'Inline and Linked CSS', 'desc' => 'Scans the page\'s inline styles alongside every linked external stylesheet, giving you a complete token map from all CSS sources in one pass.'],
+                ['icon' => 'copy', 'title' => 'Copy Any Variable', 'desc' => 'Click any row to copy the variable name or its value instantly,ready to paste directly into your code, no reformatting needed.'],
+                ['icon' => 'database', 'title' => 'No Data Stored', 'desc' => 'Stylesheets are fetched, parsed entirely in memory, and immediately discarded. Nothing is ever logged, cached, or persisted.'],
             ]"
         >
             <x-slot:title>Design tokens, <span class="s-it text-accent">decoded.</span></x-slot:title>

@@ -17,7 +17,7 @@
         >
             <x-slot:title>Steal the <span class="s-it text-accent">color palette.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card icon="fa-solid fa-palette" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" title="Site Palette" subtitle="6 dominant colors">
+                <x-preview-card icon="palette" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" title="Site Palette" subtitle="6 dominant colors">
                     <div class="grid grid-cols-3 gap-2">
                         @foreach ([
                             ['hex' => '#0694a2', 'count' => 84],
@@ -41,24 +41,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-palette', 'color' => '#0694a2', 'label' => 'Color Palette'],
-            ['icon' => 'fa-solid fa-hashtag', 'color' => '#16bdca', 'label' => 'Hex Codes'],
-            ['icon' => 'fa-solid fa-droplet', 'color' => '#0098f0', 'label' => 'RGB Values'],
-            ['icon' => 'fa-solid fa-eye-dropper', 'color' => '#7edce2', 'label' => 'HSL'],
-            ['icon' => 'fa-solid fa-fill-drip', 'color' => '#0694a2', 'label' => 'Color Tokens'],
-            ['icon' => 'fa-solid fa-copy', 'color' => '#16bdca', 'label' => 'Click to Copy'],
-            ['icon' => 'fa-solid fa-trophy', 'color' => '#0098f0', 'label' => 'Frequency'],
-            ['icon' => 'fa-solid fa-paintbrush', 'color' => '#7edce2', 'label' => 'Inline Styles'],
-            ['icon' => 'fa-solid fa-file-code', 'color' => '#0694a2', 'label' => 'CSS Files'],
-            ['icon' => 'fa-solid fa-palette', 'color' => '#16bdca', 'label' => 'Swatches'],
-            ['icon' => 'fa-solid fa-circle-half-stroke', 'color' => '#0098f0', 'label' => 'RGBA'],
-            ['icon' => 'fa-solid fa-paintbrush', 'color' => '#7edce2', 'label' => 'Brand Colors'],
+            ['icon' => 'palette', 'color' => '#0694a2', 'label' => 'Color Palette'],
+            ['icon' => 'hash', 'color' => '#16bdca', 'label' => 'Hex Codes'],
+            ['icon' => 'droplet', 'color' => '#0098f0', 'label' => 'RGB Values'],
+            ['icon' => 'pipette', 'color' => '#7edce2', 'label' => 'HSL'],
+            ['icon' => 'paint-bucket', 'color' => '#0694a2', 'label' => 'Color Tokens'],
+            ['icon' => 'copy', 'color' => '#16bdca', 'label' => 'Click to Copy'],
+            ['icon' => 'trophy', 'color' => '#0098f0', 'label' => 'Frequency'],
+            ['icon' => 'paintbrush', 'color' => '#7edce2', 'label' => 'Inline Styles'],
+            ['icon' => 'file-code', 'color' => '#0694a2', 'label' => 'CSS Files'],
+            ['icon' => 'palette', 'color' => '#16bdca', 'label' => 'Swatches'],
+            ['icon' => 'contrast', 'color' => '#0098f0', 'label' => 'RGBA'],
+            ['icon' => 'paintbrush', 'color' => '#7edce2', 'label' => 'Brand Colors'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL,the tool fetches the page, its inline styles, and every linked CSS file automatically.'],
-            ['icon' => 'fa-solid fa-eye-dropper', 'title' => 'Scan All Colors', 'desc' => 'Hex, rgb, rgba, hsl, and hsla color values are all detected across every source and normalized into clean hex codes.'],
-            ['icon' => 'fa-solid fa-palette', 'title' => 'Click to Copy', 'desc' => 'A visual palette is generated with usage counts, sorted by frequency. Click any color swatch to instantly copy its hex code.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL,the tool fetches the page, its inline styles, and every linked CSS file automatically.'],
+            ['icon' => 'pipette', 'title' => 'Scan All Colors', 'desc' => 'Hex, rgb, rgba, hsl, and hsla color values are all detected across every source and normalized into clean hex codes.'],
+            ['icon' => 'palette', 'title' => 'Click to Copy', 'desc' => 'A visual palette is generated with usage counts, sorted by frequency. Click any color swatch to instantly copy its hex code.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">the perfect palette</span></x-slot:subtitle>
         </x-how-it-works>
@@ -67,12 +67,12 @@
             badge="Why This Tool"
             description="Every color, every source, frequency-ranked and copy-ready,your brand research tab can finally close."
             :features="[
-                ['icon' => 'fa-solid fa-trophy', 'title' => 'Frequency-Ranked', 'desc' => 'Colors are ordered by how often they actually appear on the page, so dominant brand colors surface at the top where they belong.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'One-Click Copy', 'desc' => 'Tap any color swatch to copy its hex code instantly,no tooltip hunting, no right-click menus, no extra steps.'],
-                ['icon' => 'fa-solid fa-file-code', 'title' => 'Inline and Linked CSS', 'desc' => 'Scans inline style attributes, style blocks, and every linked external stylesheet,so nothing is missed regardless of how the colors are declared.'],
-                ['icon' => 'fa-solid fa-droplet', 'title' => 'Hex and RGB Output', 'desc' => 'Every color is normalized to a clean 6-digit hex code plus an RGB triple,ready to drop into any design tool or codebase.'],
-                ['icon' => 'fa-solid fa-globe', 'title' => 'Works on Any Site', 'desc' => 'Marketing pages, dashboards, blogs, ecommerce stores,if it ships HTML and CSS, the colors are extracted.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Nothing Stored', 'desc' => 'URLs and stylesheets are fetched, parsed, and immediately discarded. No data is ever logged or persisted.'],
+                ['icon' => 'trophy', 'title' => 'Frequency-Ranked', 'desc' => 'Colors are ordered by how often they actually appear on the page, so dominant brand colors surface at the top where they belong.'],
+                ['icon' => 'copy', 'title' => 'One-Click Copy', 'desc' => 'Tap any color swatch to copy its hex code instantly,no tooltip hunting, no right-click menus, no extra steps.'],
+                ['icon' => 'file-code', 'title' => 'Inline and Linked CSS', 'desc' => 'Scans inline style attributes, style blocks, and every linked external stylesheet,so nothing is missed regardless of how the colors are declared.'],
+                ['icon' => 'droplet', 'title' => 'Hex and RGB Output', 'desc' => 'Every color is normalized to a clean 6-digit hex code plus an RGB triple,ready to drop into any design tool or codebase.'],
+                ['icon' => 'globe', 'title' => 'Works on Any Site', 'desc' => 'Marketing pages, dashboards, blogs, ecommerce stores,if it ships HTML and CSS, the colors are extracted.'],
+                ['icon' => 'database', 'title' => 'Nothing Stored', 'desc' => 'URLs and stylesheets are fetched, parsed, and immediately discarded. No data is ever logged or persisted.'],
             ]"
         >
             <x-slot:title>Steal palettes the <span class="s-it text-accent">smart way.</span></x-slot:title>

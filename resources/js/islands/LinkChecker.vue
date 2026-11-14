@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -129,14 +130,14 @@ async function checkAll(urls) {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to crawl.</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast &amp; free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="text"
@@ -157,14 +158,14 @@ async function checkAll(urls) {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-bug text-xs"></i>
+            <LucideIcon class="text-xs" name="bug"></LucideIcon>
             Crawl
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -186,7 +187,7 @@ async function checkAll(urls) {
       <div class="flex items-center justify-between gap-3 px-3 py-2.5 mb-2 sticky top-0 z-10 rounded-xl backdrop-blur-md" style="background:rgba(10, 20, 24, 0.75);border:1px solid var(--c-border);box-shadow:0 4px 16px rgba(0,0,0,0.25)">
         <div class="flex items-center gap-2.5">
           <span class="flex items-center justify-center w-7 h-7 rounded-lg shrink-0" style="background:linear-gradient(135deg,#0694a2,#0098f0)">
-            <i class="fa-solid fa-list text-xs" style="color:#0b1316"></i>
+            <LucideIcon class="text-xs" style="color:#0b1316" name="list"></LucideIcon>
           </span>
           <div class="flex flex-col leading-tight">
             <span class="text-sm font-bold" style="color:#e5e7eb">
@@ -208,7 +209,7 @@ async function checkAll(urls) {
             boxShadow: copiedAll ? '0 0 0 1px #0078e055, 0 2px 8px #4010b033' : '0 0 0 1px #16bdca55, 0 2px 8px #0694a233',
           }"
         >
-          <i :class="copiedAll ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[11px]"></i>
+          <LucideIcon class="text-[11px]" :name="copiedAll ? 'check' : 'copy'"></LucideIcon>
           {{ copiedAll ? 'Copied!' : 'Copy All' }}
         </button>
       </div>
@@ -222,7 +223,7 @@ async function checkAll(urls) {
           aria-label="Copy URL"
           title="Copy URL"
         >
-          <i :class="copiedIdx === i ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[13px]"></i>
+          <LucideIcon class="text-[13px]" :name="copiedIdx === i ? 'check' : 'copy'"></LucideIcon>
         </button>
         <span class="text-[10px] font-bold px-2 py-0.5 rounded shrink-0" :style="{ background: `${statusColor(u.status)}20`, color: statusColor(u.status) }">{{ u.status === null ? '...' : u.status === 0 ? 'ERR' : u.status }}</span>
       </div>

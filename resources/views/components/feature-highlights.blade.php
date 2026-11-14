@@ -1,37 +1,35 @@
 @props(['badge' => 'Why this tool', 'description' => null, 'features'])
 @php
-    $gradients = [['#0694a2', '#16bdca'], ['#16bdca', '#0098f0'], ['#0098f0', '#0694a2'], ['#7edce2', '#0694a2'], ['#0694a2', '#7edce2'], ['#0098f0', '#16bdca']];
+    $gradients = [['#6818E8', '#0078E0'], ['#4010B0', '#6818E8'], ['#0078E0', '#0098F0'], ['#6818E8', '#4010B0'], ['#0078E0', '#6818E8'], ['#0098F0', '#4010B0']];
 @endphp
 
-<section class="py-12 px-5 sm:px-8 relative">
-    <div class="max-w-7xl mx-auto relative">
-        <div class="text-center mb-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4" style="background:rgba(6,148,162,0.08);border:1px solid rgba(6,148,162,0.20);color:#0694a2">
-                <i class="fa-solid fa-sparkles text-[11px]"></i> {{ $badge }}
+<section class="tool-features-section relative px-5 py-16 sm:px-8">
+    <div class="mx-auto max-w-7xl relative">
+        <div class="tool-features-heading mb-10 text-center">
+            <div class="tool-features-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-widest">
+                <i class="text-[11px]" aria-hidden="true" data-lucide="sparkles"></i> {{ $badge }}
             </div>
-            <h2 class="font-sans text-3xl sm:text-4xl font-700 tracking-tight leading-tight">{!! $title !!}</h2>
+            <h2 class="mt-4 font-sans text-3xl sm:text-4xl font-700 tracking-tight leading-tight">{!! $title !!}</h2>
             @if ($description)
-                <p class="text-sm sm:text-base mt-3 max-w-xl mx-auto" style="color:var(--c-muted)">{{ $description }}</p>
+                <p class="text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-relaxed" style="color:var(--c-muted)">{{ $description }}</p>
             @endif
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="tool-features-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             @foreach ($features as $i => $f)
                 @php
                     $g1 = $f['g1'] ?? $gradients[$i % 6][0];
                     $g2 = $f['g2'] ?? $gradients[$i % 6][1];
-                    $iconColor = $g2 === '#0098f0' ? '#061c21' : '#fff';
                 @endphp
-                <div class="feat-card glass rounded-3xl p-6 relative overflow-hidden isolate">
-                    <div class="feat-mesh" style="background:radial-gradient(circle at 20% 0%, {{ $g1 }}22, transparent 55%), radial-gradient(circle at 100% 100%, {{ $g2 }}1f, transparent 50%)"></div>
-                    <div class="relative">
-                        <div class="feature-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4 relative overflow-hidden" style="background:linear-gradient(135deg,{{ $g1 }},{{ $g2 }});box-shadow:0 10px 24px {{ $g1 }}40, inset 0 1px 0 rgba(255,255,255,0.4)">
-                            <i class="{{ $f['icon'] }} relative z-10" style="color:{{ $iconColor }}"></i>
-                            <span class="absolute inset-0" style="background:linear-gradient(135deg, rgba(255,255,255,0.35), transparent 55%)"></span>
+                <div class="tool-feature-card" style="--feature-accent:{{ $g1 }};--feature-accent-secondary:{{ $g2 }}">
+                    <div class="tool-feature-top">
+                        <div class="tool-feature-icon">
+                            <i aria-hidden="true" data-lucide="{{ $f['icon'] }}"></i>
                         </div>
-                        <h3 class="font-sans text-lg font-700 tracking-tight mb-2">{{ $f['title'] }}</h3>
-                        <p class="text-[13px] leading-relaxed" style="color:var(--c-muted)">{{ $f['desc'] }}</p>
+                        <span class="tool-feature-index" aria-hidden="true">{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
                     </div>
+                    <h3 class="tool-feature-title">{{ $f['title'] }}</h3>
+                    <p class="tool-feature-description">{{ $f['desc'] }}</p>
                 </div>
             @endforeach
         </div>

@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -11,10 +12,10 @@ const copiedKey = ref(null);
 const filter = ref('all');
 
 const statusMeta = {
-  good: { color: '#4010b0', bg: '#4010b022', label: 'GOOD', icon: 'fa-solid fa-circle-check' },
-  weak: { color: '#f59e0b', bg: '#f59e0b22', label: 'WEAK', icon: 'fa-solid fa-triangle-exclamation' },
-  missing: { color: '#f87171', bg: '#f8717122', label: 'MISSING', icon: 'fa-solid fa-circle-xmark' },
-  leak: { color: '#f97316', bg: '#f9731622', label: 'LEAK', icon: 'fa-solid fa-file-circle-exclamation' },
+  good: { color: '#4010b0', bg: '#4010b022', label: 'GOOD', icon: 'circle-check' },
+  weak: { color: '#f59e0b', bg: '#f59e0b22', label: 'WEAK', icon: 'triangle-alert' },
+  missing: { color: '#f87171', bg: '#f8717122', label: 'MISSING', icon: 'circle-x' },
+  leak: { color: '#f97316', bg: '#f9731622', label: 'LEAK', icon: 'file-warning' },
 };
 
 const visible = computed(() => {
@@ -68,14 +69,14 @@ async function copyFix(key, fix) {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to audit.</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast &amp; free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="text"
@@ -96,14 +97,14 @@ async function copyFix(key, fix) {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-shield-halved text-xs"></i>
+            <LucideIcon class="text-xs" name="shield-check"></LucideIcon>
             Audit
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -136,14 +137,14 @@ async function copyFix(key, fix) {
       <div v-for="c in visible" :key="c.key" class="glass rounded-2xl p-4 sm:p-5" :style="{ borderLeft: `3px solid ${statusMeta[c.status].color}` }">
         <div class="flex flex-wrap items-start gap-3">
           <div class="flex items-center justify-center w-9 h-9 rounded-xl shrink-0" :style="{ background: statusMeta[c.status].bg, color: statusMeta[c.status].color }">
-            <i :class="statusMeta[c.status].icon"></i>
+            <LucideIcon :name="statusMeta[c.status].icon"></LucideIcon>
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex flex-wrap items-center gap-2 mb-1">
               <span class="font-mono text-[13px] font-700 break-all" style="color:#e5e7eb">{{ c.label }}</span>
               <span class="text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0" :style="{ background: statusMeta[c.status].bg, color: statusMeta[c.status].color }">{{ statusMeta[c.status].label }}</span>
               <a :href="c.docs" target="_blank" rel="noopener noreferrer" class="text-[10px] inline-flex items-center gap-1 ml-auto" style="color:var(--c-muted)" title="MDN docs">
-                docs <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                docs <LucideIcon class="text-[9px]" name="arrow-up-right-from-square"></LucideIcon>
               </a>
             </div>
             <div v-if="c.value" class="font-mono text-[11px] rounded-lg px-2.5 py-1.5 mb-2 break-all" style="background:rgba(255,255,255,0.04);color:var(--c-muted)">
@@ -159,7 +160,7 @@ async function copyFix(key, fix) {
                   class="flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded"
                   :style="{ background: copiedKey === c.key ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedKey === c.key ? '#4010b0' : 'var(--c-muted)' }"
                 >
-                  <i :class="copiedKey === c.key ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[10px]"></i>
+                  <LucideIcon class="text-[10px]" :name="copiedKey === c.key ? 'check' : 'copy'"></LucideIcon>
                   {{ copiedKey === c.key ? 'Copied' : 'Copy' }}
                 </button>
               </div>

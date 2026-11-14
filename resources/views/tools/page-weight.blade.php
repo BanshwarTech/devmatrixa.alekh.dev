@@ -18,7 +18,7 @@
         >
             <x-slot:title>Where every<br><span class="s-it text-accent">byte goes.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-scale-balanced" icon-bg="linear-gradient(135deg,#0098f0,#f59e0b)" icon-color="#061c21" title="Page Weight" subtitle="2.4 MB total">
+                <x-preview-card variant="gauge" icon="scale" icon-bg="linear-gradient(135deg,#0098f0,#f59e0b)" icon-color="#061c21" title="Page Weight" subtitle="2.4 MB total">
                     <div class="space-y-2">
                         @foreach ([
                             ['type' => 'Images', 'size' => '1.2 MB', 'pct' => 50, 'color' => '#0098f0'],
@@ -43,24 +43,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-scale-balanced', 'color' => '#0694a2', 'label' => 'Total Weight'],
-            ['icon' => 'fa-solid fa-file-code', 'color' => '#16bdca', 'label' => 'HTML Size'],
-            ['icon' => 'fa-brands fa-css3-alt', 'color' => '#0098f0', 'label' => 'CSS Size'],
-            ['icon' => 'fa-brands fa-js', 'color' => '#7edce2', 'label' => 'JS Size'],
-            ['icon' => 'fa-solid fa-image', 'color' => '#0694a2', 'label' => 'Image Bytes'],
-            ['icon' => 'fa-solid fa-film', 'color' => '#16bdca', 'label' => 'Media Files'],
-            ['icon' => 'fa-solid fa-list-ol', 'color' => '#0098f0', 'label' => 'Total Requests'],
-            ['icon' => 'fa-solid fa-chart-pie', 'color' => '#7edce2', 'label' => 'Type Breakdown'],
-            ['icon' => 'fa-solid fa-file-zipper', 'color' => '#0694a2', 'label' => 'Compression'],
-            ['icon' => 'fa-solid fa-gauge-high', 'color' => '#16bdca', 'label' => 'Largest Assets'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Parallel Probes'],
-            ['icon' => 'fa-solid fa-ruler', 'color' => '#7edce2', 'label' => 'Content-Length'],
+            ['icon' => 'scale', 'color' => '#0694a2', 'label' => 'Total Weight'],
+            ['icon' => 'file-code', 'color' => '#16bdca', 'label' => 'HTML Size'],
+            ['icon' => 'code-xml', 'color' => '#0098f0', 'label' => 'CSS Size'],
+            ['icon' => 'file-code-2', 'color' => '#7edce2', 'label' => 'JS Size'],
+            ['icon' => 'image', 'color' => '#0694a2', 'label' => 'Image Bytes'],
+            ['icon' => 'film', 'color' => '#16bdca', 'label' => 'Media Files'],
+            ['icon' => 'list-ordered', 'color' => '#0098f0', 'label' => 'Total Requests'],
+            ['icon' => 'chart-pie', 'color' => '#7edce2', 'label' => 'Type Breakdown'],
+            ['icon' => 'file-archive', 'color' => '#0694a2', 'label' => 'Compression'],
+            ['icon' => 'circle-gauge', 'color' => '#16bdca', 'label' => 'Largest Assets'],
+            ['icon' => 'bolt', 'color' => '#0098f0', 'label' => 'Parallel Probes'],
+            ['icon' => 'ruler', 'color' => '#7edce2', 'label' => 'Content-Length'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL and the tool fetches the full HTML, then discovers every linked JS, CSS, image, and media file referenced on the page.'],
-            ['icon' => 'fa-solid fa-scale-balanced', 'title' => 'Measure Everything', 'desc' => 'Each discovered resource is HEAD-requested in parallel to retrieve its real Content-Length — no estimates, no heuristics, just actual transferred sizes.'],
-            ['icon' => 'fa-solid fa-chart-pie', 'title' => 'Type Breakdown', 'desc' => 'Bytes are grouped and ranked by asset type — HTML, JS, CSS, images, and media — with the largest individual files surfaced for immediate action.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL and the tool fetches the full HTML, then discovers every linked JS, CSS, image, and media file referenced on the page.'],
+            ['icon' => 'scale', 'title' => 'Measure Everything', 'desc' => 'Each discovered resource is HEAD-requested in parallel to retrieve its real Content-Length — no estimates, no heuristics, just actual transferred sizes.'],
+            ['icon' => 'chart-pie', 'title' => 'Type Breakdown', 'desc' => 'Bytes are grouped and ranked by asset type — HTML, JS, CSS, images, and media — with the largest individual files surfaced for immediate action.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">a leaner page.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -69,12 +69,12 @@
             badge="Why This Tool"
             description="Page weight broken down by asset type so you know which specific file — not just which folder — is costing your users load time."
             :features="[
-                ['icon' => 'fa-solid fa-chart-pie', 'title' => 'Type-Level Breakdown', 'desc' => 'HTML, JS, CSS, image, and media bytes are independently summed and ranked by size, so you can target the heaviest category first without guessing.'],
-                ['icon' => 'fa-solid fa-list-ol', 'title' => 'Largest Asset List', 'desc' => 'Every resource is listed individually with its exact size — making it easy to surface the single oversized hero image or unminified JS bundle that is dragging the rest of the page down.'],
-                ['icon' => 'fa-solid fa-ruler', 'title' => 'Real Content-Length', 'desc' => 'Sizes are pulled directly from actual HTTP response headers — not estimated from file extensions — so the totals reflect what your CDN bills and what browsers actually download.'],
-                ['icon' => 'fa-solid fa-bolt', 'title' => 'Parallel Probing', 'desc' => 'Every asset is HEAD-checked simultaneously, meaning even pages with over 200 individual requests are fully measured in a matter of seconds.'],
-                ['icon' => 'fa-solid fa-file-zipper', 'title' => 'Pre-Compression Aware', 'desc' => 'Transferred sizes are reported, so brotli and gzip savings are already reflected in the totals — giving you the real-world figure your users experience.'],
-                ['icon' => 'fa-solid fa-gauge-high', 'title' => 'Perf-Budget Friendly', 'desc' => 'Run the tool against a target weight threshold — 2 MB for content pages, 1 MB for landing pages, 500 KB for critical paths — and instantly see where your page stands.'],
+                ['icon' => 'chart-pie', 'title' => 'Type-Level Breakdown', 'desc' => 'HTML, JS, CSS, image, and media bytes are independently summed and ranked by size, so you can target the heaviest category first without guessing.'],
+                ['icon' => 'list-ordered', 'title' => 'Largest Asset List', 'desc' => 'Every resource is listed individually with its exact size — making it easy to surface the single oversized hero image or unminified JS bundle that is dragging the rest of the page down.'],
+                ['icon' => 'ruler', 'title' => 'Real Content-Length', 'desc' => 'Sizes are pulled directly from actual HTTP response headers — not estimated from file extensions — so the totals reflect what your CDN bills and what browsers actually download.'],
+                ['icon' => 'bolt', 'title' => 'Parallel Probing', 'desc' => 'Every asset is HEAD-checked simultaneously, meaning even pages with over 200 individual requests are fully measured in a matter of seconds.'],
+                ['icon' => 'file-archive', 'title' => 'Pre-Compression Aware', 'desc' => 'Transferred sizes are reported, so brotli and gzip savings are already reflected in the totals — giving you the real-world figure your users experience.'],
+                ['icon' => 'circle-gauge', 'title' => 'Perf-Budget Friendly', 'desc' => 'Run the tool against a target weight threshold — 2 MB for content pages, 1 MB for landing pages, 500 KB for critical paths — and instantly see where your page stands.'],
             ]"
         >
             <x-slot:title>Know exactly where the <span class="s-it text-accent">bytes go.</span></x-slot:title>

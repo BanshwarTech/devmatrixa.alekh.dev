@@ -31,7 +31,7 @@
                                 <span class="absolute inset-[-6px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="border:1px solid {{ $g1 }}55;animation:ping 2.4s cubic-bezier(0,0,0.2,1) infinite"></span>
                             </div>
                             <div class="workflow-icon absolute -bottom-1 -right-2 w-10 h-10 rounded-xl flex items-center justify-center transition-transform duration-500 group-hover:rotate-6" style="background:linear-gradient(135deg,{{ $g1 }},{{ $g2 }});box-shadow:0 10px 24px {{ $g1 }}55, inset 0 1px 0 rgba(255,255,255,0.4)">
-                                <i class="{{ $s['icon'] }} text-sm" style="color:{{ $iconColor }}"></i>
+                                <i class="text-sm" style="color:{{ $iconColor }}" data-lucide="{{ $s['icon'] }}"></i>
                             </div>
                         </div>
 
@@ -55,7 +55,7 @@
                         <div class="relative flex items-center gap-3">
                             <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg, {{ $c1 }}, {{ $c2 }});box-shadow:0 6px 16px {{ $c1 }}40, inset 0 1px 0 rgba(255,255,255,0.35)">
                                 @if (!empty($s['icon']))
-                                    <i class="{{ $s['icon'] }} text-sm" style="color:{{ ($c2 === '#0098f0' || $c1 === '#0098f0') ? '#061c21' : '#fff' }}"></i>
+                                    <i class="text-sm" style="color:{{ ($c2 === '#0098f0' || $c1 === '#0098f0') ? '#061c21' : '#fff' }}" data-lucide="{{ $s['icon'] }}"></i>
                                 @endif
                             </div>
                             <div class="min-w-0">

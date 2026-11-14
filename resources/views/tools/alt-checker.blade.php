@@ -15,7 +15,7 @@
         >
             <x-slot:title>Check Missing Image Alt Tags <span class="s-it text-accent">Instantly</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-magnifying-glass" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" icon-color="#061c21" title="Alt Analysis" subtitle="Image SEO insights">
+                <x-preview-card variant="scope" icon="search" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" icon-color="#061c21" title="Alt Analysis" subtitle="Image SEO insights">
                     <div class="space-y-2">
                         @foreach ([
                             ['alt' => 'Product showcase image', 'status' => 'Optimized', 'ok' => true, 'color' => '#4010b0'],
@@ -24,7 +24,7 @@
                             ['alt' => 'Team collaboration', 'status' => 'Good', 'ok' => true, 'color' => '#4010b0'],
                         ] as $p)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
-                                <i class="fa-solid {{ $p['ok'] ? 'fa-circle-check' : 'fa-circle-xmark' }} text-xs" style="color:{{ $p['color'] }}"></i>
+                                <i class="text-xs" style="color:{{ $p['color'] }}" data-lucide="{{ $p['ok'] ? 'circle-check' : 'circle-x' }}"></i>
                                 <span class="font-mono text-[10px]" style="color:var(--c-muted)">{{ $p['alt'] ?: '[empty]' }}</span>
                                 <span class="ml-auto text-[10px] font-bold" style="color:{{ $p['color'] }}">{{ $p['status'] }}</span>
                             </div>
@@ -35,24 +35,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#0694a2', 'label' => 'Missing Alt Tags'],
-            ['icon' => 'fa-solid fa-circle-exclamation', 'color' => '#16bdca', 'label' => 'Empty Attributes'],
-            ['icon' => 'fa-solid fa-list-check', 'color' => '#0098f0', 'label' => 'Duplicate Alt Text'],
-            ['icon' => 'fa-solid fa-wave-square', 'color' => '#7edce2', 'label' => 'Quality Analysis'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#0694a2', 'label' => 'Fast Scanning'],
-            ['icon' => 'fa-solid fa-globe', 'color' => '#16bdca', 'label' => 'Website Audit'],
-            ['icon' => 'fa-solid fa-circle-check', 'color' => '#0098f0', 'label' => 'Accessibility'],
-            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#7edce2', 'label' => 'SEO Friendly'],
-            ['icon' => 'fa-solid fa-palette', 'color' => '#0694a2', 'label' => 'Image Indexing'],
-            ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#16bdca', 'label' => 'Optimization Tips'],
-            ['icon' => 'fa-solid fa-clipboard', 'color' => '#0098f0', 'label' => 'Detailed Report'],
-            ['icon' => 'fa-solid fa-arrow-right', 'color' => '#7edce2', 'label' => '100% Free'],
+            ['icon' => 'search', 'color' => '#0694a2', 'label' => 'Missing Alt Tags'],
+            ['icon' => 'circle-alert', 'color' => '#16bdca', 'label' => 'Empty Attributes'],
+            ['icon' => 'list-checks', 'color' => '#0098f0', 'label' => 'Duplicate Alt Text'],
+            ['icon' => 'activity', 'color' => '#7edce2', 'label' => 'Quality Analysis'],
+            ['icon' => 'bolt', 'color' => '#0694a2', 'label' => 'Fast Scanning'],
+            ['icon' => 'globe', 'color' => '#16bdca', 'label' => 'Website Audit'],
+            ['icon' => 'circle-check', 'color' => '#0098f0', 'label' => 'Accessibility'],
+            ['icon' => 'shield-check', 'color' => '#7edce2', 'label' => 'SEO Friendly'],
+            ['icon' => 'palette', 'color' => '#0694a2', 'label' => 'Image Indexing'],
+            ['icon' => 'triangle-alert', 'color' => '#16bdca', 'label' => 'Optimization Tips'],
+            ['icon' => 'clipboard', 'color' => '#0098f0', 'label' => 'Detailed Report'],
+            ['icon' => 'arrow-right', 'color' => '#7edce2', 'label' => '100% Free'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-clipboard', 'title' => 'Enter Your Website URL', 'desc' => 'Paste the webpage URL you want to analyze for image accessibility and SEO issues.'],
-            ['icon' => 'fa-solid fa-wave-square', 'title' => 'Run the Scan', 'desc' => 'Our system scans all image elements and detects missing or weak alt attributes.'],
-            ['icon' => 'fa-solid fa-triangle-exclamation', 'title' => 'Review the Results', 'desc' => 'Get a detailed report showing missing, duplicate, and unoptimized image alt tags.'],
+            ['icon' => 'clipboard', 'title' => 'Enter Your Website URL', 'desc' => 'Paste the webpage URL you want to analyze for image accessibility and SEO issues.'],
+            ['icon' => 'activity', 'title' => 'Run the Scan', 'desc' => 'Our system scans all image elements and detects missing or weak alt attributes.'],
+            ['icon' => 'triangle-alert', 'title' => 'Review the Results', 'desc' => 'Get a detailed report showing missing, duplicate, and unoptimized image alt tags.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">optimize image alt tags</span></x-slot:subtitle>
         </x-how-it-works>
@@ -61,12 +61,12 @@
             badge="Everything You Need"
             description="Detect missing alt attributes, find duplicate descriptions, analyze quality, and boost your image SEO instantly."
             :features="[
-                ['icon' => 'fa-solid fa-magnifying-glass', 'title' => 'Detect Missing Alt', 'desc' => 'Identify images without alt text and improve accessibility for search engines and screen readers.'],
-                ['icon' => 'fa-solid fa-list-check', 'title' => 'Find Duplicates', 'desc' => 'Discover duplicate image descriptions that may affect SEO quality and content relevance.'],
-                ['icon' => 'fa-solid fa-wave-square', 'title' => 'Analyze Quality', 'desc' => 'Get insights into weak, generic, or poorly optimized alt tags across your webpage.'],
-                ['icon' => 'fa-solid fa-bolt', 'title' => 'Boost Image SEO', 'desc' => 'Improve image indexing and visibility in Google Image Search with optimized alt attributes.'],
-                ['icon' => 'fa-solid fa-globe', 'title' => 'Accessibility Focus', 'desc' => 'Make your website more accessible for visually impaired users and improve usability standards.'],
-                ['icon' => 'fa-solid fa-triangle-exclamation', 'title' => 'Instant Scanning', 'desc' => 'Run fast and accurate image alt audits without complex setup or technical knowledge.'],
+                ['icon' => 'search', 'title' => 'Detect Missing Alt', 'desc' => 'Identify images without alt text and improve accessibility for search engines and screen readers.'],
+                ['icon' => 'list-checks', 'title' => 'Find Duplicates', 'desc' => 'Discover duplicate image descriptions that may affect SEO quality and content relevance.'],
+                ['icon' => 'activity', 'title' => 'Analyze Quality', 'desc' => 'Get insights into weak, generic, or poorly optimized alt tags across your webpage.'],
+                ['icon' => 'bolt', 'title' => 'Boost Image SEO', 'desc' => 'Improve image indexing and visibility in Google Image Search with optimized alt attributes.'],
+                ['icon' => 'globe', 'title' => 'Accessibility Focus', 'desc' => 'Make your website more accessible for visually impaired users and improve usability standards.'],
+                ['icon' => 'triangle-alert', 'title' => 'Instant Scanning', 'desc' => 'Run fast and accurate image alt audits without complex setup or technical knowledge.'],
             ]"
         >
             <x-slot:title>Optimize Image Alt Tags <span class="s-it text-accent">with confidence.</span></x-slot:title>

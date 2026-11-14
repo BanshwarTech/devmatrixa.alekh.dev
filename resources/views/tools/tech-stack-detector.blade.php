@@ -17,16 +17,16 @@
         >
             <x-slot:title>Identify any site's <span class="s-it text-accent">tech stack.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-magnifying-glass-plus" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" title="Detected Stack" subtitle="Site fingerprint">
+                <x-preview-card variant="terminal" icon="search-code" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" title="Detected Stack" subtitle="Site fingerprint">
                     <div class="space-y-2">
                         @foreach ([
-                            ['cat' => 'CMS', 'tech' => 'WordPress', 'icon' => 'fa-solid fa-layer-group', 'color' => '#0694a2'],
-                            ['cat' => 'JS', 'tech' => 'Next.js, React', 'icon' => 'fa-brands fa-js', 'color' => '#16bdca'],
-                            ['cat' => 'Hosting', 'tech' => 'Vercel', 'icon' => 'fa-solid fa-cloud', 'color' => '#0098f0'],
-                            ['cat' => 'Analytics', 'tech' => 'GA4, GTM', 'icon' => 'fa-solid fa-chart-bar', 'color' => '#7edce2'],
+                            ['cat' => 'CMS', 'tech' => 'WordPress', 'icon' => 'layers', 'color' => '#0694a2'],
+                            ['cat' => 'JS', 'tech' => 'Next.js, React', 'icon' => 'file-code-2', 'color' => '#16bdca'],
+                            ['cat' => 'Hosting', 'tech' => 'Vercel', 'icon' => 'cloud', 'color' => '#0098f0'],
+                            ['cat' => 'Analytics', 'tech' => 'GA4, GTM', 'icon' => 'chart-bar', 'color' => '#7edce2'],
                         ] as $t)
                             <div class="flex items-center gap-2 text-xs rounded-lg px-2.5 py-1.5" style="background:rgba(255,255,255,0.04)">
-                                <i class="{{ $t['icon'] }} text-xs" style="color:{{ $t['color'] }}"></i>
+                                <i class="text-xs" style="color:{{ $t['color'] }}" data-lucide="{{ $t['icon'] }}"></i>
                                 <span class="text-[10px] uppercase font-bold tracking-wider" style="color:var(--c-muted)">{{ $t['cat'] }}</span>
                                 <span class="font-semibold ml-auto" style="color:var(--c-text)">{{ $t['tech'] }}</span>
                             </div>
@@ -37,24 +37,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-brands fa-react', 'color' => '#0694a2', 'label' => 'React'],
-            ['icon' => 'fa-brands fa-vuejs', 'color' => '#16bdca', 'label' => 'Vue'],
-            ['icon' => 'fa-brands fa-js', 'color' => '#0098f0', 'label' => 'Next.js'],
-            ['icon' => 'fa-brands fa-wordpress', 'color' => '#7edce2', 'label' => 'WordPress'],
-            ['icon' => 'fa-solid fa-boxes-stacked', 'color' => '#0694a2', 'label' => 'Webpack'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => 'jQuery'],
-            ['icon' => 'fa-solid fa-cloud', 'color' => '#0098f0', 'label' => 'CDN'],
-            ['icon' => 'fa-solid fa-chart-bar', 'color' => '#7edce2', 'label' => 'Analytics'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Fonts'],
-            ['icon' => 'fa-solid fa-server', 'color' => '#16bdca', 'label' => 'Hosting'],
-            ['icon' => 'fa-solid fa-shield', 'color' => '#0098f0', 'label' => 'Headers'],
-            ['icon' => 'fa-solid fa-fingerprint', 'color' => '#7edce2', 'label' => 'Fingerprint'],
+            ['icon' => 'atom', 'color' => '#0694a2', 'label' => 'React'],
+            ['icon' => 'panels-top-left', 'color' => '#16bdca', 'label' => 'Vue'],
+            ['icon' => 'file-code-2', 'color' => '#0098f0', 'label' => 'Next.js'],
+            ['icon' => 'file-text', 'color' => '#7edce2', 'label' => 'WordPress'],
+            ['icon' => 'boxes', 'color' => '#0694a2', 'label' => 'Webpack'],
+            ['icon' => 'code', 'color' => '#16bdca', 'label' => 'jQuery'],
+            ['icon' => 'cloud', 'color' => '#0098f0', 'label' => 'CDN'],
+            ['icon' => 'chart-bar', 'color' => '#7edce2', 'label' => 'Analytics'],
+            ['icon' => 'type', 'color' => '#0694a2', 'label' => 'Fonts'],
+            ['icon' => 'server', 'color' => '#16bdca', 'label' => 'Hosting'],
+            ['icon' => 'shield', 'color' => '#0098f0', 'label' => 'Headers'],
+            ['icon' => 'fingerprint', 'color' => '#7edce2', 'label' => 'Fingerprint'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any public URL and the tool fetches the full HTML response along with all server response headers.'],
-            ['icon' => 'fa-solid fa-magnifying-glass-plus', 'title' => 'Pattern Match', 'desc' => 'Over 80 technology signatures are checked across HTML structure, response headers, meta tags, and script paths simultaneously.'],
-            ['icon' => 'fa-solid fa-layer-group', 'title' => 'Categorized Results', 'desc' => 'Every detected technology is grouped into clearly labeled categories,CMS, JS framework, analytics, hosting, CDN, server, and more.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any public URL and the tool fetches the full HTML response along with all server response headers.'],
+            ['icon' => 'search-code', 'title' => 'Pattern Match', 'desc' => 'Over 80 technology signatures are checked across HTML structure, response headers, meta tags, and script paths simultaneously.'],
+            ['icon' => 'layers', 'title' => 'Categorized Results', 'desc' => 'Every detected technology is grouped into clearly labeled categories,CMS, JS framework, analytics, hosting, CDN, server, and more.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">site fingerprinting</span></x-slot:subtitle>
         </x-how-it-works>
@@ -63,12 +63,12 @@
             badge="Why This Tool"
             description="A free, no-install Wappalyzer alternative. Identify the CMS, framework, hosting, analytics, and CDN behind any URL,built for competitive research and rapid stack audits."
             :features="[
-                ['icon' => 'fa-solid fa-bullseye', 'title' => '80+ Tech Signatures', 'desc' => 'Detection rules cover React, Vue, Next.js, WordPress, Shopify, Webpack, Cloudflare, GA4, and dozens more technologies out of the box.'],
-                ['icon' => 'fa-solid fa-layer-group', 'title' => '10 Categories', 'desc' => 'Results are cleanly grouped into CMS, JS framework, build tools, hosting, CDN, analytics, fonts, e-commerce, server, and response headers.'],
-                ['icon' => 'fa-solid fa-fingerprint', 'title' => 'HTML, Headers, and Meta', 'desc' => 'Server response headers, meta tags, link and script URLs, and inline HTML are all inspected,multiple detection angles means far fewer false positives.'],
-                ['icon' => 'fa-solid fa-bolt', 'title' => 'Sub-3-Second Scans', 'desc' => 'A single HTTP request is all it takes. Most sites are fully fingerprinted in under three seconds,no waiting, no queues.'],
-                ['icon' => 'fa-solid fa-globe', 'title' => 'Works on Any Site', 'desc' => 'Marketing pages, SaaS apps, dashboards, blogs, and ecommerce stores,if it serves HTML, the stack can be identified.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Nothing Stored', 'desc' => 'URLs are fetched, parsed, and immediately discarded. Your scans are never logged, stored, or analyzed.'],
+                ['icon' => 'target', 'title' => '80+ Tech Signatures', 'desc' => 'Detection rules cover React, Vue, Next.js, WordPress, Shopify, Webpack, Cloudflare, GA4, and dozens more technologies out of the box.'],
+                ['icon' => 'layers', 'title' => '10 Categories', 'desc' => 'Results are cleanly grouped into CMS, JS framework, build tools, hosting, CDN, analytics, fonts, e-commerce, server, and response headers.'],
+                ['icon' => 'fingerprint', 'title' => 'HTML, Headers, and Meta', 'desc' => 'Server response headers, meta tags, link and script URLs, and inline HTML are all inspected,multiple detection angles means far fewer false positives.'],
+                ['icon' => 'bolt', 'title' => 'Sub-3-Second Scans', 'desc' => 'A single HTTP request is all it takes. Most sites are fully fingerprinted in under three seconds,no waiting, no queues.'],
+                ['icon' => 'globe', 'title' => 'Works on Any Site', 'desc' => 'Marketing pages, SaaS apps, dashboards, blogs, and ecommerce stores,if it serves HTML, the stack can be identified.'],
+                ['icon' => 'database', 'title' => 'Nothing Stored', 'desc' => 'URLs are fetched, parsed, and immediately discarded. Your scans are never logged, stored, or analyzed.'],
             ]"
         >
             <x-slot:title>Fingerprint any site, <span class="s-it text-accent">in seconds.</span></x-slot:title>

@@ -15,7 +15,7 @@
         >
             <x-slot:title>Convert any CSS to<br><span class="s-it text-accent">Tailwind classes.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-wand-magic-sparkles" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" title="CSS &rarr; Tailwind" subtitle="Instant mapping">
+                <x-preview-card variant="terminal" icon="wand-sparkles" icon-bg="linear-gradient(135deg,#16bdca,#0098f0)" title="CSS &rarr; Tailwind" subtitle="Instant mapping">
                     <div class="space-y-2 text-[11px] font-mono">
                         <div class="rounded p-2" style="background:rgba(248,113,113,0.06)">
                             <span style="color:#f87171">padding</span>: <span style="color:var(--c-muted)">16px</span>
@@ -30,24 +30,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#0694a2', 'label' => 'CSS to Tailwind'],
-            ['icon' => 'fa-brands fa-css3-alt', 'color' => '#16bdca', 'label' => 'Utility Classes'],
-            ['icon' => 'fa-solid fa-arrows-left-right', 'color' => '#0098f0', 'label' => 'Spacing'],
-            ['icon' => 'fa-solid fa-arrow-up-short-wide', 'color' => '#7edce2', 'label' => 'Padding'],
-            ['icon' => 'fa-solid fa-grip', 'color' => '#0694a2', 'label' => 'Flexbox'],
-            ['icon' => 'fa-solid fa-table-cells-large', 'color' => '#16bdca', 'label' => 'Grid'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#0098f0', 'label' => 'Typography'],
-            ['icon' => 'fa-solid fa-fill-drip', 'color' => '#7edce2', 'label' => 'Backgrounds'],
-            ['icon' => 'fa-solid fa-border-all', 'color' => '#0694a2', 'label' => 'Borders'],
-            ['icon' => 'fa-solid fa-text-height', 'color' => '#16bdca', 'label' => 'Font Size'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#0098f0', 'label' => 'Z-Index'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#7edce2', 'label' => 'Instant Convert'],
+            ['icon' => 'wand-sparkles', 'color' => '#0694a2', 'label' => 'CSS to Tailwind'],
+            ['icon' => 'code-xml', 'color' => '#16bdca', 'label' => 'Utility Classes'],
+            ['icon' => 'arrow-left-right', 'color' => '#0098f0', 'label' => 'Spacing'],
+            ['icon' => 'arrow-up-narrow-wide', 'color' => '#7edce2', 'label' => 'Padding'],
+            ['icon' => 'grip', 'color' => '#0694a2', 'label' => 'Flexbox'],
+            ['icon' => 'grid-2x2', 'color' => '#16bdca', 'label' => 'Grid'],
+            ['icon' => 'type', 'color' => '#0098f0', 'label' => 'Typography'],
+            ['icon' => 'paint-bucket', 'color' => '#7edce2', 'label' => 'Backgrounds'],
+            ['icon' => 'grid-2x2', 'color' => '#0694a2', 'label' => 'Borders'],
+            ['icon' => 'text', 'color' => '#16bdca', 'label' => 'Font Size'],
+            ['icon' => 'layers', 'color' => '#0098f0', 'label' => 'Z-Index'],
+            ['icon' => 'bolt', 'color' => '#7edce2', 'label' => 'Instant Convert'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-clipboard', 'title' => 'Paste Raw CSS', 'desc' => 'Paste any CSS,full rule blocks or just declarations, with comments or without.'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'Smart Mapping', 'desc' => 'We map static properties, plus dynamic spacing, font-size, and z-index to the closest Tailwind class.'],
-            ['icon' => 'fa-solid fa-copy', 'title' => 'Copy & Ship', 'desc' => 'Get the final class string with one click,ready to paste into your JSX or HTML.'],
+            ['icon' => 'clipboard', 'title' => 'Paste Raw CSS', 'desc' => 'Paste any CSS,full rule blocks or just declarations, with comments or without.'],
+            ['icon' => 'wand-sparkles', 'title' => 'Smart Mapping', 'desc' => 'We map static properties, plus dynamic spacing, font-size, and z-index to the closest Tailwind class.'],
+            ['icon' => 'copy', 'title' => 'Copy & Ship', 'desc' => 'Get the final class string with one click,ready to paste into your JSX or HTML.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">Tailwind utilities</span></x-slot:subtitle>
         </x-how-it-works>
@@ -56,12 +56,12 @@
             badge="Why this tool"
             description="A smart converter that knows Tailwind's scale, not just a 1:1 lookup table."
             :features="[
-                ['icon' => 'fa-solid fa-bullseye', 'title' => '180+ mappings', 'desc' => 'From flexbox to z-index, the most commonly used properties are mapped to their Tailwind utility.'],
-                ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'Smart spacing', 'desc' => 'Pixel and rem spacing values are snapped to the nearest Tailwind spacing token, not just exact matches.'],
-                ['icon' => 'fa-solid fa-text-height', 'title' => 'Font-size matching', 'desc' => 'Font-size values resolve to text-xs through text-9xl using Tailwind\'s default type scale.'],
-                ['icon' => 'fa-solid fa-bolt', 'title' => 'Instant + offline', 'desc' => 'Conversion runs in your browser,there are no API calls, no rate limits, no waiting.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'One-click copy', 'desc' => 'The final Tailwind class string is copy-ready as soon as conversion finishes.'],
-                ['icon' => 'fa-solid fa-shield-halved', 'title' => 'Nothing leaves your browser', 'desc' => 'Your CSS is parsed locally,we never see what you paste in.'],
+                ['icon' => 'target', 'title' => '180+ mappings', 'desc' => 'From flexbox to z-index, the most commonly used properties are mapped to their Tailwind utility.'],
+                ['icon' => 'wand-sparkles', 'title' => 'Smart spacing', 'desc' => 'Pixel and rem spacing values are snapped to the nearest Tailwind spacing token, not just exact matches.'],
+                ['icon' => 'text', 'title' => 'Font-size matching', 'desc' => 'Font-size values resolve to text-xs through text-9xl using Tailwind\'s default type scale.'],
+                ['icon' => 'bolt', 'title' => 'Instant + offline', 'desc' => 'Conversion runs in your browser,there are no API calls, no rate limits, no waiting.'],
+                ['icon' => 'copy', 'title' => 'One-click copy', 'desc' => 'The final Tailwind class string is copy-ready as soon as conversion finishes.'],
+                ['icon' => 'shield-check', 'title' => 'Nothing leaves your browser', 'desc' => 'Your CSS is parsed locally,we never see what you paste in.'],
             ]"
         >
             <x-slot:title>CSS to Tailwind without <span class="s-it text-accent">the grunt work.</span></x-slot:title>

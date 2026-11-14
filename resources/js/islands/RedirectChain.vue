@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -21,7 +22,7 @@ function statusColor(s) {
 }
 
 const issueColor = (t) => (t === 'error' ? '#f87171' : t === 'warning' ? '#f59e0b' : '#16bdca');
-const issueIcon = (t) => (t === 'error' ? 'fa-solid fa-circle-xmark' : t === 'warning' ? 'fa-solid fa-triangle-exclamation' : 'fa-solid fa-circle-info');
+const issueIcon = (t) => (t === 'error' ? 'circle-x' : t === 'warning' ? 'triangle-alert' : 'info');
 
 async function analyze() {
   const trimmed = url.value.trim();
@@ -75,14 +76,14 @@ function copyHop(hopUrl, idx) {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to trace.</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast &amp; free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="text"
@@ -103,14 +104,14 @@ function copyHop(hopUrl, idx) {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-rotate text-xs"></i>
+            <LucideIcon class="text-xs" name="rotate-cw"></LucideIcon>
             Trace
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -133,7 +134,7 @@ function copyHop(hopUrl, idx) {
           class="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition-colors"
           :style="{ background: copiedFinal ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedFinal ? '#4010b0' : '#e5e7eb', border: '1px solid var(--c-border)' }"
         >
-          <i :class="copiedFinal ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[12px]"></i>
+          <LucideIcon class="text-[12px]" :name="copiedFinal ? 'check' : 'copy'"></LucideIcon>
           {{ copiedFinal ? 'Copied!' : 'Copy Final URL' }}
         </button>
       </div>
@@ -154,11 +155,11 @@ function copyHop(hopUrl, idx) {
                 </span>
                 <span v-if="h.statusText" class="text-[11px]" style="color:var(--c-muted)">{{ h.statusText }}</span>
                 <span class="text-[10px] inline-flex items-center gap-1 font-semibold px-1.5 py-0.5 rounded" :style="{ background: h.protocol === 'https:' ? '#4010b022' : '#f8717122', color: h.protocol === 'https:' ? '#4010b0' : '#f87171' }">
-                  <i :class="h.protocol === 'https:' ? 'fa-solid fa-lock' : 'fa-solid fa-unlock'" class="text-[9px]"></i>
+                  <LucideIcon class="text-[9px]" :name="h.protocol === 'https:' ? 'lock' : 'lock-keyhole-open'"></LucideIcon>
                   {{ h.protocol.replace(':', '').toUpperCase() }}
                 </span>
                 <span class="text-[10px] inline-flex items-center gap-1 ml-auto font-semibold" style="color:var(--c-muted)">
-                  <i class="fa-solid fa-clock text-[10px]"></i> {{ h.timeMs }} ms
+                  <LucideIcon class="text-[10px]" name="clock"></LucideIcon> {{ h.timeMs }} ms
                 </span>
               </div>
               <div class="flex items-start gap-2">
@@ -171,11 +172,11 @@ function copyHop(hopUrl, idx) {
                   aria-label="Copy hop URL"
                   title="Copy hop URL"
                 >
-                  <i :class="copiedHop === idx ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[12px]"></i>
+                  <LucideIcon class="text-[12px]" :name="copiedHop === idx ? 'check' : 'copy'"></LucideIcon>
                 </button>
               </div>
               <div v-if="h.location" class="mt-2 flex items-center gap-2 text-[11px]" style="color:var(--c-muted)">
-                <i class="fa-solid fa-circle-arrow-down" style="color:#f59e0b"></i>
+                <LucideIcon style="color:#f59e0b" name="circle-arrow-down"></LucideIcon>
                 <span class="font-semibold">Location:</span>
                 <span class="font-mono break-all">{{ h.location }}</span>
               </div>
@@ -187,20 +188,20 @@ function copyHop(hopUrl, idx) {
           </div>
         </div>
         <div v-if="idx !== data.hops.length - 1" class="flex justify-center py-1">
-          <i class="fa-solid fa-circle-arrow-down" style="color:#f59e0b"></i>
+          <LucideIcon style="color:#f59e0b" name="circle-arrow-down"></LucideIcon>
         </div>
       </div>
     </div>
 
     <div v-if="data.issues.length > 0" class="glass rounded-3xl p-5 space-y-3">
       <div class="flex items-center gap-2 mb-1">
-        <i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b"></i>
+        <LucideIcon style="color:#f59e0b" name="triangle-alert"></LucideIcon>
         <h4 class="font-sans font-700 text-base tracking-tight">Issues Found</h4>
         <span class="text-[10px] font-bold px-2 py-0.5 rounded ml-1" style="background:rgba(255,255,255,0.06);color:var(--c-muted)">{{ data.issues.length }}</span>
       </div>
       <div v-for="(iss, i) in data.issues" :key="i" class="rounded-xl p-3" :style="{ background: `${issueColor(iss.type)}10`, border: `1px solid ${issueColor(iss.type)}30` }">
         <div class="flex items-start gap-2.5">
-          <i :class="issueIcon(iss.type)" class="shrink-0 mt-0.5" :style="{ color: issueColor(iss.type) }"></i>
+          <LucideIcon class="shrink-0 mt-0.5" :style="{ color: issueColor(iss.type) }" :name="issueIcon(iss.type)"></LucideIcon>
           <div class="flex-1 min-w-0">
             <p class="text-[13px] font-semibold mb-1" style="color:#e5e7eb">{{ iss.msg }}</p>
             <p class="text-[12px] leading-relaxed" style="color:var(--c-muted)">{{ iss.fix }}</p>
@@ -210,7 +211,7 @@ function copyHop(hopUrl, idx) {
     </div>
 
     <div v-if="data.issues.length === 0" class="glass rounded-2xl p-4 flex items-center gap-3" style="background:rgba(64, 16, 176,0.06);border:1px solid rgba(64, 16, 176,0.25)">
-      <i class="fa-solid fa-circle-check text-xl" style="color:#4010b0"></i>
+      <LucideIcon class="text-xl" style="color:#4010b0" name="circle-check"></LucideIcon>
       <div class="text-sm" style="color:#e5e7eb">
         No issues detected. The redirect chain is clean — no downgrades, loops, or excessive hops.
       </div>

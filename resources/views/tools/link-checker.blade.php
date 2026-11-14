@@ -17,7 +17,7 @@
         >
             <x-slot:title>Find every<br><span class="s-it text-accent">broken link.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-bug" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" title="Live Crawl" subtitle="Status by URL">
+                <x-preview-card variant="scope" icon="bug" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" title="Live Crawl" subtitle="Status by URL">
                     <div class="space-y-1.5">
                         @foreach ([
                             ['url' => '/blog/welcome', 'status' => 200, 'c' => '#4010b0'],
@@ -38,24 +38,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-link', 'color' => '#0694a2', 'label' => 'Internal Links'],
-            ['icon' => 'fa-solid fa-arrow-up-right-from-square', 'color' => '#16bdca', 'label' => 'External Links'],
-            ['icon' => 'fa-solid fa-link-slash', 'color' => '#0098f0', 'label' => 'Broken Links'],
-            ['icon' => 'fa-solid fa-circle-xmark', 'color' => '#7edce2', 'label' => '404s'],
-            ['icon' => 'fa-solid fa-rotate', 'color' => '#0694a2', 'label' => 'Redirects'],
-            ['icon' => 'fa-solid fa-gauge-high', 'color' => '#16bdca', 'label' => 'HTTP Status'],
-            ['icon' => 'fa-solid fa-bug', 'color' => '#0098f0', 'label' => 'Live Crawl'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#7edce2', 'label' => 'Parallel Checks'],
-            ['icon' => 'fa-solid fa-triangle-exclamation', 'color' => '#0694a2', 'label' => '5xx Errors'],
-            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#16bdca', 'label' => 'HTTPS'],
-            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#0098f0', 'label' => 'URL Audit'],
-            ['icon' => 'fa-solid fa-list', 'color' => '#7edce2', 'label' => 'Status Map'],
+            ['icon' => 'link', 'color' => '#0694a2', 'label' => 'Internal Links'],
+            ['icon' => 'arrow-up-right-from-square', 'color' => '#16bdca', 'label' => 'External Links'],
+            ['icon' => 'unlink', 'color' => '#0098f0', 'label' => 'Broken Links'],
+            ['icon' => 'circle-x', 'color' => '#7edce2', 'label' => '404s'],
+            ['icon' => 'rotate-cw', 'color' => '#0694a2', 'label' => 'Redirects'],
+            ['icon' => 'circle-gauge', 'color' => '#16bdca', 'label' => 'HTTP Status'],
+            ['icon' => 'bug', 'color' => '#0098f0', 'label' => 'Live Crawl'],
+            ['icon' => 'bolt', 'color' => '#7edce2', 'label' => 'Parallel Checks'],
+            ['icon' => 'triangle-alert', 'color' => '#0694a2', 'label' => '5xx Errors'],
+            ['icon' => 'shield-check', 'color' => '#16bdca', 'label' => 'HTTPS'],
+            ['icon' => 'search', 'color' => '#0098f0', 'label' => 'URL Audit'],
+            ['icon' => 'list', 'color' => '#7edce2', 'label' => 'Status Map'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-sitemap', 'title' => 'Paste Your URL', 'desc' => 'Drop in any page URL. The crawler reads your sitemap and scans every HTML link it finds - no setup, no configuration.'],
-            ['icon' => 'fa-solid fa-bolt', 'title' => 'Live Status Scan', 'desc' => 'Each discovered URL is checked in real time. Status codes stream in row by row - 200s, 301s, 404s, and everything in between.'],
-            ['icon' => 'fa-solid fa-circle-check', 'title' => 'Fix and Export', 'desc' => 'Broken links surface at the top. Sort by status code, isolate the problems, and fix them before they cost you rankings.'],
+            ['icon' => 'network', 'title' => 'Paste Your URL', 'desc' => 'Drop in any page URL. The crawler reads your sitemap and scans every HTML link it finds - no setup, no configuration.'],
+            ['icon' => 'bolt', 'title' => 'Live Status Scan', 'desc' => 'Each discovered URL is checked in real time. Status codes stream in row by row - 200s, 301s, 404s, and everything in between.'],
+            ['icon' => 'circle-check', 'title' => 'Fix and Export', 'desc' => 'Broken links surface at the top. Sort by status code, isolate the problems, and fix them before they cost you rankings.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">zero broken links.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -64,12 +64,12 @@
             badge="Why This Tool"
             description="Paste a URL, hit crawl, and watch every internal link status stream in live - no waiting, no batch jobs, no guesswork."
             :features="[
-                ['icon' => 'fa-solid fa-bolt', 'title' => 'Live status streaming', 'desc' => 'Results appear as each link is checked - you see broken links the moment they\'re found, not after the entire crawl finishes.'],
-                ['icon' => 'fa-solid fa-gauge-high', 'title' => 'Concurrent requests', 'desc' => 'Six links run in parallel by default. Even pages with hundreds of links finish in seconds, not minutes.'],
-                ['icon' => 'fa-solid fa-rotate', 'title' => 'Redirect aware', 'desc' => '301s and 302s are flagged separately from 4xx and 5xx errors so you know exactly what needs fixing versus what\'s just moved.'],
-                ['icon' => 'fa-solid fa-bug', 'title' => 'Internal-link focus', 'desc' => 'Only same-domain links are audited. The crawl stays clean and relevant - no noise from third-party URLs.'],
-                ['icon' => 'fa-solid fa-shield-halved', 'title' => 'Fail-soft network handling', 'desc' => 'Timeouts and DNS failures return a status 0 instead of crashing the crawl. Every broken path gets reported, nothing gets skipped.'],
-                ['icon' => 'fa-solid fa-circle-check', 'title' => 'Color-coded results', 'desc' => 'Green for healthy, amber for redirects, red for errors. Broken links are impossible to miss - visible state at a single glance.'],
+                ['icon' => 'bolt', 'title' => 'Live status streaming', 'desc' => 'Results appear as each link is checked - you see broken links the moment they\'re found, not after the entire crawl finishes.'],
+                ['icon' => 'circle-gauge', 'title' => 'Concurrent requests', 'desc' => 'Six links run in parallel by default. Even pages with hundreds of links finish in seconds, not minutes.'],
+                ['icon' => 'rotate-cw', 'title' => 'Redirect aware', 'desc' => '301s and 302s are flagged separately from 4xx and 5xx errors so you know exactly what needs fixing versus what\'s just moved.'],
+                ['icon' => 'bug', 'title' => 'Internal-link focus', 'desc' => 'Only same-domain links are audited. The crawl stays clean and relevant - no noise from third-party URLs.'],
+                ['icon' => 'shield-check', 'title' => 'Fail-soft network handling', 'desc' => 'Timeouts and DNS failures return a status 0 instead of crashing the crawl. Every broken path gets reported, nothing gets skipped.'],
+                ['icon' => 'circle-check', 'title' => 'Color-coded results', 'desc' => 'Green for healthy, amber for redirects, red for errors. Broken links are impossible to miss - visible state at a single glance.'],
             ]"
         >
             <x-slot:title>404s caught the moment <span class="s-it text-accent">they happen.</span></x-slot:title>

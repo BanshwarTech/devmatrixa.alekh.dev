@@ -19,7 +19,7 @@
         >
             <x-slot:title>Every pixel<br><span class="s-it text-accent">on your page.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="scope" icon="fa-solid fa-satellite-dish" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" icon-color="#061c21" title="Detected Trackers" subtitle="By purpose">
+                <x-preview-card variant="scope" icon="satellite-dish" icon-bg="linear-gradient(135deg,#0694a2,#0098f0)" icon-color="#061c21" title="Detected Trackers" subtitle="By purpose">
                     <div class="space-y-1.5">
                         @foreach ([
                             ['h' => 'google-analytics.com', 't' => 'Analytics', 'c' => '#0694a2'],
@@ -40,24 +40,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-chart-bar', 'color' => '#0694a2', 'label' => 'Analytics'],
-            ['icon' => 'fa-solid fa-bullhorn', 'color' => '#f87171', 'label' => 'Ad Pixels'],
-            ['icon' => 'fa-solid fa-share-nodes', 'color' => '#16bdca', 'label' => 'Social'],
-            ['icon' => 'fa-solid fa-film', 'color' => '#f87171', 'label' => 'Session Replay'],
-            ['icon' => 'fa-solid fa-tag', 'color' => '#f59e0b', 'label' => 'Tag Manager'],
-            ['icon' => 'fa-solid fa-comment-dots', 'color' => '#0098f0', 'label' => 'Chat'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#7edce2', 'label' => 'Fonts'],
-            ['icon' => 'fa-solid fa-server', 'color' => '#0694a2', 'label' => 'CDN'],
-            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#f87171', 'label' => 'Privacy Grade'],
-            ['icon' => 'fa-solid fa-eye', 'color' => '#f59e0b', 'label' => 'GDPR Audit'],
-            ['icon' => 'fa-solid fa-bolt', 'color' => '#0098f0', 'label' => 'Instant Scan'],
-            ['icon' => 'fa-solid fa-globe', 'color' => '#16bdca', 'label' => 'Per-Domain'],
+            ['icon' => 'chart-bar', 'color' => '#0694a2', 'label' => 'Analytics'],
+            ['icon' => 'megaphone', 'color' => '#f87171', 'label' => 'Ad Pixels'],
+            ['icon' => 'share-2', 'color' => '#16bdca', 'label' => 'Social'],
+            ['icon' => 'film', 'color' => '#f87171', 'label' => 'Session Replay'],
+            ['icon' => 'tag', 'color' => '#f59e0b', 'label' => 'Tag Manager'],
+            ['icon' => 'message-circle', 'color' => '#0098f0', 'label' => 'Chat'],
+            ['icon' => 'type', 'color' => '#7edce2', 'label' => 'Fonts'],
+            ['icon' => 'server', 'color' => '#0694a2', 'label' => 'CDN'],
+            ['icon' => 'shield-check', 'color' => '#f87171', 'label' => 'Privacy Grade'],
+            ['icon' => 'eye', 'color' => '#f59e0b', 'label' => 'GDPR Audit'],
+            ['icon' => 'bolt', 'color' => '#0098f0', 'label' => 'Instant Scan'],
+            ['icon' => 'globe', 'color' => '#16bdca', 'label' => 'Per-Domain'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-globe', 'title' => 'Paste Your URL', 'desc' => 'Drop in any page URL. We fetch the HTML and parse every script, stylesheet, iframe, image, and media src — anything that triggers a third-party request.'],
-            ['icon' => 'fa-solid fa-magnifying-glass', 'title' => 'Classified by Purpose', 'desc' => 'Each external domain is matched against a database of 70+ known trackers and grouped into analytics, ads, social, chat, CDN, fonts, payment, captcha, error tracking and more.'],
-            ['icon' => 'fa-solid fa-shield-halved', 'title' => 'Privacy-Graded', 'desc' => 'Trackers are flagged High / Medium / Low privacy impact. Session replays and ad pixels are High; fonts and CDN are Low. You see exactly what\'s worth disclosing in your privacy policy.'],
+            ['icon' => 'globe', 'title' => 'Paste Your URL', 'desc' => 'Drop in any page URL. We fetch the HTML and parse every script, stylesheet, iframe, image, and media src — anything that triggers a third-party request.'],
+            ['icon' => 'search', 'title' => 'Classified by Purpose', 'desc' => 'Each external domain is matched against a database of 70+ known trackers and grouped into analytics, ads, social, chat, CDN, fonts, payment, captcha, error tracking and more.'],
+            ['icon' => 'shield-check', 'title' => 'Privacy-Graded', 'desc' => 'Trackers are flagged High / Medium / Low privacy impact. Session replays and ad pixels are High; fonts and CDN are Low. You see exactly what\'s worth disclosing in your privacy policy.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">your real stack.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -66,12 +66,12 @@
             badge="Why This Tool"
             description="Hidden tag managers fire other pixels. Session replays record everything users type. This tool surfaces them all — not just the ones you intentionally installed."
             :features="[
-                ['icon' => 'fa-solid fa-satellite-dish', 'title' => '70+ tracker signatures', 'desc' => 'Recognizes Google Analytics, Meta Pixel, TikTok, LinkedIn Insight, Hotjar, FullStory, Clarity, Intercom, Stripe, reCAPTCHA, Sentry, and dozens more by domain pattern.'],
-                ['icon' => 'fa-solid fa-shield-halved', 'title' => 'Privacy-impact grading', 'desc' => 'Each tracker gets a privacy grade: High (Ad pixels, session replays), Medium (analytics with PII), Low (fonts, CDN). Quick triage for your privacy policy.'],
-                ['icon' => 'fa-solid fa-tag', 'title' => 'Tag manager detection', 'desc' => 'Google Tag Manager (and similar) is flagged separately — because what GTM loads is invisible to a static scan, so you know to audit GTM rules separately.'],
-                ['icon' => 'fa-solid fa-film', 'title' => 'Session replay surfaced', 'desc' => 'Hotjar, FullStory, Microsoft Clarity, LogRocket and others record user sessions. We highlight these as High privacy impact since they often capture form input and clicks.'],
-                ['icon' => 'fa-solid fa-server', 'title' => 'Per-domain request count', 'desc' => 'Each domain shows total request count and breakdown by type (script, stylesheet, iframe, image). Spot the bloat that came in from one library.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'Copy-as-list output', 'desc' => 'Each category has a one-click copy button — paste the host list into your CSP allowlist, ad-blocker rule, or privacy policy disclosure.'],
+                ['icon' => 'satellite-dish', 'title' => '70+ tracker signatures', 'desc' => 'Recognizes Google Analytics, Meta Pixel, TikTok, LinkedIn Insight, Hotjar, FullStory, Clarity, Intercom, Stripe, reCAPTCHA, Sentry, and dozens more by domain pattern.'],
+                ['icon' => 'shield-check', 'title' => 'Privacy-impact grading', 'desc' => 'Each tracker gets a privacy grade: High (Ad pixels, session replays), Medium (analytics with PII), Low (fonts, CDN). Quick triage for your privacy policy.'],
+                ['icon' => 'tag', 'title' => 'Tag manager detection', 'desc' => 'Google Tag Manager (and similar) is flagged separately — because what GTM loads is invisible to a static scan, so you know to audit GTM rules separately.'],
+                ['icon' => 'film', 'title' => 'Session replay surfaced', 'desc' => 'Hotjar, FullStory, Microsoft Clarity, LogRocket and others record user sessions. We highlight these as High privacy impact since they often capture form input and clicks.'],
+                ['icon' => 'server', 'title' => 'Per-domain request count', 'desc' => 'Each domain shows total request count and breakdown by type (script, stylesheet, iframe, image). Spot the bloat that came in from one library.'],
+                ['icon' => 'copy', 'title' => 'Copy-as-list output', 'desc' => 'Each category has a one-click copy button — paste the host list into your CSP allowlist, ad-blocker rule, or privacy policy disclosure.'],
             ]"
         >
             <x-slot:title>Most pages load <span class="s-it text-accent">more than you think.</span></x-slot:title>
@@ -85,7 +85,7 @@
             ['q' => 'Does this catch trackers loaded by tag managers?', 'a' => 'Partially. We detect Google Tag Manager itself, but the pixels GTM fires at runtime can\'t be seen from a static HTML scan — those load via JS execution after the page boots. For a complete view, also audit your GTM container directly.'],
             ['q' => 'Why is Hotjar marked \'High Privacy Impact\'?', 'a' => 'Session replay tools record user mouse movement, clicks, scrolls, and often form input. Even with PII masking enabled, they typically require explicit consent under GDPR and disclosure in your privacy policy.'],
             ['q' => 'Are subdomain requests counted as third-party?', 'a' => 'We compare hostnames with the www. prefix stripped. A request to api.yoursite.com from yoursite.com is treated as same-origin. Different roots (cdn.yourcdn.com) are third-party.'],
-            ['q' => 'Why doesn\'t my favicon show up?', 'a' => 'We focus on requests that load executable code or trackable assets: scripts, stylesheets, iframes, images, media, preconnect/preload links. Inline data: URIs and same-origin assets are excluded.'],
+            ['q' => 'Why doesn\'t my favicon show up?','a'=>'We focus on requests that load executable code or trackable assets: scripts, stylesheets, iframes, images, media, preconnect/preload links. Inline data: URIs and same-origin assets are excluded.'],
             ['q' => 'Are URLs stored?', 'a' => 'No. The page is fetched, parsed in memory, classified, and the result is returned. Nothing is logged or persisted.'],
         ]" />
 

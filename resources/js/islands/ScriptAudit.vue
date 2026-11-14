@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -52,14 +53,14 @@ async function analyze() {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL, we'll crawl up to 15 pages</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast & free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="url"
@@ -74,7 +75,7 @@ async function analyze() {
             style="color:var(--c-text)"
           >
           <button v-if="url && !loading" type="button" @click="url = ''" aria-label="Clear input" class="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center transition-colors" style="background:rgba(6,148,162,0.10);color:var(--c-muted)">
-            <i class="fa-solid fa-xmark text-xs"></i>
+            <LucideIcon class="text-xs" name="x"></LucideIcon>
           </button>
         </div>
         <button @click="analyze" :disabled="loading" class="btn-primary px-7 py-3.5 rounded-xl text-sm font-700 inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed">
@@ -83,22 +84,22 @@ async function analyze() {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-code-branch text-xs" style="color:#061c21"></i>
+            <LucideIcon class="text-xs" style="color:#061c21" name="git-branch"></LucideIcon>
             Audit
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
 
       <div class="mt-6 pt-5 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-[11px] font-semibold" style="border-top:1px solid var(--c-border);color:var(--c-muted)">
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-bolt text-xs" style="color:#0098f0"></i>Lightning fast</span>
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-shield text-xs" style="color:#16bdca"></i>Privacy-first</span>
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-xs" style="color:#0098f0"></i>No signup</span>
-        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-infinity text-xs" style="color:#16bdca"></i>Unlimited use</span>
+        <span class="inline-flex items-center gap-1.5"><LucideIcon class="text-xs" style="color:#0098f0" name="bolt"></LucideIcon>Lightning fast</span>
+        <span class="inline-flex items-center gap-1.5"><LucideIcon class="text-xs" style="color:#16bdca" name="shield"></LucideIcon>Privacy-first</span>
+        <span class="inline-flex items-center gap-1.5"><LucideIcon class="text-xs" style="color:#0098f0" name="circle-check"></LucideIcon>No signup</span>
+        <span class="inline-flex items-center gap-1.5"><LucideIcon class="text-xs" style="color:#16bdca" name="infinity"></LucideIcon>Unlimited use</span>
         <span class="inline-flex items-center gap-1.5 ml-auto">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background:#4010b0"></span>
@@ -120,7 +121,7 @@ async function analyze() {
 
     <div v-if="data.issues.multiVersion.length > 0" class="glass rounded-3xl p-5">
       <p class="text-xs font-bold uppercase tracking-widest mb-3 inline-flex items-center gap-2" style="color:#f97316">
-        <i class="fa-solid fa-triangle-exclamation text-xs"></i>Multiple Versions
+        <LucideIcon class="text-xs" name="triangle-alert"></LucideIcon>Multiple Versions
       </p>
       <div class="space-y-3">
         <div v-for="(m, i) in data.issues.multiVersion" :key="i" class="rounded-xl p-3" style="background:rgba(249,115,22,0.07);border:1px solid rgba(249,115,22,0.15)">
@@ -136,7 +137,7 @@ async function analyze() {
 
     <div v-if="data.issues.pageDuplicates.length > 0" class="glass rounded-3xl p-5">
       <p class="text-xs font-bold uppercase tracking-widest mb-3 inline-flex items-center gap-2" style="color:#f97316">
-        <i class="fa-solid fa-copy text-xs"></i>Same-page duplicates
+        <LucideIcon class="text-xs" name="copy"></LucideIcon>Same-page duplicates
       </p>
       <div class="space-y-2">
         <div v-for="(d, i) in data.issues.pageDuplicates" :key="i" class="text-xs rounded-lg px-3 py-2" style="background:rgba(249,115,22,0.07);border:1px solid rgba(249,115,22,0.15)">

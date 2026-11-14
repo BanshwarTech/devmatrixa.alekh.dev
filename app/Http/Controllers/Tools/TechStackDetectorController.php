@@ -98,10 +98,10 @@ class TechStackDetectorController extends Controller
     ];
 
     private const CAT_ICONS = [
-        'CMS' => 'fa-layer-group', 'JS Framework' => 'fa-js', 'Backend' => 'fa-server',
-        'CSS Framework' => 'fa-palette', 'JS Library' => 'fa-code', 'Analytics' => 'fa-chart-bar',
-        'CDN & Hosting' => 'fa-cloud', 'Server' => 'fa-database', 'E-commerce' => 'fa-cart-shopping',
-        'Chat & Support' => 'fa-comments',
+        'CMS' => 'layers', 'JS Framework' => 'code-2', 'Backend' => 'server',
+        'CSS Framework' => 'palette', 'JS Library' => 'code', 'Analytics' => 'chart-bar',
+        'CDN & Hosting' => 'cloud', 'Server' => 'database', 'E-commerce' => 'shopping-cart',
+        'Chat & Support' => 'message-circle',
     ];
 
     public function analyze(Request $request)
@@ -188,7 +188,7 @@ class TechStackDetectorController extends Controller
             }
 
             if (count($found)) {
-                $detected[$cat] = ['icon' => self::CAT_ICONS[$cat] ?? 'fa-puzzle-piece', 'techs' => $found];
+                $detected[$cat] = ['icon' => self::CAT_ICONS[$cat] ?? 'puzzle', 'techs' => $found];
             }
         }
 

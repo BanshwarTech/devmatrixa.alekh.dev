@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -79,14 +80,14 @@ async function copyVal(key, text) {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a domain to resolve.</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast & free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="domain"
             type="text"
@@ -107,7 +108,7 @@ async function copyVal(key, text) {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-server text-xs"></i>
+            <LucideIcon class="text-xs" name="server"></LucideIcon>
             Look Up
           </template>
         </button>
@@ -115,7 +116,7 @@ async function copyVal(key, text) {
 
       <div class="mt-5 flex flex-wrap items-center gap-2">
         <span class="text-[10px] font-bold uppercase tracking-widest mr-1 inline-flex items-center gap-1.5" style="color:var(--c-muted)">
-          <i class="fa-solid fa-wand-magic-sparkles text-xs" style="color:#0694a2"></i>
+          <LucideIcon class="text-xs" style="color:#0694a2" name="wand-sparkles"></LucideIcon>
           Try
         </span>
         <button
@@ -126,13 +127,13 @@ async function copyVal(key, text) {
           :disabled="loading"
           class="url-example-chip text-xs font-semibold px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 transition-all disabled:opacity-50"
         >
-          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]" style="color:#0694a2"></i>
+          <LucideIcon class="text-[11px]" style="color:#0694a2" name="arrow-up-right-from-square"></LucideIcon>
           {{ ex }}
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -141,7 +142,7 @@ async function copyVal(key, text) {
   <div v-if="data" class="space-y-4">
     <div class="glass rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-5">
       <div class="flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl shrink-0" style="background:linear-gradient(135deg, #16bdca22, #0098f011);border:2px solid #16bdca;box-shadow:0 0 32px #16bdca33">
-        <i class="fa-solid fa-server text-5xl" style="color:#16bdca"></i>
+        <LucideIcon class="text-5xl" style="color:#16bdca" name="server"></LucideIcon>
       </div>
       <div class="flex-1 text-center sm:text-left">
         <div class="text-[11px] uppercase tracking-widest font-semibold mb-1" style="color:var(--c-muted)">Resolved Domain</div>
@@ -171,7 +172,7 @@ async function copyVal(key, text) {
           border: `1px solid ${onlyFound ? '#16bdca55' : 'var(--c-border)'}`,
         }"
       >
-        <i :class="onlyFound ? 'fa-solid fa-check' : 'fa-solid fa-layer-group'" class="text-[11px]"></i>
+        <LucideIcon class="text-[11px]" :name="onlyFound ? 'check' : 'layers'"></LucideIcon>
         {{ onlyFound ? 'Showing records with data' : 'Hide empty record types' }}
       </button>
     </div>
@@ -188,7 +189,7 @@ async function copyVal(key, text) {
           <span class="font-sans text-[13px] font-700">{{ r.label.replace(/^[A-Z]+ — /, '') }}</span>
           <span v-if="r.status === 'none'" class="text-[10px] font-bold px-1.5 py-0.5 rounded ml-auto" style="background:rgba(255,255,255,0.06);color:var(--c-muted)">NO RECORDS</span>
           <span v-if="r.status === 'error'" class="text-[10px] font-bold px-1.5 py-0.5 rounded ml-auto inline-flex items-center gap-1" style="background:#f8717122;color:#f87171">
-            <i class="fa-solid fa-triangle-exclamation text-[10px]"></i> {{ r.error }}
+            <LucideIcon class="text-[10px]" name="triangle-alert"></LucideIcon> {{ r.error }}
           </span>
         </div>
         <p class="text-[12.5px] leading-relaxed mb-2" style="color:var(--c-muted)">{{ r.desc }}</p>
@@ -205,7 +206,7 @@ async function copyVal(key, text) {
               class="shrink-0 w-6 h-6 rounded-md flex items-center justify-center transition-colors"
               :style="{ background: copiedKey === `${r.type}-${i}` ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedKey === `${r.type}-${i}` ? '#4010b0' : 'var(--c-muted)' }"
             >
-              <i :class="copiedKey === `${r.type}-${i}` ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[11px]"></i>
+              <LucideIcon class="text-[11px]" :name="copiedKey === `${r.type}-${i}` ? 'check' : 'copy'"></LucideIcon>
             </button>
           </div>
         </div>
@@ -217,7 +218,7 @@ async function copyVal(key, text) {
     </div>
 
     <div class="flex items-center gap-2 text-[11px] justify-center pt-1" style="color:var(--c-muted)">
-      <i class="fa-solid fa-circle-check" style="color:#4010b0"></i>
+      <LucideIcon style="color:#4010b0" name="circle-check"></LucideIcon>
       Live results — nothing is stored. Re-run anytime to see propagation changes.
     </div>
   </div>

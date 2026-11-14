@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -11,21 +12,21 @@ const filter = ref('all');
 const copiedAll = ref(false);
 
 const CAT_META = {
-  analytics: { label: 'Analytics', color: '#0694a2', icon: 'fa-solid fa-chart-bar' },
-  advertising: { label: 'Advertising', color: '#f87171', icon: 'fa-solid fa-bullhorn' },
-  social: { label: 'Social', color: '#16bdca', icon: 'fa-solid fa-share-nodes' },
-  'tag-manager': { label: 'Tag Manager', color: '#f59e0b', icon: 'fa-solid fa-tag' },
-  chat: { label: 'Chat / Support', color: '#0098f0', icon: 'fa-solid fa-comment-dots' },
-  video: { label: 'Video', color: '#f97316', icon: 'fa-solid fa-video' },
-  fonts: { label: 'Fonts', color: '#7edce2', icon: 'fa-solid fa-font' },
-  cdn: { label: 'CDN', color: '#0694a2', icon: 'fa-solid fa-server' },
-  maps: { label: 'Maps', color: '#16bdca', icon: 'fa-solid fa-map' },
-  payment: { label: 'Payment', color: '#4010b0', icon: 'fa-solid fa-credit-card' },
-  captcha: { label: 'Captcha', color: '#0098f0', icon: 'fa-solid fa-shield-halved' },
-  'error-tracking': { label: 'Error Tracking', color: '#16bdca', icon: 'fa-solid fa-bug' },
-  'ab-testing': { label: 'A/B Testing', color: '#0694a2', icon: 'fa-solid fa-flask' },
-  'session-replay': { label: 'Session Replay', color: '#f87171', icon: 'fa-solid fa-film' },
-  other: { label: 'Other', color: '#a3a3a3', icon: 'fa-solid fa-circle-question' },
+  analytics: { label: 'Analytics', color: '#0694a2', icon: 'chart-bar' },
+  advertising: { label: 'Advertising', color: '#f87171', icon: 'megaphone' },
+  social: { label: 'Social', color: '#16bdca', icon: 'share-2' },
+  'tag-manager': { label: 'Tag Manager', color: '#f59e0b', icon: 'tag' },
+  chat: { label: 'Chat / Support', color: '#0098f0', icon: 'message-circle' },
+  video: { label: 'Video', color: '#f97316', icon: 'video' },
+  fonts: { label: 'Fonts', color: '#7edce2', icon: 'type' },
+  cdn: { label: 'CDN', color: '#0694a2', icon: 'server' },
+  maps: { label: 'Maps', color: '#16bdca', icon: 'map' },
+  payment: { label: 'Payment', color: '#4010b0', icon: 'credit-card' },
+  captcha: { label: 'Captcha', color: '#0098f0', icon: 'shield-check' },
+  'error-tracking': { label: 'Error Tracking', color: '#16bdca', icon: 'bug' },
+  'ab-testing': { label: 'A/B Testing', color: '#0694a2', icon: 'flask-conical' },
+  'session-replay': { label: 'Session Replay', color: '#f87171', icon: 'film' },
+  other: { label: 'Other', color: '#a3a3a3', icon: 'circle-help' },
 };
 
 const PRIVACY_META = {
@@ -102,14 +103,14 @@ async function copyAll() {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter a URL to scan.</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast & free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="url"
@@ -130,14 +131,14 @@ async function copyAll() {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-satellite-dish text-xs"></i>
+            <LucideIcon class="text-xs" name="satellite-dish"></LucideIcon>
             Scan
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -173,7 +174,7 @@ async function copyAll() {
           class="text-xs font-semibold px-3 py-1.5 rounded-full transition-colors inline-flex items-center gap-1.5"
           :style="{ background: filter === cat ? `${CAT_META[cat].color}1f` : 'rgba(255,255,255,0.05)', color: filter === cat ? CAT_META[cat].color : 'var(--c-text)', border: `1px solid ${filter === cat ? CAT_META[cat].color + '55' : 'var(--c-border)'}` }"
         >
-          <i :class="CAT_META[cat].icon" class="text-[11px]"></i>
+          <LucideIcon class="text-[11px]" :name="CAT_META[cat].icon"></LucideIcon>
           {{ CAT_META[cat].label }} <span :style="{ color: filter === cat ? CAT_META[cat].color : 'var(--c-muted)', opacity: 0.85 }">{{ data.byCategory[cat] }}</span>
         </button>
       </div>
@@ -182,7 +183,7 @@ async function copyAll() {
     <div class="glass rounded-3xl p-4 sm:p-5">
       <div class="flex items-center justify-between gap-2 mb-3">
         <div class="text-[11px] uppercase tracking-widest font-semibold" style="color:var(--c-muted)">
-          {{ visibleDomains.length }} {{ filter === 'all' ? 'domain' : CAT_META[filter].label.toLowerCase() + ' domain' }}{{ visibleDomains.length !== 1 ? 's' : '' }}
+          {{ visibleDomains.length }} {{ filter === 'all' ? 'domain' : CAT_META[filter].label.toLowerCase() + 'domain' }}{{ visibleDomains.length !== 1 ? 's' : '' }}
         </div>
         <button
           type="button"
@@ -191,7 +192,7 @@ async function copyAll() {
           class="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition-colors disabled:opacity-40"
           :style="{ background: copiedAll ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedAll ? '#4010b0' : 'var(--c-text)', border: '1px solid var(--c-border)' }"
         >
-          <i :class="copiedAll ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[11px]"></i>
+          <LucideIcon class="text-[11px]" :name="copiedAll ? 'check' : 'copy'"></LucideIcon>
           {{ copiedAll ? 'Copied!' : 'Copy Hosts' }}
         </button>
       </div>
@@ -202,7 +203,7 @@ async function copyAll() {
         <div v-for="d in visibleDomains" :key="d.host" class="rounded-xl p-3" style="background:rgba(255,255,255,0.03);border:1px solid var(--c-border)">
           <div class="flex flex-wrap items-start gap-3">
             <div class="flex items-center justify-center w-9 h-9 rounded-xl shrink-0" :style="{ background: `${CAT_META[d.category].color}1f`, color: CAT_META[d.category].color }">
-              <i :class="CAT_META[d.category].icon" class="text-sm"></i>
+              <LucideIcon class="text-sm" :name="CAT_META[d.category].icon"></LucideIcon>
             </div>
             <div class="flex-1 min-w-0">
               <div class="flex flex-wrap items-center gap-2 mb-1">
@@ -216,7 +217,7 @@ async function copyAll() {
                 <span v-for="(v, k) in d.types" :key="k">{{ k }}: {{ v }}</span>
               </div>
               <a :href="d.sample" target="_blank" rel="noopener noreferrer" class="text-[11px] inline-flex items-center gap-1 hover:underline" style="color:#16bdca">
-                sample request <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                sample request <LucideIcon class="text-[10px]" name="arrow-up-right-from-square"></LucideIcon>
               </a>
             </div>
           </div>

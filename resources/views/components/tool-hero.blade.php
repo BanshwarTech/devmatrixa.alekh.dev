@@ -35,22 +35,22 @@
                 <div class="flex flex-wrap items-center gap-4 {{ $hasRightPanel ? 'justify-center lg:justify-start' : 'justify-center' }}">
                     @if ($primaryCta)
                         <a href="{{ $primaryCta['href'] }}" class="btn-primary px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2.5 font-700">
-                            <i class="{{ $primaryCta['icon'] ?? 'fa-solid fa-bolt' }} text-xs" style="color:#061c21"></i> {{ $primaryCta['label'] }}
+                            <i class="text-xs" style="color:#061c21" data-lucide="{{ $primaryCta['icon'] ?? 'bolt' }}"></i> {{ $primaryCta['label'] }}
                         </a>
                     @endif
                     @if ($secondaryCta)
                         <a href="{{ $secondaryCta['href'] }}" class="btn-outline px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2.5 font-semibold">
-                            {{ $secondaryCta['label'] }} <i class="fa-solid fa-arrow-right text-xs" style="color:var(--c-muted)"></i>
+                            {{ $secondaryCta['label'] }} <i class="text-xs" style="color:var(--c-muted)" data-lucide="arrow-right"></i>
                         </a>
                     @endif
                 </div>
 
                 @if ($trustStrip)
                     <div class="tool-hero-trust mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] font-medium {{ $hasRightPanel ? 'justify-center lg:justify-start' : 'justify-center' }}" style="color:var(--c-muted)">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-xs" style="color:#0098f0"></i>{{ $trust['fast'] }}</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-xs" style="color:#16bdca"></i>{{ $trust['privacy'] }}</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-xs" style="color:#0098f0"></i>{{ $trust['signup'] }}</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-infinity text-xs" style="color:#16bdca"></i>{{ $trust['unlimited'] }}</span>
+                        <span class="flex items-center gap-1.5"><i class="text-xs" style="color:#0098f0" data-lucide="bolt"></i>{{ $trust['fast'] }}</span>
+                        <span class="flex items-center gap-1.5"><i class="text-xs" style="color:#16bdca" data-lucide="shield"></i>{{ $trust['privacy'] }}</span>
+                        <span class="flex items-center gap-1.5"><i class="text-xs" style="color:#0098f0" data-lucide="circle-check"></i>{{ $trust['signup'] }}</span>
+                        <span class="flex items-center gap-1.5"><i class="text-xs" style="color:#16bdca" data-lucide="infinity"></i>{{ $trust['unlimited'] }}</span>
                     </div>
                 @endif
             </div>

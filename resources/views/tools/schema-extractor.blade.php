@@ -18,31 +18,31 @@
         >
             <x-slot:title>Inspect every<br><span class="s-it text-accent">schema block.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-diagram-project" icon-bg="linear-gradient(135deg,#0098f0,#047481)" title="JSON-LD Block" subtitle="Article schema">
+                <x-preview-card variant="terminal" icon="network" icon-bg="linear-gradient(135deg,#0098f0,#047481)" title="JSON-LD Block" subtitle="Article schema">
                     <pre class="text-[10px] font-mono leading-relaxed overflow-hidden" style="color:#daf2f4"><span style="color:#16bdca">&lbrace;</span><br>  <span style="color:#7edce2">"@type"</span>: <span style="color:#0098f0">"Article"</span>,<br>  <span style="color:#7edce2">"headline"</span>: <span style="color:#0098f0">"How to ..."</span>,<br>  <span style="color:#7edce2">"author"</span>: <span style="color:#0098f0">"Alekh B."</span>,<br>  <span style="color:#7edce2">"datePublished"</span>: <span style="color:#0098f0">"2026-05"</span><br><span style="color:#16bdca">&rbrace;</span></pre>
                 </x-preview-card>
             </x-slot:rightPanel>
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-diagram-project', 'color' => '#0694a2', 'label' => 'JSON-LD'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#16bdca', 'label' => 'Microdata'],
-            ['icon' => 'fa-solid fa-tags', 'color' => '#0098f0', 'label' => 'RDFa'],
-            ['icon' => 'fa-solid fa-building', 'color' => '#7edce2', 'label' => 'Organization'],
-            ['icon' => 'fa-solid fa-newspaper', 'color' => '#0694a2', 'label' => 'Article'],
-            ['icon' => 'fa-solid fa-circle-question', 'color' => '#16bdca', 'label' => 'FAQPage'],
-            ['icon' => 'fa-solid fa-box', 'color' => '#0098f0', 'label' => 'Product'],
-            ['icon' => 'fa-solid fa-list', 'color' => '#7edce2', 'label' => 'Breadcrumb'],
-            ['icon' => 'fa-solid fa-utensils', 'color' => '#0694a2', 'label' => 'Recipe'],
-            ['icon' => 'fa-solid fa-video', 'color' => '#16bdca', 'label' => 'VideoObject'],
-            ['icon' => 'fa-solid fa-copy', 'color' => '#0098f0', 'label' => 'Copy JSON'],
-            ['icon' => 'fa-solid fa-star', 'color' => '#7edce2', 'label' => 'Rich Results'],
+            ['icon' => 'network', 'color' => '#0694a2', 'label' => 'JSON-LD'],
+            ['icon' => 'code', 'color' => '#16bdca', 'label' => 'Microdata'],
+            ['icon' => 'tags', 'color' => '#0098f0', 'label' => 'RDFa'],
+            ['icon' => 'building', 'color' => '#7edce2', 'label' => 'Organization'],
+            ['icon' => 'newspaper', 'color' => '#0694a2', 'label' => 'Article'],
+            ['icon' => 'circle-help', 'color' => '#16bdca', 'label' => 'FAQPage'],
+            ['icon' => 'box', 'color' => '#0098f0', 'label' => 'Product'],
+            ['icon' => 'list', 'color' => '#7edce2', 'label' => 'Breadcrumb'],
+            ['icon' => 'utensils', 'color' => '#0694a2', 'label' => 'Recipe'],
+            ['icon' => 'video', 'color' => '#16bdca', 'label' => 'VideoObject'],
+            ['icon' => 'copy', 'color' => '#0098f0', 'label' => 'Copy JSON'],
+            ['icon' => 'star', 'color' => '#7edce2', 'label' => 'Rich Results'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL that contains structured data,an article, product page, FAQ, recipe, or any page targeting Google rich results.'],
-            ['icon' => 'fa-solid fa-diagram-project', 'title' => 'Detect JSON-LD', 'desc' => 'Every script tag with type application/ld+json is found and extracted,including individual nodes nested inside @graph blocks.'],
-            ['icon' => 'fa-solid fa-copy', 'title' => 'Copy and Use', 'desc' => 'Each schema block is auto-formatted with a type label and a one-click copy button,paste straight into Google\'s Rich Results Test or your own code.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL that contains structured data,an article, product page, FAQ, recipe, or any page targeting Google rich results.'],
+            ['icon' => 'network', 'title' => 'Detect JSON-LD', 'desc' => 'Every script tag with type application/ld+json is found and extracted,including individual nodes nested inside @graph blocks.'],
+            ['icon' => 'copy', 'title' => 'Copy and Use', 'desc' => 'Each schema block is auto-formatted with a type label and a one-click copy button,paste straight into Google\'s Rich Results Test or your own code.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">rich-result ready.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -51,12 +51,12 @@
             badge="Why This Tool"
             description="Inspect every JSON-LD block on any page,auto-typed, pretty-printed, and ready to paste into a rich-results test in seconds."
             :features="[
-                ['icon' => 'fa-solid fa-diagram-project', 'title' => 'All JSON-LD Blocks', 'desc' => 'Every script tag with the application/ld+json type is captured from the page,including multiple blocks and individual entities split across @graph nodes.'],
-                ['icon' => 'fa-solid fa-tags', 'title' => 'Type-Aware Grouping', 'desc' => 'Article, Product, FAQPage, Organization, Recipe, and other schema types are automatically detected and labeled with a colored chip for instant visual clarity.'],
-                ['icon' => 'fa-solid fa-code', 'title' => 'Pretty-Printed JSON', 'desc' => 'Every extracted block is formatted with clean 2-space indentation,instantly readable, diff-friendly, and ready to paste without reformatting.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'One-Click Copy Per Block', 'desc' => 'Each schema block has its own dedicated copy button. Paste the output directly into Google\'s Rich Results Test or wherever you need it next.'],
-                ['icon' => 'fa-solid fa-file-circle-check', 'title' => 'Rich Result Hints', 'desc' => 'Schema types that map to Google rich features,Article, FAQPage, Recipe, Product, and more,are highlighted so you always know what your markup is targeting.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Nothing Stored', 'desc' => 'Fetched HTML and parsed schemas live in memory only and are discarded the moment you leave the page. No data is ever logged or retained.'],
+                ['icon' => 'network', 'title' => 'All JSON-LD Blocks', 'desc' => 'Every script tag with the application/ld+json type is captured from the page,including multiple blocks and individual entities split across @graph nodes.'],
+                ['icon' => 'tags', 'title' => 'Type-Aware Grouping', 'desc' => 'Article, Product, FAQPage, Organization, Recipe, and other schema types are automatically detected and labeled with a colored chip for instant visual clarity.'],
+                ['icon' => 'code', 'title' => 'Pretty-Printed JSON', 'desc' => 'Every extracted block is formatted with clean 2-space indentation,instantly readable, diff-friendly, and ready to paste without reformatting.'],
+                ['icon' => 'copy', 'title' => 'One-Click Copy Per Block', 'desc' => 'Each schema block has its own dedicated copy button. Paste the output directly into Google\'s Rich Results Test or wherever you need it next.'],
+                ['icon' => 'file-check-2', 'title' => 'Rich Result Hints', 'desc' => 'Schema types that map to Google rich features,Article, FAQPage, Recipe, Product, and more,are highlighted so you always know what your markup is targeting.'],
+                ['icon' => 'database', 'title' => 'Nothing Stored', 'desc' => 'Fetched HTML and parsed schemas live in memory only and are discarded the moment you leave the page. No data is ever logged or retained.'],
             ]"
         >
             <x-slot:title>Structured data, <span class="s-it text-accent">demystified.</span></x-slot:title>

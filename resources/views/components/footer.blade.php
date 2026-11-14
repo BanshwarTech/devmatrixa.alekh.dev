@@ -10,16 +10,16 @@
                 </p>
                 <div class="flex gap-3">
                     <a href="https://github.com/BanshwarTech" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
-                        <i class="fa-brands fa-github"></i>
+                        <i data-lucide="code-2"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/alekh-banshwar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i data-lucide="network"></i>
                     </a>
                     <a href="mailto:contact@alekh.dev" aria-label="Email" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i data-lucide="mail"></i>
                     </a>
                     <a href="{{ url('/contact') }}" aria-label="Contact" class="w-10 h-10 rounded-xl flex items-center justify-center text-sm transition-all hover:-translate-y-0.5" style="background:#080808;border:1px solid #252525;color:#bfc5cd">
-                        <i class="fa-solid fa-paper-plane"></i>
+                        <i data-lucide="send"></i>
                     </a>
                 </div>
             </div>
@@ -70,7 +70,7 @@
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 text-xs" style="border-top:1px solid var(--c-border);color:var(--c-muted)">
             <span>&copy; {{ date('Y') }} Devmatrixa Inc. All rights reserved.</span>
             <span class="flex items-center gap-1.5">
-                Crafted with <i class="fa-solid fa-heart" style="color:#0694a2"></i> for the craft-obsessed
+                Crafted with <i style="color:#0694a2" data-lucide="heart"></i> for the craft-obsessed
             </span>
         </div>
     </div>

@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref } from 'vue';
 
 const urls = ref('');
@@ -31,14 +32,16 @@ async function analyze() {
 </script>
 
 <template>
-  <div class="relative glass rounded-3xl p-8 md:p-12 mb-10 overflow-hidden">
+  <div class="url-form relative glass rounded-3xl p-6 sm:p-9 md:p-11 mb-10 overflow-hidden">
+    <div class="url-form-accent" aria-hidden="true"></div>
+    <div class="url-form-mesh" aria-hidden="true"></div>
     <div class="relative z-10">
       <div class="flex items-center justify-between gap-4 mb-6">
         <div>
-          <p class="text-xs uppercase tracking-widest font-semibold mb-1" style="color:#0694a2">Analyze Image Alt Text</p>
+          <p class="url-form-eyebrow text-xs uppercase tracking-widest font-semibold mb-1" style="color:#0694a2">Analyze Image Alt Text</p>
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight">Enter your website URL for alt tag analysis.</h2>
         </div>
-        <span class="text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full" style="background:rgba(0, 152, 240,0.12);color:#0098f0;border:1px solid rgba(0, 152, 240,0.25)">Instant results</span>
+        <span class="url-form-status text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full">Instant results</span>
       </div>
       <textarea
         v-model="urls"
@@ -47,7 +50,7 @@ async function analyze() {
         class="field w-full p-4 rounded-2xl text-sm font-mono"
       ></textarea>
       <button @click="analyze" :disabled="loading" class="btn-primary w-full mt-4 px-6 py-3 rounded-2xl text-sm font-700 inline-flex items-center justify-center gap-2 disabled:opacity-70">
-        <i class="fa-solid fa-magnifying-glass text-xs" style="color:#061c21"></i>
+        <LucideIcon class="text-xs" style="color:#061c21" name="search"></LucideIcon>
         {{ loading ? 'Analyzing...' : 'Start Alt Analysis' }}
       </button>
       <div v-if="error" class="mt-4 rounded-2xl p-4 text-sm font-semibold" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);color:#f87171">
@@ -67,7 +70,7 @@ async function analyze() {
       </div>
       <div v-if="r.issues && r.issues.length > 0" class="p-4 space-y-2 max-h-80 overflow-y-auto">
         <div v-for="(iss, i) in r.issues" :key="i" class="flex items-center gap-3 rounded-xl px-3 py-2 text-xs" style="background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.15)">
-          <i class="fa-solid fa-circle-exclamation" style="color:#f87171"></i>
+          <LucideIcon style="color:#f87171" name="circle-alert"></LucideIcon>
           <span class="font-mono truncate flex-1" style="color:var(--c-muted)">{{ iss.src }}</span>
         </div>
       </div>

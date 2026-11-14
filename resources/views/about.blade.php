@@ -10,24 +10,24 @@
         $totalTools = count($tools);
 
         $storyCards = [
-            ['icon' => 'fa-bolt', 'title' => 'Instant Results', 'desc' => 'No queues, no waiting. Analysis runs in seconds directly in your browser.', 'g1' => '#0694a2', 'g2' => '#16bdca'],
-            ['icon' => 'fa-shield-halved', 'title' => 'Privacy First', 'desc' => "We don't store URLs, results, or any user data. What you check stays yours.", 'g1' => '#16bdca', 'g2' => '#0098f0'],
-            ['icon' => 'fa-code', 'title' => 'Developer Grade', 'desc' => 'Built by developers for developers. Every tool is precise, reliable, and clutter-free.', 'g1' => '#0098f0', 'g2' => '#0694a2'],
-            ['icon' => 'fa-sparkles', 'title' => 'Always Free', 'desc' => 'No trial periods, no pro tiers, no credit card. Genuinely free, always.', 'g1' => '#047481', 'g2' => '#16bdca'],
+            ['icon' => 'bolt', 'title' => 'Instant Results', 'desc' => 'No queues, no waiting. Analysis runs in seconds directly in your browser.', 'g1' => '#0694a2', 'g2' => '#16bdca'],
+            ['icon' => 'shield-check', 'title' => 'Privacy First', 'desc' => "We don't store URLs, results, or any user data. What you check stays yours.", 'g1' => '#16bdca', 'g2' => '#0098f0'],
+            ['icon' => 'code', 'title' => 'Developer Grade', 'desc' => 'Built by developers for developers. Every tool is precise, reliable, and clutter-free.', 'g1' => '#0098f0', 'g2' => '#0694a2'],
+            ['icon' => 'sparkles', 'title' => 'Always Free', 'desc' => 'No trial periods, no pro tiers, no credit card. Genuinely free, always.', 'g1' => '#047481', 'g2' => '#16bdca'],
         ];
 
         $principles = [
-            ['n' => '01', 'icon' => 'fa-door-open', 'title' => 'No Barriers', 'desc' => 'Every tool is immediately accessible. No account creation, no email required, no onboarding flow to slip through.'],
-            ['n' => '02', 'icon' => 'fa-eye-slash', 'title' => 'Zero Tracking', 'desc' => "We don't log the URLs you analyze, the results you get, or any personal information. Your data is genuinely yours."],
-            ['n' => '03', 'icon' => 'fa-bullseye', 'title' => 'Single Purpose', 'desc' => 'Each tool does one thing extremely well. No feature creep. No trying to replicate entire SaaS platforms. Focused utility.'],
-            ['n' => '04', 'icon' => 'fa-arrow-trend-up', 'title' => 'Always Improving', 'desc' => 'New tools ship regularly. Existing tools get smarter — better checks, richer output, more actionable fixes over time.'],
+            ['n' => '01', 'icon' => 'door-open', 'title' => 'No Barriers', 'desc' => 'Every tool is immediately accessible. No account creation, no email required, no onboarding flow to slip through.'],
+            ['n' => '02', 'icon' => 'eye-off', 'title' => 'Zero Tracking', 'desc' => "We don't log the URLs you analyze, the results you get, or any personal information. Your data is genuinely yours."],
+            ['n' => '03', 'icon' => 'target', 'title' => 'Single Purpose', 'desc' => 'Each tool does one thing extremely well. No feature creep. No trying to replicate entire SaaS platforms. Focused utility.'],
+            ['n' => '04', 'icon' => 'trending-up', 'title' => 'Always Improving', 'desc' => 'New tools ship regularly. Existing tools get smarter — better checks, richer output, more actionable fixes over time.'],
         ];
 
         $stack = [
-            ['name' => 'Laravel', 'icon' => 'fa-brands fa-laravel', 'g1' => '#0694a2', 'g2' => '#16bdca', 'desc' => 'PHP framework powering server rendering, routing, and the backend for every tool.'],
-            ['name' => 'Vue.js', 'icon' => 'fa-brands fa-vuejs', 'g1' => '#16bdca', 'g2' => '#0098f0', 'desc' => 'Lightweight interactive islands for the parts of the UI that need real client-side state.'],
-            ['name' => 'Tailwind CSS', 'icon' => 'fa-solid fa-wind', 'g1' => '#0098f0', 'g2' => '#0694a2', 'desc' => 'Utility-first CSS for a consistent, responsive UI across every page.'],
-            ['name' => 'Font Awesome', 'icon' => 'fa-solid fa-icons', 'g1' => '#047481', 'g2' => '#0098f0', 'desc' => 'Icon library providing consistent, scalable icons throughout the interface.'],
+            ['name' => 'Laravel', 'icon' => 'code-2', 'g1' => '#0694a2', 'g2' => '#16bdca', 'desc' => 'PHP framework powering server rendering, routing, and the backend for every tool.'],
+            ['name' => 'Vue.js', 'icon' => 'panels-top-left', 'g1' => '#16bdca', 'g2' => '#0098f0', 'desc' => 'Lightweight interactive islands for the parts of the UI that need real client-side state.'],
+            ['name' => 'Tailwind CSS', 'icon' => 'wind', 'g1' => '#0098f0', 'g2' => '#0694a2', 'desc' => 'Utility-first CSS for a consistent, responsive UI across every page.'],
+            ['name' => 'Font Awesome', 'icon' => 'shapes', 'g1' => '#047481', 'g2' => '#0098f0', 'desc' => 'Icon library providing consistent, scalable icons throughout the interface.'],
         ];
     @endphp
 
@@ -41,7 +41,7 @@
 
             <div class="about-hero-copy relative z-10 max-w-3xl mx-auto text-center">
                 <div class="hero-badge inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-7" style="background:rgba(6,148,162,0.10);border:1.5px solid rgba(6,148,162,0.22);color:#0694a2">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> About Devmatrixa
+                    <i data-lucide="wand-sparkles"></i> About Devmatrixa
                 </div>
 
                 <h1 class="hero-title font-sans text-5xl sm:text-6xl font-700 tracking-tight leading-[1.05] mb-6">
@@ -55,10 +55,10 @@
 
                 <div class="flex flex-wrap items-center justify-center gap-4">
                     <a href="{{ url('/#tools') }}" class="btn-primary px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2.5 font-700">
-                        <i class="fa-solid fa-rocket" style="color:#061c21"></i> Explore All Tools
+                        <i style="color:#061c21" data-lucide="rocket"></i> Explore All Tools
                     </a>
                     <a href="#story" class="btn-outline px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2.5 font-semibold">
-                        Our Story <i class="fa-solid fa-arrow-down text-xs" style="color:var(--c-muted)"></i>
+                        Our Story <i class="text-xs" style="color:var(--c-muted)" data-lucide="arrow-down"></i>
                     </a>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                     @foreach ($storyCards as $c)
                         <div class="feat-card rounded-2xl p-5 text-center">
                             <div class="t-icon mx-auto w-11 h-11 rounded-xl flex items-center justify-center mb-3 shadow-lg" style="background:linear-gradient(135deg,{{ $c['g1'] }},{{ $c['g2'] }});box-shadow:0 8px 20px {{ $c['g1'] }}44">
-                                <i class="fa-solid {{ $c['icon'] }} text-sm" style="color:{{ $c['g2'] === '#0098f0' ? '#061c21' : '#fff' }}"></i>
+                                <i class="text-sm" style="color:{{ $c['g2'] === '#0098f0' ? '#061c21' : '#fff' }}" data-lucide="{{ $c['icon'] }}"></i>
                             </div>
                             <h3 class="font-sans font-600 text-sm tracking-tight mb-1.5">{{ $c['title'] }}</h3>
                             <p class="text-xs leading-relaxed" style="color:var(--c-muted)">{{ $c['desc'] }}</p>
@@ -127,7 +127,7 @@
                         <div class="feat-card rounded-2xl p-6 relative overflow-hidden">
                             <span class="absolute top-4 right-5 stat-num text-3xl opacity-30" style="color:#16bdca">{{ $p['n'] }}</span>
                             <div class="t-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4 shadow-lg" style="background:linear-gradient(135deg,#0694a2,#0098f0);box-shadow:0 10px 24px rgba(6,148,162,0.32)">
-                                <i class="fa-solid {{ $p['icon'] }} text-base" style="color:#061c21"></i>
+                                <i class="text-base" style="color:#061c21" data-lucide="{{ $p['icon'] }}"></i>
                             </div>
                             <h3 class="font-sans font-600 text-base tracking-tight mb-1.5">{{ $p['title'] }}</h3>
                             <p class="text-xs leading-relaxed" style="color:var(--c-muted)">{{ $p['desc'] }}</p>
@@ -152,7 +152,7 @@
                     <div class="glass rounded-3xl p-6 sm:p-7">
                         <div class="flex items-center gap-3 mb-5 pb-4" style="border-bottom:1px solid var(--c-border)">
                             <div class="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg" style="background:linear-gradient(135deg,#0098f0,#0694a2);box-shadow:0 8px 20px rgba(0, 152, 240,0.32)">
-                                <i class="fa-solid fa-magnifying-glass-chart text-sm" style="color:#061c21"></i>
+                                <i class="text-sm" style="color:#061c21" data-lucide="chart-no-axes-combined"></i>
                             </div>
                             <div>
                                 <h3 class="font-sans font-600 text-base tracking-tight">SEO Tools</h3>
@@ -164,7 +164,7 @@
                                 <li>
                                     <a href="{{ url($t['url'] ?? '#') }}" class="flex items-start gap-3 p-2 -m-2 rounded-xl transition-colors hover:bg-teal-900/15">
                                         <div class="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center mt-0.5" style="background:linear-gradient(135deg,{{ $t['g1'] }},{{ $t['g2'] }})">
-                                            <i class="{{ $t['icon'] }} text-[11px]" style="color:{{ $t['g2'] === '#0098f0' ? '#061c21' : '#fff' }}"></i>
+                                            <i class="text-[11px]" style="color:{{ $t['g2'] === '#0098f0' ? '#061c21' : '#fff' }}" data-lucide="{{ $t['icon'] }}"></i>
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <p class="text-sm font-semibold" style="color:var(--c-text)">{{ $t['name'] }}</p>
@@ -179,7 +179,7 @@
                     <div class="glass rounded-3xl p-6 sm:p-7">
                         <div class="flex items-center gap-3 mb-5 pb-4" style="border-bottom:1px solid var(--c-border)">
                             <div class="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg" style="background:linear-gradient(135deg,#0694a2,#16bdca);box-shadow:0 8px 20px rgba(6,148,162,0.32)">
-                                <i class="fa-solid fa-code text-sm text-white"></i>
+                                <i class="text-sm text-white" data-lucide="code"></i>
                             </div>
                             <div>
                                 <h3 class="font-sans font-600 text-base tracking-tight">Dev Tools</h3>
@@ -191,7 +191,7 @@
                                 <li>
                                     <a href="{{ url($t['url'] ?? '#') }}" class="flex items-start gap-3 p-2 -m-2 rounded-xl transition-colors hover:bg-teal-900/15">
                                         <div class="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center mt-0.5" style="background:linear-gradient(135deg,{{ $t['g1'] }},{{ $t['g2'] }})">
-                                            <i class="{{ $t['icon'] }} text-[11px]" style="color:{{ $t['g2'] === '#0098f0' ? '#061c21' : '#fff' }}"></i>
+                                            <i class="text-[11px]" style="color:{{ $t['g2'] === '#0098f0' ? '#061c21' : '#fff' }}" data-lucide="{{ $t['icon'] }}"></i>
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <p class="text-sm font-semibold" style="color:var(--c-text)">{{ $t['name'] }}</p>
@@ -229,13 +229,13 @@
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 @foreach ([
-                                    ['icon' => 'fa-solid fa-server', 'label' => 'Laravel'],
-                                    ['icon' => 'fa-brands fa-vuejs', 'label' => 'Vue.js'],
-                                    ['icon' => 'fa-solid fa-wind', 'label' => 'Tailwind CSS'],
-                                    ['icon' => 'fa-solid fa-magnifying-glass-chart', 'label' => 'SEO Tools'],
+                                    ['icon' => 'server', 'label' => 'Laravel'],
+                                    ['icon' => 'panels-top-left', 'label' => 'Vue.js'],
+                                    ['icon' => 'wind', 'label' => 'Tailwind CSS'],
+                                    ['icon' => 'chart-no-axes-combined', 'label' => 'SEO Tools'],
                                 ] as $b)
                                     <span class="text-[11px] font-semibold px-3 py-1.5 rounded-full inline-flex items-center gap-1.5" style="background:rgba(6,148,162,0.10);border:1px solid rgba(6,148,162,0.22);color:#0694a2">
-                                        <i class="{{ $b['icon'] }} text-[10px]"></i> {{ $b['label'] }}
+                                        <i class="text-[10px]" data-lucide="{{ $b['icon'] }}"></i> {{ $b['label'] }}
                                     </span>
                                 @endforeach
                             </div>
@@ -259,7 +259,7 @@
                     @foreach ($stack as $s)
                         <div class="feat-card rounded-2xl p-6">
                             <div class="t-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4 shadow-lg" style="background:linear-gradient(135deg,{{ $s['g1'] }},{{ $s['g2'] }});box-shadow:0 10px 24px {{ $s['g1'] }}44">
-                                <i class="{{ $s['icon'] }} text-base" style="color:{{ $s['g2'] === '#0098f0' ? '#061c21' : '#fff' }}"></i>
+                                <i class="text-base" style="color:{{ $s['g2'] === '#0098f0' ? '#061c21' : '#fff' }}" data-lucide="{{ $s['icon'] }}"></i>
                             </div>
                             <h3 class="font-sans font-600 text-base tracking-tight mb-1.5">{{ $s['name'] }}</h3>
                             <p class="text-xs leading-relaxed" style="color:var(--c-muted)">{{ $s['desc'] }}</p>
@@ -277,7 +277,7 @@
                     <div class="orb w-80 h-80 opacity-20" style="background:radial-gradient(circle,#0098f0,transparent 70%);bottom:-30%;right:-10%;filter:blur(60px)"></div>
                     <div class="relative z-10">
                         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6" style="background:rgba(6,148,162,0.10);border:1px solid rgba(6,148,162,0.22);color:#0694a2">
-                            <i class="fa-solid fa-rocket"></i> Ready to build
+                            <i data-lucide="rocket"></i> Ready to build
                         </div>
                         <h2 class="font-sans text-4xl sm:text-5xl font-700 tracking-tight mb-4">
                             Start using Devmatrixa.<br><span class="s-it text-accent">No account needed.</span>
@@ -287,10 +287,10 @@
                         </p>
                         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a href="{{ url('/#tools') }}" class="btn-primary px-8 py-4 rounded-full text-sm font-700 inline-flex items-center gap-2.5">
-                                <i class="fa-solid fa-hammer" style="color:#061c21"></i> Browse All Tools
+                                <i style="color:#061c21" data-lucide="hammer"></i> Browse All Tools
                             </a>
                             <a href="{{ url('/seo-analyzer') }}" class="btn-outline px-8 py-4 rounded-full text-sm font-semibold inline-flex items-center gap-2.5">
-                                <i class="fa-solid fa-magnifying-glass-chart text-xs" style="color:#0694a2"></i> Try SEO Analyzer
+                                <i class="text-xs" style="color:#0694a2" data-lucide="chart-no-axes-combined"></i> Try SEO Analyzer
                             </a>
                         </div>
                     </div>

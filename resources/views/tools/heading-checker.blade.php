@@ -19,7 +19,7 @@
         >
             <x-slot:title>Find skipped<br><span class="s-it text-accent">heading levels.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-solid fa-heading" icon-bg="linear-gradient(135deg,#0694a2,#16bdca)" icon-color="#fff" title="Heading Tree" subtitle="H1–H6 audit">
+                <x-preview-card variant="terminal" icon="heading" icon-bg="linear-gradient(135deg,#0694a2,#16bdca)" icon-color="#fff" title="Heading Tree" subtitle="H1–H6 audit">
                     <div class="space-y-1.5">
                         @foreach ([
                             ['tag' => 'H1', 'text' => 'Best Running Shoes 2025', 'color' => '#0694a2', 'indent' => 0],
@@ -39,24 +39,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-heading', 'color' => '#0694a2', 'label' => 'H1 Tag'],
-            ['icon' => 'fa-solid fa-list-ol', 'color' => '#16bdca', 'label' => 'H2 - H6'],
-            ['icon' => 'fa-solid fa-sitemap', 'color' => '#0098f0', 'label' => 'Hierarchy'],
-            ['icon' => 'fa-solid fa-arrow-down-1-9', 'color' => '#7edce2', 'label' => 'Skipped Levels'],
-            ['icon' => 'fa-solid fa-ban', 'color' => '#0694a2', 'label' => 'Empty Headings'],
-            ['icon' => 'fa-solid fa-tree', 'color' => '#16bdca', 'label' => 'Outline Tree'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#0098f0', 'label' => 'Fix Suggestions'],
-            ['icon' => 'fa-solid fa-circle-exclamation', 'color' => '#7edce2', 'label' => 'Missing H1'],
-            ['icon' => 'fa-solid fa-copy', 'color' => '#0694a2', 'label' => 'Duplicate H1'],
-            ['icon' => 'fa-solid fa-list', 'color' => '#16bdca', 'label' => 'DOM Order'],
-            ['icon' => 'fa-solid fa-magnifying-glass-chart', 'color' => '#0098f0', 'label' => 'Structure Audit'],
-            ['icon' => 'fa-solid fa-universal-access', 'color' => '#7edce2', 'label' => 'Accessibility'],
+            ['icon' => 'heading', 'color' => '#0694a2', 'label' => 'H1 Tag'],
+            ['icon' => 'list-ordered', 'color' => '#16bdca', 'label' => 'H2 - H6'],
+            ['icon' => 'network', 'color' => '#0098f0', 'label' => 'Hierarchy'],
+            ['icon' => 'arrow-down-01', 'color' => '#7edce2', 'label' => 'Skipped Levels'],
+            ['icon' => 'ban', 'color' => '#0694a2', 'label' => 'Empty Headings'],
+            ['icon' => 'tree-deciduous', 'color' => '#16bdca', 'label' => 'Outline Tree'],
+            ['icon' => 'wand-sparkles', 'color' => '#0098f0', 'label' => 'Fix Suggestions'],
+            ['icon' => 'circle-alert', 'color' => '#7edce2', 'label' => 'Missing H1'],
+            ['icon' => 'copy', 'color' => '#0694a2', 'label' => 'Duplicate H1'],
+            ['icon' => 'list', 'color' => '#16bdca', 'label' => 'DOM Order'],
+            ['icon' => 'chart-no-axes-combined', 'color' => '#0098f0', 'label' => 'Structure Audit'],
+            ['icon' => 'accessibility', 'color' => '#7edce2', 'label' => 'Accessibility'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any public URL,a homepage, landing page, or blog post,and the audit begins instantly.'],
-            ['icon' => 'fa-solid fa-sitemap', 'title' => 'Structure Audit', 'desc' => 'Every H1–H6 tag is extracted in DOM order and visualized as a full, indented heading tree so structural issues are immediately obvious.'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'Get Fix Suggestions', 'desc' => 'Skipped levels and empty headings are flagged individually, each paired with a suggested correction so your outline can be fixed in one pass.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any public URL,a homepage, landing page, or blog post,and the audit begins instantly.'],
+            ['icon' => 'network', 'title' => 'Structure Audit', 'desc' => 'Every H1–H6 tag is extracted in DOM order and visualized as a full, indented heading tree so structural issues are immediately obvious.'],
+            ['icon' => 'wand-sparkles', 'title' => 'Get Fix Suggestions', 'desc' => 'Skipped levels and empty headings are flagged individually, each paired with a suggested correction so your outline can be fixed in one pass.'],
         ]">
             <x-slot:subtitle>Three steps to a <span class="s-it text-accent">perfect heading tree.</span></x-slot:subtitle>
         </x-how-it-works>
@@ -65,12 +65,12 @@
             badge="Why This Tool"
             description="Spot missing H1s, skipped levels, and empty headings in one tree view,with auto-fix suggestions you can act on immediately."
             :features="[
-                ['icon' => 'fa-solid fa-tree', 'title' => 'Visual Outline Tree', 'desc' => 'Headings render as an indented tree so you can see exactly where hierarchy breaks down,without having to read a single line of raw HTML.'],
-                ['icon' => 'fa-solid fa-arrow-down-1-9', 'title' => 'Skipped Level Detection', 'desc' => 'H1 to H3 jumps and similar ordering errors are flagged automatically,the kind of issues that confuse screen readers, crawlers, and content editors alike.'],
-                ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'Auto Fix Suggestions', 'desc' => 'Every problematic heading gets a recommended level correction, so you can refactor your full outline structure in one focused review.'],
-                ['icon' => 'fa-solid fa-ban', 'title' => 'Empty Headings Caught', 'desc' => 'Heading tags that exist in the DOM but contain no readable text,common with icon-only or decorative markup,are surfaced clearly in the results.'],
-                ['icon' => 'fa-solid fa-universal-access', 'title' => 'Accessibility-Friendly', 'desc' => 'A clean heading order is foundational to WCAG compliance and screen-reader navigation. This tool surfaces the exact issues accessibility auditors look for.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'Copy the Corrected Outline', 'desc' => 'The suggested heading tree is copy-ready as plain text,paste it directly into a content brief, a doc, or your CMS without reformatting.'],
+                ['icon' => 'tree-deciduous', 'title' => 'Visual Outline Tree', 'desc' => 'Headings render as an indented tree so you can see exactly where hierarchy breaks down,without having to read a single line of raw HTML.'],
+                ['icon' => 'arrow-down-01', 'title' => 'Skipped Level Detection', 'desc' => 'H1 to H3 jumps and similar ordering errors are flagged automatically,the kind of issues that confuse screen readers, crawlers, and content editors alike.'],
+                ['icon' => 'wand-sparkles', 'title' => 'Auto Fix Suggestions', 'desc' => 'Every problematic heading gets a recommended level correction, so you can refactor your full outline structure in one focused review.'],
+                ['icon' => 'ban', 'title' => 'Empty Headings Caught', 'desc' => 'Heading tags that exist in the DOM but contain no readable text,common with icon-only or decorative markup,are surfaced clearly in the results.'],
+                ['icon' => 'accessibility', 'title' => 'Accessibility-Friendly', 'desc' => 'A clean heading order is foundational to WCAG compliance and screen-reader navigation. This tool surfaces the exact issues accessibility auditors look for.'],
+                ['icon' => 'copy', 'title' => 'Copy the Corrected Outline', 'desc' => 'The suggested heading tree is copy-ready as plain text,paste it directly into a content brief, a doc, or your CMS without reformatting.'],
             ]"
         >
             <x-slot:title>Heading hierarchy, <span class="s-it text-accent">visualised.</span></x-slot:title>

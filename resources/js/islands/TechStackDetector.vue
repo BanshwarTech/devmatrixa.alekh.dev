@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -9,21 +10,21 @@ const loading = ref(false);
 const error = ref('');
 
 const CAT_ICON_MAP = {
-  'fa-layer-group': 'fa-solid fa-layer-group',
-  'fa-js': 'fa-brands fa-js',
-  'fa-server': 'fa-solid fa-server',
-  'fa-palette': 'fa-solid fa-palette',
-  'fa-code': 'fa-solid fa-code',
-  'fa-chart-bar': 'fa-solid fa-chart-bar',
-  'fa-cloud': 'fa-solid fa-cloud',
-  'fa-database': 'fa-solid fa-database',
-  'fa-cart-shopping': 'fa-solid fa-cart-shopping',
-  'fa-comments': 'fa-solid fa-comments',
-  'fa-puzzle-piece': 'fa-solid fa-puzzle-piece',
+  'layers': 'layers',
+  'file-code-2': 'file-code-2',
+  'server': 'server',
+  'palette': 'palette',
+  'code': 'code',
+  'chart-bar': 'chart-bar',
+  'cloud': 'cloud',
+  'database': 'database',
+  'shopping-cart': 'shopping-cart',
+  'messages-square': 'messages-square',
+  'puzzle': 'puzzle',
 };
 
 function catIcon(icon) {
-  return CAT_ICON_MAP[icon] ?? 'fa-solid fa-puzzle-piece';
+  return CAT_ICON_MAP[icon] ?? 'puzzle';
 }
 
 const detectedEntries = computed(() => (data.value ? Object.entries(data.value.detected) : []));
@@ -73,14 +74,14 @@ async function analyze() {
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">Fast and free.</p>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast and free.
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="url"
@@ -101,14 +102,14 @@ async function analyze() {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+            <LucideIcon class="text-xs" name="search-code"></LucideIcon>
             Detect
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -121,14 +122,14 @@ async function analyze() {
     </div>
 
     <div v-if="detectedEntries.length === 0" class="glass rounded-3xl p-8 text-center">
-      <i class="fa-solid fa-circle-question text-3xl mb-3" style="color:#f97316"></i>
+      <LucideIcon class="text-3xl mb-3" style="color:#f97316" name="circle-help"></LucideIcon>
       <p class="text-sm font-semibold">No known technologies detected.</p>
     </div>
     <div v-else class="grid sm:grid-cols-2 gap-4">
       <div v-for="[cat, info] in detectedEntries" :key="cat" class="glass rounded-3xl p-5">
         <div class="flex items-center gap-3 mb-3">
           <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:linear-gradient(135deg,#0694a2,#0098f0)">
-            <i :class="catIcon(info.icon)" class="text-sm" style="color:#061c21"></i>
+            <LucideIcon class="text-sm" style="color:#061c21" :name="info.icon"></LucideIcon>
           </div>
           <p class="text-sm font-700">{{ cat }}</p>
         </div>

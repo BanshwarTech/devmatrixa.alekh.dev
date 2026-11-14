@@ -18,7 +18,7 @@
         >
             <x-slot:title>Analyze. Score.<br><span class="s-it text-accent">Rank higher.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-magnifying-glass-chart" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="SEO Analyzer" subtitle="On-page audit">
+                <x-preview-card variant="gauge" icon="chart-no-axes-combined" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="SEO Analyzer" subtitle="On-page audit">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-[11px] uppercase tracking-[0.25em] font-semibold" style="color:#76d0d9">SEO Score</span>
                         <span class="text-2xl font-700" style="color:#0098f0">84<span class="text-sm opacity-60">/100</span></span>
@@ -43,26 +43,26 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-heading', 'color' => '#0694a2', 'label' => 'Title Tag'],
-            ['icon' => 'fa-solid fa-align-left', 'color' => '#16bdca', 'label' => 'Meta Description'],
-            ['icon' => 'fa-solid fa-list-ol', 'color' => '#0098f0', 'label' => 'Headings H1-H3'],
-            ['icon' => 'fa-solid fa-share-nodes', 'color' => '#7edce2', 'label' => 'Open Graph'],
-            ['icon' => 'fa-brands fa-x-twitter', 'color' => '#0694a2', 'label' => 'Twitter Cards'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#0098f0', 'label' => 'Schema.org JSON-LD'],
-            ['icon' => 'fa-solid fa-link', 'color' => '#16bdca', 'label' => 'Canonical URL'],
-            ['icon' => 'fa-solid fa-image', 'color' => '#7edce2', 'label' => 'ALT Text Audit'],
-            ['icon' => 'fa-solid fa-robot', 'color' => '#0694a2', 'label' => 'Robots Meta'],
-            ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#0098f0', 'label' => 'Viewport'],
-            ['icon' => 'fa-solid fa-bookmark', 'color' => '#16bdca', 'label' => 'Favicon'],
-            ['icon' => 'fa-solid fa-gauge-high', 'color' => '#7edce2', 'label' => 'Page Weight'],
-            ['icon' => 'fa-solid fa-language', 'color' => '#0694a2', 'label' => 'HTML Lang'],
-            ['icon' => 'fa-solid fa-shield-halved', 'color' => '#0098f0', 'label' => 'HTTPS Check'],
+            ['icon' => 'heading', 'color' => '#0694a2', 'label' => 'Title Tag'],
+            ['icon' => 'align-left', 'color' => '#16bdca', 'label' => 'Meta Description'],
+            ['icon' => 'list-ordered', 'color' => '#0098f0', 'label' => 'Headings H1-H3'],
+            ['icon' => 'share-2', 'color' => '#7edce2', 'label' => 'Open Graph'],
+            ['icon' => 'at-sign', 'color' => '#0694a2', 'label' => 'Twitter Cards'],
+            ['icon' => 'code', 'color' => '#0098f0', 'label' => 'Schema.org JSON-LD'],
+            ['icon' => 'link', 'color' => '#16bdca', 'label' => 'Canonical URL'],
+            ['icon' => 'image', 'color' => '#7edce2', 'label' => 'ALT Text Audit'],
+            ['icon' => 'bot', 'color' => '#0694a2', 'label' => 'Robots Meta'],
+            ['icon' => 'smartphone', 'color' => '#0098f0', 'label' => 'Viewport'],
+            ['icon' => 'bookmark', 'color' => '#16bdca', 'label' => 'Favicon'],
+            ['icon' => 'circle-gauge', 'color' => '#7edce2', 'label' => 'Page Weight'],
+            ['icon' => 'languages', 'color' => '#0694a2', 'label' => 'HTML Lang'],
+            ['icon' => 'shield-check', 'color' => '#0098f0', 'label' => 'HTTPS Check'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Enter URL', 'desc' => 'Paste any public URL - a homepage, landing page, or blog post - and hit Analyze. That\'s all it takes to get started.'],
-            ['icon' => 'fa-solid fa-magnifying-glass-chart', 'title' => 'Deep Audit', 'desc' => 'We scan 10+ SEO signals in one pass - title tag, meta description, headings, OG tags, ALT text, canonical, schema, robots, and more.'],
-            ['icon' => 'fa-solid fa-circle-check', 'title' => 'Score & Fix', 'desc' => 'Get a clear score out of 100. Every flagged issue comes with a one-line fix you can apply immediately - no guesswork, no vague advice.'],
+            ['icon' => 'link', 'title' => 'Enter URL', 'desc' => 'Paste any public URL - a homepage, landing page, or blog post - and hit Analyze. That\'s all it takes to get started.'],
+            ['icon' => 'chart-no-axes-combined', 'title' => 'Deep Audit', 'desc' => 'We scan 10+ SEO signals in one pass - title tag, meta description, headings, OG tags, ALT text, canonical, schema, robots, and more.'],
+            ['icon' => 'circle-check', 'title' => 'Score & Fix', 'desc' => 'Get a clear score out of 100. Every flagged issue comes with a one-line fix you can apply immediately - no guesswork, no vague advice.'],
         ]">
             <x-slot:subtitle>Three steps to a <span class="s-it text-accent">perfect SEO score</span></x-slot:subtitle>
         </x-how-it-works>
@@ -71,12 +71,12 @@
             badge="Why this audit"
             description="A clear breakdown of every signal Google cares about - and the exact fix for each issue, in plain English."
             :features="[
-                ['icon' => 'fa-solid fa-magnifying-glass-chart', 'title' => '10+ signals checked', 'desc' => 'Title, meta, headings, OG, Twitter cards, canonical, schema, robots, viewport, ALT text, favicon, page weight - all audited in a single pass.'],
-                ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'Actionable fixes', 'desc' => 'Every issue ships with a one-line fix you can apply right away - no rabbit holes, no learn-more loops.'],
-                ['icon' => 'fa-solid fa-code', 'title' => 'Schema-aware', 'desc' => 'Detects JSON-LD types present on the page and flags missing structured data that can unlock rich results in search.'],
-                ['icon' => 'fa-solid fa-mobile-screen', 'title' => 'Mobile-first checks', 'desc' => 'Validates the viewport meta tag and warns if your layout is likely to break on small screens - before it costs you rankings.'],
-                ['icon' => 'fa-solid fa-chart-column', 'title' => 'Pass / warn / fail', 'desc' => 'Every check is color-coded. See at a glance what\'s healthy, what\'s borderline, and what needs immediate attention.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Nothing stored', 'desc' => 'We fetch your page once, score it, and discard everything. No logs, no stored URLs, no analytics on your content.'],
+                ['icon' => 'chart-no-axes-combined', 'title' => '10+ signals checked', 'desc' => 'Title, meta, headings, OG, Twitter cards, canonical, schema, robots, viewport, ALT text, favicon, page weight - all audited in a single pass.'],
+                ['icon' => 'wand-sparkles', 'title' => 'Actionable fixes', 'desc' => 'Every issue ships with a one-line fix you can apply right away - no rabbit holes, no learn-more loops.'],
+                ['icon' => 'code', 'title' => 'Schema-aware', 'desc' => 'Detects JSON-LD types present on the page and flags missing structured data that can unlock rich results in search.'],
+                ['icon' => 'smartphone', 'title' => 'Mobile-first checks', 'desc' => 'Validates the viewport meta tag and warns if your layout is likely to break on small screens - before it costs you rankings.'],
+                ['icon' => 'chart-column', 'title' => 'Pass / warn / fail', 'desc' => 'Every check is color-coded. See at a glance what\'s healthy, what\'s borderline, and what needs immediate attention.'],
+                ['icon' => 'database', 'title' => 'Nothing stored', 'desc' => 'We fetch your page once, score it, and discard everything. No logs, no stored URLs, no analytics on your content.'],
             ]"
         >
             <x-slot:title>Beyond a simple <span class="s-it text-accent">score.</span></x-slot:title>

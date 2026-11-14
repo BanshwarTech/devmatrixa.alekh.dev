@@ -23,39 +23,38 @@
 @endphp
 
 @if ($items->isNotEmpty())
-<section class="py-12 px-5 sm:px-8 relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-40">
-        <div class="orb w-[380px] h-[380px] opacity-15" style="background:radial-gradient(circle,#0694a2,transparent 65%);top:20%;right:-8%"></div>
+<section class="related-tools-section relative overflow-hidden px-5 py-16 sm:px-8">
+    <div class="related-tools-glow pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="orb w-[380px] h-[380px]" style="background:radial-gradient(circle,#6818E8,transparent 65%);top:10%;right:-8%"></div>
     </div>
     <div class="max-w-7xl mx-auto relative">
-        <div class="text-center mb-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-3" style="background:rgba(22,189,202,0.10);border:1px solid rgba(22,189,202,0.28);color:#16bdca">
-                    <i class="fa-solid fa-wrench text-[11px]"></i> {{ $badge }}
-                </div>
-                <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">{{ $title }}</h2>
-                <p class="text-sm sm:text-[15px] mt-2 max-w-xl mx-auto" style="color:var(--c-muted)">{{ $description }}</p>
-            <a href="{{ url('/#tools') }}" class="btn-outline mt-4 px-5 py-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-2">
-                View All Tools <i class="fa-solid fa-arrow-right text-xs" style="color:var(--c-muted)"></i>
+        <div class="related-tools-heading mb-9 text-center">
+            <div class="related-tools-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-widest">
+                <i class="text-[11px]" aria-hidden="true" data-lucide="wand-sparkles"></i> {{ $badge }}
+            </div>
+            <h2 class="mt-4 font-sans text-3xl sm:text-4xl font-700 tracking-tight leading-tight">{{ $title }}</h2>
+            <p class="text-sm sm:text-base mt-3 max-w-xl mx-auto leading-relaxed" style="color:var(--c-muted)">{{ $description }}</p>
+            <a href="{{ url('/#tools') }}" class="related-tools-all mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold">
+                View all tools <i class="text-xs" aria-hidden="true" data-lucide="arrow-right"></i>
             </a>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="related-tools-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             @foreach ($items as $t)
                 @php $iconColor = ($t['g1'] === '#0098f0' || $t['g2'] === '#0098f0') ? '#061c21' : '#fff'; @endphp
-                <a href="{{ url($t['url']) }}" class="tool-card rounded-[20px] p-5 flex flex-col relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60">
-                    <div class="tc-spotlight" style="background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%), {{ $t['g1'] }}26, transparent 50%)"></div>
+                <a href="{{ url($t['url']) }}" class="related-tool-card group flex flex-col relative overflow-hidden" style="--related-accent:{{ $t['g1'] }};--related-accent-secondary:{{ $t['g2'] }}">
                     <div class="relative flex items-start justify-between z-10">
                         <div class="t-icon-wrap">
-                            <div class="t-icon w-12 h-12 rounded-2xl flex items-center justify-center relative" style="background:linear-gradient(135deg,{{ $t['g1'] }},{{ $t['g2'] }});box-shadow:0 10px 24px {{ $t['g1'] }}55, inset 0 1px 0 rgba(255,255,255,0.35)">
-                                <i class="{{ $t['icon'] }} text-[16px] relative z-10" style="color:{{ $iconColor }}"></i>
-                                <span class="t-icon-shine"></span>
+                            <div class="related-tool-icon t-icon">
+                                <i style="color:{{ $iconColor }}" aria-hidden="true" data-lucide="{{ $t['icon'] }}"></i>
                             </div>
                         </div>
-                        @if (!empty($t['badge']))
-                            <span class="tc-badge text-[9px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider" style="background:linear-gradient(135deg,{{ $t['g1'] }},{{ $t['g2'] }});color:#061c21;letter-spacing:0.06em">
-                                {{ $t['badge'] }}
-                            </span>
-                        @endif
+                        <div class="related-tool-labels">
+                            <span class="related-tool-category">{{ ucfirst($t['cat']) }}</span>
+                            @if (!empty($t['badge']))
+                                <span class="related-tool-badge">{{ $t['badge'] }}</span>
+                            @endif
+                        </div>
                     </div>
 
                     <div class="relative flex-1 mt-4 z-10">
@@ -63,10 +62,10 @@
                         <p class="text-[12.5px] leading-relaxed line-clamp-3" style="color:var(--c-muted)">{{ $t['desc'] }}</p>
                     </div>
 
-                    <div class="relative flex items-center justify-end pt-4 mt-4 z-10" style="border-top:1px dashed var(--c-border)">
-                        <span class="tc-cta text-[11.5px] font-bold inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg" style="color:#0694a2">
-                            Open Tool
-                            <i class="fa-solid fa-arrow-right tc-arrow text-[11px]"></i>
+                    <div class="related-tool-footer relative flex items-center justify-between mt-5 pt-4 z-10">
+                        <span class="related-tool-hint">Explore tool</span>
+                        <span class="related-tool-cta">
+                            Open tool <i aria-hidden="true" data-lucide="arrow-right"></i>
                         </span>
                     </div>
                 </a>

@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref } from 'vue';
 
 const url = ref('');
@@ -62,14 +63,14 @@ function exportJs() {
           <p class="mt-2 text-sm sm:text-[15px] leading-relaxed max-w-xl" style="color:var(--c-muted)">Fast and free.</p>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast & free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="url"
@@ -90,14 +91,14 @@ function exportJs() {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-circle-question text-xs"></i>
+            <LucideIcon class="text-xs" name="circle-help"></LucideIcon>
             Extract
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -107,12 +108,12 @@ function exportJs() {
     <div class="glass rounded-3xl p-5 flex items-center justify-between flex-wrap gap-3">
       <p class="text-sm font-semibold">{{ data.faqs.length }} FAQ{{ data.faqs.length === 1 ? '' : 's' }} found</p>
       <button v-if="data.faqs.length > 0" @click="exportJs" class="btn-primary px-4 py-2 rounded-full text-xs font-700 inline-flex items-center gap-2">
-        <i class="fa-solid fa-download text-[10px]" style="color:#061c21"></i> Export as JS
+        <LucideIcon class="text-[10px]" style="color:#061c21" name="download"></LucideIcon> Export as JS
       </button>
     </div>
 
     <div v-if="data.faqs.length === 0" class="glass rounded-3xl p-8 text-center">
-      <i class="fa-solid fa-triangle-exclamation text-3xl mb-3" style="color:#f97316"></i>
+      <LucideIcon class="text-3xl mb-3" style="color:#f97316" name="triangle-alert"></LucideIcon>
       <p class="text-sm font-semibold">No FAQs detected on this page.</p>
       <p class="text-xs mt-1" style="color:var(--c-muted)">Either no FAQPage schema or recognised accordion markup was found.</p>
     </div>

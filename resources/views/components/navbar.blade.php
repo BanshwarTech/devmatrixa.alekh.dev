@@ -14,10 +14,11 @@
 
         <div class="flex items-center gap-3">
             <a href="{{ url('/#tools') }}" class="hidden sm:inline-flex btn-primary px-5 py-2.5 rounded-full text-sm items-center gap-2">
-                Explore Tools <i class="fa-solid fa-arrow-right text-xs"></i>
+                Explore Tools <i class="text-xs" data-lucide="arrow-right"></i>
             </a>
             <button type="button" data-mob-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="mob" class="md:hidden p-2.5 rounded-xl transition-colors hover:bg-teal-50">
-                <i class="fa-solid fa-bars text-sm" data-mob-icon style="color:var(--c-muted)"></i>
+                <i class="text-sm" data-mob-icon-menu style="color:var(--c-muted)" data-lucide="menu"></i>
+                <i class="text-sm hidden" data-mob-icon-close style="color:var(--c-muted)" data-lucide="x"></i>
             </button>
         </div>
     </div>
@@ -60,7 +61,6 @@
   if (!nav) return;
   var mob = document.getElementById('mob');
   var toggle = nav.querySelector('[data-mob-toggle]');
-  var icon = nav.querySelector('[data-mob-icon]');
   var closeButtons = mob.querySelectorAll('[data-mob-close]');
   var drawer = document.getElementById('mob-drawer');
   var open = false;
@@ -77,8 +77,10 @@
     mob.inert = !open;
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    icon.classList.toggle('fa-bars', !open);
-    icon.classList.toggle('fa-xmark', open);
+    var menuIcon = nav.querySelector('[data-mob-icon-menu]');
+    var closeIcon = nav.querySelector('[data-mob-icon-close]');
+    if (menuIcon) menuIcon.classList.toggle('hidden', open);
+    if (closeIcon) closeIcon.classList.toggle('hidden', !open);
 
     if (open) {
       previousBodyOverflow = document.body.style.overflow;

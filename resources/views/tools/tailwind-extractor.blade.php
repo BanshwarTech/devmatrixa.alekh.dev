@@ -17,7 +17,7 @@
         >
             <x-slot:title>Extract every <span class="s-it text-accent">Tailwind class.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="terminal" icon="fa-brands fa-css3-alt" icon-bg="linear-gradient(135deg,#0694a2,#16bdca)" icon-color="#fff" title="Tailwind Classes" subtitle="Layout group">
+                <x-preview-card variant="terminal" icon="code-xml" icon-bg="linear-gradient(135deg,#0694a2,#16bdca)" icon-color="#fff" title="Tailwind Classes" subtitle="Layout group">
                     <div class="flex flex-wrap gap-1.5">
                         @foreach (['flex', 'items-center', 'justify-between', 'gap-4', 'px-6', 'py-3', 'rounded-2xl', 'bg-teal-500', 'text-white', 'shadow-lg', 'hover:scale-105', 'transition-all'] as $c)
                             <span class="font-mono text-[10px] px-2 py-1 rounded" style="background:rgba(6,148,162,0.10);color:#0694a2;border:1px solid rgba(6,148,162,0.22)">{{ $c }}</span>
@@ -28,24 +28,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-brands fa-css3-alt', 'color' => '#0694a2', 'label' => 'Utility Classes'],
-            ['icon' => 'fa-solid fa-ruler', 'color' => '#16bdca', 'label' => 'Spacing'],
-            ['icon' => 'fa-solid fa-palette', 'color' => '#0098f0', 'label' => 'Colors'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#7edce2', 'label' => 'Typography'],
-            ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#0694a2', 'label' => 'Breakpoints'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#16bdca', 'label' => 'Variants'],
-            ['icon' => 'fa-solid fa-code', 'color' => '#0098f0', 'label' => 'Arbitrary Values'],
-            ['icon' => 'fa-solid fa-table-cells', 'color' => '#7edce2', 'label' => 'Layout'],
-            ['icon' => 'fa-solid fa-sparkles', 'color' => '#0694a2', 'label' => 'Effects'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#16bdca', 'label' => 'Grouped'],
-            ['icon' => 'fa-solid fa-copy', 'color' => '#0098f0', 'label' => 'One-Click Copy'],
-            ['icon' => 'fa-solid fa-filter', 'color' => '#7edce2', 'label' => 'Filtered'],
+            ['icon' => 'code-xml', 'color' => '#0694a2', 'label' => 'Utility Classes'],
+            ['icon' => 'ruler', 'color' => '#16bdca', 'label' => 'Spacing'],
+            ['icon' => 'palette', 'color' => '#0098f0', 'label' => 'Colors'],
+            ['icon' => 'type', 'color' => '#7edce2', 'label' => 'Typography'],
+            ['icon' => 'smartphone', 'color' => '#0694a2', 'label' => 'Breakpoints'],
+            ['icon' => 'wand-sparkles', 'color' => '#16bdca', 'label' => 'Variants'],
+            ['icon' => 'code', 'color' => '#0098f0', 'label' => 'Arbitrary Values'],
+            ['icon' => 'table', 'color' => '#7edce2', 'label' => 'Layout'],
+            ['icon' => 'sparkles', 'color' => '#0694a2', 'label' => 'Effects'],
+            ['icon' => 'layers', 'color' => '#16bdca', 'label' => 'Grouped'],
+            ['icon' => 'copy', 'color' => '#0098f0', 'label' => 'One-Click Copy'],
+            ['icon' => 'filter', 'color' => '#7edce2', 'label' => 'Filtered'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any live URL built with Tailwind,a homepage, landing page, product page, or documentation site.'],
-            ['icon' => 'fa-solid fa-filter', 'title' => 'Filter Tailwind', 'desc' => 'Every class on the page is scanned and filtered down to only those matching Tailwind\'s prefix conventions. Non-Tailwind classes are stripped out automatically.'],
-            ['icon' => 'fa-solid fa-layer-group', 'title' => 'Grouped and Ready to Copy', 'desc' => 'Classes are sorted into Layout, Spacing, Typography, Effects, and more. Copy any entire group in one click and paste straight into your project.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any live URL built with Tailwind,a homepage, landing page, product page, or documentation site.'],
+            ['icon' => 'filter', 'title' => 'Filter Tailwind', 'desc' => 'Every class on the page is scanned and filtered down to only those matching Tailwind\'s prefix conventions. Non-Tailwind classes are stripped out automatically.'],
+            ['icon' => 'layers', 'title' => 'Grouped and Ready to Copy', 'desc' => 'Classes are sorted into Layout, Spacing, Typography, Effects, and more. Copy any entire group in one click and paste straight into your project.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">a complete class list</span></x-slot:subtitle>
         </x-how-it-works>
@@ -54,12 +54,12 @@
             badge="Why This Tool"
             description="Stop guessing how a site styles itself. Get the full Tailwind class list, sorted by intent, with one-click copy on every group."
             :features="[
-                ['icon' => 'fa-solid fa-layer-group', 'title' => '12 Categories', 'desc' => 'Classes are automatically sorted into Layout, Spacing, Typography, Colors, Effects, Borders, and more,so you find exactly what you need without scrolling through noise.'],
-                ['icon' => 'fa-solid fa-filter', 'title' => 'Tailwind-Only Filter', 'desc' => 'Custom and non-standard classes are stripped away, leaving only clean, canonical Tailwind classes in the output.'],
-                ['icon' => 'fa-solid fa-mobile-screen', 'title' => 'Variants Preserved', 'desc' => 'Responsive prefixes like sm:, md:, lg:, plus hover:, focus:, and dark:,every variant is captured exactly as it appears on the page.'],
-                ['icon' => 'fa-solid fa-copy', 'title' => 'Copy Any Group', 'desc' => 'One click copies every class in a category group. Paste directly into your JSX or HTML and keep moving.'],
-                ['icon' => 'fa-solid fa-globe', 'title' => 'Works on Live URLs', 'desc' => 'Point it at any production site using Tailwind,marketing pages, dashboards, docs, component libraries,it handles them all.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Zero Data Stored', 'desc' => 'URLs are fetched, parsed, and immediately discarded. Your scans never leave a trace.'],
+                ['icon' => 'layers', 'title' => '12 Categories', 'desc' => 'Classes are automatically sorted into Layout, Spacing, Typography, Colors, Effects, Borders, and more,so you find exactly what you need without scrolling through noise.'],
+                ['icon' => 'filter', 'title' => 'Tailwind-Only Filter', 'desc' => 'Custom and non-standard classes are stripped away, leaving only clean, canonical Tailwind classes in the output.'],
+                ['icon' => 'smartphone', 'title' => 'Variants Preserved', 'desc' => 'Responsive prefixes like sm:, md:, lg:, plus hover:, focus:, and dark:,every variant is captured exactly as it appears on the page.'],
+                ['icon' => 'copy', 'title' => 'Copy Any Group', 'desc' => 'One click copies every class in a category group. Paste directly into your JSX or HTML and keep moving.'],
+                ['icon' => 'globe', 'title' => 'Works on Live URLs', 'desc' => 'Point it at any production site using Tailwind,marketing pages, dashboards, docs, component libraries,it handles them all.'],
+                ['icon' => 'database', 'title' => 'Zero Data Stored', 'desc' => 'URLs are fetched, parsed, and immediately discarded. Your scans never leave a trace.'],
             ]"
         >
             <x-slot:title>Every class, <span class="s-it text-accent">grouped and ready.</span></x-slot:title>

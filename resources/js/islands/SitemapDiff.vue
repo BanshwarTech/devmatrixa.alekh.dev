@@ -1,4 +1,5 @@
 <script setup>
+import LucideIcon from '../components/LucideIcon.js';
 import { ref, computed } from 'vue';
 import StatTile from './shared/StatTile.vue';
 
@@ -11,9 +12,9 @@ const bucket = ref('missing');
 const copiedAll = ref(false);
 
 const bucketMeta = {
-  both: { label: 'Healthy (in both)', color: '#4010b0', hint: 'These pages are linked AND in your sitemap. No action needed.', icon: 'fa-solid fa-circle-check' },
-  orphan: { label: 'Orphan (sitemap only)', color: '#f59e0b', hint: 'Listed in sitemap but no internal link reaches them. Add internal links or remove from sitemap.', icon: 'fa-solid fa-link-slash' },
-  missing: { label: 'Missing from sitemap', color: '#f87171', hint: 'Linked across the site but absent from sitemap.xml. Add them so search engines discover them faster.', icon: 'fa-solid fa-file-circle-xmark' },
+  both: { label: 'Healthy (in both)', color: '#4010b0', hint: 'These pages are linked AND in your sitemap. No action needed.', icon: 'circle-check' },
+  orphan: { label: 'Orphan (sitemap only)', color: '#f59e0b', hint: 'Listed in sitemap but no internal link reaches them. Add internal links or remove from sitemap.', icon: 'unlink' },
+  missing: { label: 'Missing from sitemap', color: '#f87171', hint: 'Linked across the site but absent from sitemap.xml. Add them so search engines discover them faster.', icon: 'file-x-2' },
 };
 
 const list = computed(() => {
@@ -77,14 +78,14 @@ async function copyList() {
           <h2 class="font-sans text-2xl sm:text-3xl font-700 tracking-tight leading-tight">Enter your homepage URL.</h2>
         </div>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold shrink-0 self-start" style="background:rgba(0, 152, 240,0.10);border:1px solid rgba(0, 152, 240,0.28);color:#4010b0">
-          <i class="fa-solid fa-bolt text-xs"></i>
+          <LucideIcon class="text-xs" name="bolt"></LucideIcon>
           Fast &amp; free
         </div>
       </div>
 
       <div :class="['url-input-wrap', focused ? 'focused' : '']" class="flex gap-2 sm:gap-3 flex-col sm:flex-row p-1.5 rounded-2xl">
         <div class="relative flex-1">
-          <i class="fa-solid fa-globe absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }"></i>
+          <LucideIcon class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm" :style="{ color: focused ? '#0694a2' : 'var(--c-muted)' }" name="globe"></LucideIcon>
           <input
             v-model="url"
             type="text"
@@ -105,14 +106,14 @@ async function copyList() {
             Analyzing
           </template>
           <template v-else>
-            <i class="fa-solid fa-code-compare text-xs"></i>
+            <LucideIcon class="text-xs" name="git-compare-arrows"></LucideIcon>
             Run Diff
           </template>
         </button>
       </div>
 
       <div v-if="error" class="mt-5 rounded-2xl px-4 py-3 text-sm font-semibold flex items-start gap-3" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#ef4444">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+        <LucideIcon class="mt-0.5 shrink-0" name="triangle-alert"></LucideIcon>
         <span class="leading-snug">{{ error }}</span>
       </div>
     </div>
@@ -146,7 +147,7 @@ async function copyList() {
       <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
         <div class="flex items-center gap-2.5">
           <span class="flex items-center justify-center w-9 h-9 rounded-xl shrink-0" :style="{ background: `${meta.color}22`, color: meta.color }">
-            <i :class="meta.icon"></i>
+            <LucideIcon :name="meta.icon"></LucideIcon>
           </span>
           <div>
             <div class="font-sans font-700 text-sm tracking-tight" style="color:#e5e7eb">
@@ -162,13 +163,13 @@ async function copyList() {
           class="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition-colors disabled:opacity-40"
           :style="{ background: copiedAll ? '#4010b022' : 'rgba(255,255,255,0.06)', color: copiedAll ? '#4010b0' : '#e5e7eb', border: '1px solid var(--c-border)' }"
         >
-          <i :class="copiedAll ? 'fa-solid fa-check' : 'fa-solid fa-copy'" class="text-[12px]"></i>
+          <LucideIcon class="text-[12px]" :name="copiedAll ? 'check' : 'copy'"></LucideIcon>
           {{ copiedAll ? 'Copied!' : 'Copy List' }}
         </button>
       </div>
 
       <div v-if="list.length === 0" class="text-center py-8 text-sm" style="color:var(--c-muted)">
-        <i class="fa-solid fa-circle-check text-2xl block mb-2" style="color:#4010b0"></i>
+        <LucideIcon class="text-2xl block mb-2" style="color:#4010b0" name="circle-check"></LucideIcon>
         Nothing in this bucket — clean on this dimension.
       </div>
       <div v-else class="space-y-1.5 max-h-[500px] overflow-y-auto">

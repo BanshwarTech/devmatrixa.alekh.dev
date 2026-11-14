@@ -9,10 +9,10 @@
 
     @php
         $reachOutTopics = [
-            ['icon' => 'fa-bug', 'title' => 'Bug Report', 'text' => 'Something broken or wrong output', 'bg' => 'rgba(239, 68, 68, 0.12)', 'color' => '#f87171'],
-            ['icon' => 'fa-lightbulb', 'title' => 'Tool Idea', 'text' => 'Suggest a new tool to build', 'bg' => 'rgba(0, 152, 240, 0.12)', 'color' => '#0098f0'],
-            ['icon' => 'fa-handshake', 'title' => 'Collaboration', 'text' => 'Partnership or guest content', 'bg' => 'rgba(22, 189, 202, 0.12)', 'color' => '#16bdca'],
-            ['icon' => 'fa-comment-dots', 'title' => 'General Feedback', 'text' => 'Anything else on your mind', 'bg' => 'rgba(64, 16, 176, 0.14)', 'color' => '#0078e0'],
+            ['icon' => 'bug', 'title' => 'Bug Report', 'text' => 'Something broken or wrong output', 'bg' => 'rgba(239, 68, 68, 0.12)', 'color' => '#f87171'],
+            ['icon' => 'lightbulb', 'title' => 'Tool Idea', 'text' => 'Suggest a new tool to build', 'bg' => 'rgba(0, 152, 240, 0.12)', 'color' => '#0098f0'],
+            ['icon' => 'handshake', 'title' => 'Collaboration', 'text' => 'Partnership or guest content', 'bg' => 'rgba(22, 189, 202, 0.12)', 'color' => '#16bdca'],
+            ['icon' => 'message-circle', 'title' => 'General Feedback', 'text' => 'Anything else on your mind', 'bg' => 'rgba(64, 16, 176, 0.14)', 'color' => '#0078e0'],
         ];
 
         $faqs = [
@@ -53,7 +53,7 @@
                         <div class="glass rounded-[22px] p-6">
                             <div class="flex items-center gap-4">
                                 <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-400 text-white">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i data-lucide="mail"></i>
                                 </div>
                                 <div>
                                     <h2 class="font-600">Email Us</h2>
@@ -68,7 +68,7 @@
                         <div class="glass rounded-[22px] p-6">
                             <div class="flex items-center gap-4">
                                 <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-400 to-teal-500" style="color:#061c21">
-                                    <i class="fa-solid fa-clock"></i>
+                                    <i data-lucide="clock"></i>
                                 </div>
                                 <div>
                                     <h2 class="font-600">Response Time</h2>
@@ -84,7 +84,7 @@
                                 @foreach ($reachOutTopics as $topic)
                                     <div class="contact-topic flex items-center gap-4 rounded-2xl border p-4" style="border-color:var(--c-border);background:{{ $topic['bg'] }}">
                                         <div class="contact-topic-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl" style="color:{{ $topic['color'] }};background:rgba(6, 28, 33, 0.25)">
-                                            <i class="fa-solid {{ $topic['icon'] }} text-sm"></i>
+                                            <i class="text-sm" data-lucide="{{ $topic['icon'] }}"></i>
                                         </div>
                                         <div>
                                             <h3 class="text-sm font-700">{{ $topic['title'] }}</h3>

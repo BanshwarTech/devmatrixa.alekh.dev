@@ -15,7 +15,7 @@
         >
             <x-slot:title>Typography that<br><span class="s-it text-accent">ranks higher.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card variant="gauge" icon="fa-solid fa-font" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="Type Scale" subtitle="Per element">
+                <x-preview-card variant="gauge" icon="type" icon-bg="linear-gradient(135deg,#0098f0,#0694a2)" icon-color="#061c21" title="Type Scale" subtitle="Per element">
                     <div class="space-y-2">
                         @foreach ([
                             ['tag' => 'H1', 'size' => '48px', 'status' => 'ideal', 'col' => '#4010b0'],
@@ -36,24 +36,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Font Size'],
-            ['icon' => 'fa-solid fa-heading', 'color' => '#16bdca', 'label' => 'Heading Scale'],
-            ['icon' => 'fa-solid fa-paragraph', 'color' => '#0098f0', 'label' => 'Body Copy'],
-            ['icon' => 'fa-solid fa-arrows-up-down', 'color' => '#7edce2', 'label' => 'Line Height'],
-            ['icon' => 'fa-solid fa-book-open', 'color' => '#0694a2', 'label' => 'Readability'],
-            ['icon' => 'fa-solid fa-sitemap', 'color' => '#16bdca', 'label' => 'Hierarchy'],
-            ['icon' => 'fa-solid fa-circle-half-stroke', 'color' => '#0098f0', 'label' => 'Contrast'],
-            ['icon' => 'fa-solid fa-ruler', 'color' => '#7edce2', 'label' => 'px / rem / em'],
-            ['icon' => 'fa-solid fa-mobile-screen', 'color' => '#0694a2', 'label' => 'Responsive'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#16bdca', 'label' => 'Typography'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'color' => '#0098f0', 'label' => 'CSS Fixes'],
-            ['icon' => 'fa-solid fa-universal-access', 'color' => '#7edce2', 'label' => 'Accessibility'],
+            ['icon' => 'type', 'color' => '#0694a2', 'label' => 'Font Size'],
+            ['icon' => 'heading', 'color' => '#16bdca', 'label' => 'Heading Scale'],
+            ['icon' => 'pilcrow', 'color' => '#0098f0', 'label' => 'Body Copy'],
+            ['icon' => 'arrow-up-down', 'color' => '#7edce2', 'label' => 'Line Height'],
+            ['icon' => 'book-open', 'color' => '#0694a2', 'label' => 'Readability'],
+            ['icon' => 'network', 'color' => '#16bdca', 'label' => 'Hierarchy'],
+            ['icon' => 'contrast', 'color' => '#0098f0', 'label' => 'Contrast'],
+            ['icon' => 'ruler', 'color' => '#7edce2', 'label' => 'px / rem / em'],
+            ['icon' => 'smartphone', 'color' => '#0694a2', 'label' => 'Responsive'],
+            ['icon' => 'type', 'color' => '#16bdca', 'label' => 'Typography'],
+            ['icon' => 'wand-sparkles', 'color' => '#0098f0', 'label' => 'CSS Fixes'],
+            ['icon' => 'accessibility', 'color' => '#7edce2', 'label' => 'Accessibility'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL — we fetch the page and parse the first 3 stylesheets.'],
-            ['icon' => 'fa-solid fa-font', 'title' => 'Measure Font Sizes', 'desc' => 'We extract font-size for H1–H6, body, p, li and small from CSS and inline styles.'],
-            ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'CSS Fix Suggestions', 'desc' => 'Each element is compared against SEO-recommended ranges — get exact CSS fix snippets.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any URL — we fetch the page and parse the first 3 stylesheets.'],
+            ['icon' => 'type', 'title' => 'Measure Font Sizes', 'desc' => 'We extract font-size for H1–H6, body, p, li and small from CSS and inline styles.'],
+            ['icon' => 'wand-sparkles', 'title' => 'CSS Fix Suggestions', 'desc' => 'Each element is compared against SEO-recommended ranges — get exact CSS fix snippets.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">better readability</span></x-slot:subtitle>
         </x-how-it-works>
@@ -62,12 +62,12 @@
             badge="Why this audit"
             description="Font sizes are an underrated SEO signal — too small hurts mobile usability, too large breaks visual hierarchy. We compare your site against tested SEO ranges."
             :features="[
-                ['icon' => 'fa-solid fa-font', 'title' => '10 elements checked', 'desc' => 'H1–H6, body, paragraph, list items, and small text — every typography-bearing element gets audited.'],
-                ['icon' => 'fa-solid fa-bullseye', 'title' => 'SEO-recommended ranges', 'desc' => 'Each element is compared against documented best-practice ranges (e.g. body 14–18px, H1 32–48px).'],
-                ['icon' => 'fa-solid fa-wand-magic-sparkles', 'title' => 'CSS fix snippets', 'desc' => 'Each issue ships with a ready-to-paste CSS rule that bumps the font-size into the healthy range.'],
-                ['icon' => 'fa-solid fa-ruler', 'title' => 'px, rem, em supported', 'desc' => 'We normalize every unit — REM, EM, and pixel values are all converted to the same scale for comparison.'],
-                ['icon' => 'fa-solid fa-universal-access', 'title' => 'Accessibility-aware', 'desc' => 'Body copy under 12px is flagged as an a11y violation, not just an SEO issue — both reasons appear in the fix.'],
-                ['icon' => 'fa-solid fa-database', 'title' => 'Nothing stored', 'desc' => 'We fetch and parse three stylesheets, then discard everything. No URLs, no styles, no logs.'],
+                ['icon' => 'type', 'title' => '10 elements checked', 'desc' => 'H1–H6, body, paragraph, list items, and small text — every typography-bearing element gets audited.'],
+                ['icon' => 'target', 'title' => 'SEO-recommended ranges', 'desc' => 'Each element is compared against documented best-practice ranges (e.g. body 14–18px, H1 32–48px).'],
+                ['icon' => 'wand-sparkles', 'title' => 'CSS fix snippets', 'desc' => 'Each issue ships with a ready-to-paste CSS rule that bumps the font-size into the healthy range.'],
+                ['icon' => 'ruler', 'title' => 'px, rem, em supported', 'desc' => 'We normalize every unit — REM, EM, and pixel values are all converted to the same scale for comparison.'],
+                ['icon' => 'accessibility', 'title' => 'Accessibility-aware', 'desc' => 'Body copy under 12px is flagged as an a11y violation, not just an SEO issue — both reasons appear in the fix.'],
+                ['icon' => 'database', 'title' => 'Nothing stored', 'desc' => 'We fetch and parse three stylesheets, then discard everything. No URLs, no styles, no logs.'],
             ]"
         >
             <x-slot:title>Readability that <span class="s-it text-accent">ranks higher.</span></x-slot:title>

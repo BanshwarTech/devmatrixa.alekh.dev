@@ -17,7 +17,7 @@
         >
             <x-slot:title>Detect every <span class="s-it text-accent">font on the page.</span></x-slot:title>
             <x-slot:rightPanel>
-                <x-preview-card icon="fa-solid fa-font" icon-bg="linear-gradient(135deg,#16bdca,#0694a2)" icon-color="#fff" title="Detected Fonts" subtitle="Per page">
+                <x-preview-card icon="type" icon-bg="linear-gradient(135deg,#16bdca,#0694a2)" icon-color="#fff" title="Detected Fonts" subtitle="Per page">
                     <div class="space-y-2">
                         @foreach ([
                             ['name' => 'Inter', 'source' => 'Google Fonts', 'weights' => '400, 500, 600, 700', 'color' => '#4010b0'],
@@ -35,24 +35,24 @@
         </x-tool-hero>
 
         <x-tool-ticker :items="[
-            ['icon' => 'fa-solid fa-font', 'color' => '#0694a2', 'label' => 'Font Family'],
-            ['icon' => 'fa-brands fa-google', 'color' => '#16bdca', 'label' => 'Google Fonts'],
-            ['icon' => 'fa-solid fa-at', 'color' => '#0098f0', 'label' => '@font-face'],
-            ['icon' => 'fa-solid fa-font', 'color' => '#7edce2', 'label' => 'Font Weight'],
-            ['icon' => 'fa-solid fa-italic', 'color' => '#0694a2', 'label' => 'Font Style'],
-            ['icon' => 'fa-solid fa-server', 'color' => '#16bdca', 'label' => 'System Fonts'],
-            ['icon' => 'fa-solid fa-layer-group', 'color' => '#0098f0', 'label' => 'CSS Stack'],
-            ['icon' => 'fa-solid fa-sliders', 'color' => '#7edce2', 'label' => 'Variable Fonts'],
-            ['icon' => 'fa-solid fa-list', 'color' => '#0694a2', 'label' => 'Usage Counts'],
-            ['icon' => 'fa-solid fa-file-import', 'color' => '#16bdca', 'label' => '@import'],
-            ['icon' => 'fa-solid fa-link', 'color' => '#0098f0', 'label' => 'Linked Sheets'],
-            ['icon' => 'fa-solid fa-magnifying-glass', 'color' => '#7edce2', 'label' => 'Auto Detect'],
+            ['icon' => 'type', 'color' => '#0694a2', 'label' => 'Font Family'],
+            ['icon' => 'search', 'color' => '#16bdca', 'label' => 'Google Fonts'],
+            ['icon' => 'at-sign', 'color' => '#0098f0', 'label' => '@font-face'],
+            ['icon' => 'type', 'color' => '#7edce2', 'label' => 'Font Weight'],
+            ['icon' => 'italic', 'color' => '#0694a2', 'label' => 'Font Style'],
+            ['icon' => 'server', 'color' => '#16bdca', 'label' => 'System Fonts'],
+            ['icon' => 'layers', 'color' => '#0098f0', 'label' => 'CSS Stack'],
+            ['icon' => 'sliders-horizontal', 'color' => '#7edce2', 'label' => 'Variable Fonts'],
+            ['icon' => 'list', 'color' => '#0694a2', 'label' => 'Usage Counts'],
+            ['icon' => 'file-input', 'color' => '#16bdca', 'label' => '@import'],
+            ['icon' => 'link', 'color' => '#0098f0', 'label' => 'Linked Sheets'],
+            ['icon' => 'search', 'color' => '#7edce2', 'label' => 'Auto Detect'],
         ]" />
 
         <x-how-it-works :steps="[
-            ['icon' => 'fa-solid fa-link', 'title' => 'Paste Your URL', 'desc' => 'Enter any public URL and the tool fetches the full HTML along with every linked stylesheet automatically.'],
-            ['icon' => 'fa-solid fa-font', 'title' => 'Scan All Sources', 'desc' => 'Google Fonts links, @import statements, @font-face blocks, and font-family declarations are all detected across every source on the page.'],
-            ['icon' => 'fa-solid fa-layer-group', 'title' => 'Grouped Results', 'desc' => 'Fonts are organized by source,Google, custom, and system,with their weights, styles, and usage counts listed clearly alongside each entry.'],
+            ['icon' => 'link', 'title' => 'Paste Your URL', 'desc' => 'Enter any public URL and the tool fetches the full HTML along with every linked stylesheet automatically.'],
+            ['icon' => 'type', 'title' => 'Scan All Sources', 'desc' => 'Google Fonts links, @import statements, @font-face blocks, and font-family declarations are all detected across every source on the page.'],
+            ['icon' => 'layers', 'title' => 'Grouped Results', 'desc' => 'Fonts are organized by source,Google, custom, and system,with their weights, styles, and usage counts listed clearly alongside each entry.'],
         ]">
             <x-slot:subtitle>Three steps to <span class="s-it text-accent">font fingerprinting</span></x-slot:subtitle>
         </x-how-it-works>
@@ -61,12 +61,12 @@
             badge="Why This Tool"
             description="Identify every font a site loads,and exactly how it loads,without opening DevTools, diving through source files, or installing an extension."
             :features="[
-                ['icon' => 'fa-brands fa-google', 'title' => 'Google Fonts Auto-Detect', 'desc' => 'Recognises Google Fonts links and @import statements automatically, including the exact weights and styles being requested for the page.'],
-                ['icon' => 'fa-solid fa-at', 'title' => '@font-face Parsing', 'desc' => 'Custom hosted fonts are detected from @font-face blocks in full detail,including their source URLs and declared unicode ranges.'],
-                ['icon' => 'fa-solid fa-sliders', 'title' => 'Weights and Styles', 'desc' => 'Every weight and italic or oblique style in use is listed alongside each font family, so you see the complete picture at a glance.'],
-                ['icon' => 'fa-solid fa-list', 'title' => 'Usage Counts', 'desc' => 'Each font shows how many elements actually use it on the page,making it easy to separate the primary typeface from a forgotten or redundant import.'],
-                ['icon' => 'fa-solid fa-server', 'title' => 'System Fallback Detection', 'desc' => 'Plain CSS stacks like Helvetica, Arial, sans-serif are classified separately from web fonts, so you always know what is and isn\'t being downloaded.'],
-                ['icon' => 'fa-solid fa-eye', 'title' => 'Live Preview', 'desc' => 'Every detected font is rendered in its own typeface directly in the results, so you can see the actual style without leaving the tool.'],
+                ['icon' => 'search', 'title' => 'Google Fonts Auto-Detect', 'desc' => 'Recognises Google Fonts links and @import statements automatically, including the exact weights and styles being requested for the page.'],
+                ['icon' => 'at-sign', 'title' => '@font-face Parsing', 'desc' => 'Custom hosted fonts are detected from @font-face blocks in full detail,including their source URLs and declared unicode ranges.'],
+                ['icon' => 'sliders-horizontal', 'title' => 'Weights and Styles', 'desc' => 'Every weight and italic or oblique style in use is listed alongside each font family, so you see the complete picture at a glance.'],
+                ['icon' => 'list', 'title' => 'Usage Counts', 'desc' => 'Each font shows how many elements actually use it on the page,making it easy to separate the primary typeface from a forgotten or redundant import.'],
+                ['icon' => 'server', 'title' => 'System Fallback Detection', 'desc' => 'Plain CSS stacks like Helvetica, Arial, sans-serif are classified separately from web fonts, so you always know what is and isn\'t being downloaded.'],
+                ['icon' => 'eye', 'title' => 'Live Preview', 'desc' => 'Every detected font is rendered in its own typeface directly in the results, so you can see the actual style without leaving the tool.'],
             ]"
         >
             <x-slot:title>Font fingerprints in <span class="s-it text-accent">one scan.</span></x-slot:title>
