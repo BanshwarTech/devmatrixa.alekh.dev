@@ -1,7 +1,7 @@
 <header id="nav" class="fixed top-0 inset-x-0 z-50" data-navbar>
     <div class="max-w-[1300px] mx-auto px-1.5 lg:px-0 flex items-center justify-between h-[72px]">
       <a href="{{ url('/') }}" class="brand-lockup flex items-center group" aria-label="Devmatrixa home">
-        <img src="{{ asset('logo.png') }}" alt="devmatrixa" width="192" height="64" class="brand-logo h-16 w-auto transition-transform duration-300 group-hover:scale-[1.02]">
+        <img src="{{ asset('main-logo.png') }}" alt="devmatrixa" width="192" height="64" class="brand-logo h-16 w-auto transition-transform duration-300 group-hover:scale-[1.02]">
         </a>
 
         <nav class="hidden md:flex items-center gap-1">
